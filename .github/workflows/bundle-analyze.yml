@@ -15,7 +15,7 @@ jobs:
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.4
         with:
-          node-version-file: .tool-versions
+          node-version-file: .nvmrc
       - name: Analyze | Bundle Size
         uses: preactjs/compressed-size-action@2.5.0
         with:

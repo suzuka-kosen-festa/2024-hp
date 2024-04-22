@@ -15,7 +15,7 @@ jobs:
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.4
         with:
-          node-version-file: .tool-versions
+          node-version-file: .nvmrc
       - name: Run | Build
         run: pnpm run build
   lint-test:
@@ -27,7 +27,7 @@ jobs:
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.4
         with:
-          node-version-file: .tool-versions
+          node-version-file: .nvmrc
       - name: Run | ESLint
         run: pnpm run lint:eslint
   type-test:
@@ -39,7 +39,7 @@ jobs:
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.4
         with:
-          node-version-file: .tool-versions
+          node-version-file: .nvmrc
       - name: Run | tsc
         run: pnpm run lint:tsc
   #  unit-test:
@@ -51,7 +51,7 @@ jobs:
   #      - name: Setup | Node.js
   #        uses: re-taro/actions/setup-node@v3.5.3
   #        with:
-  #          node-version-file: .tool-versions
+  #          node-version-file: .nvmrc
   #      - name: Test | Unit
   #        run: pnpm run test:unit
   #  integration-test:
@@ -63,7 +63,7 @@ jobs:
   #      - name: Setup | Node.js
   #        uses: re-taro/actions/setup-node@v3.5.4
   #        with:
-  #          node-version-file: .tool-versions
+  #          node-version-file: .nvmrc
   #      - name: Setup | Playwright
   #        uses: ./.github/actions/setup-playwright
   #      - name: Test | Integration
@@ -77,7 +77,7 @@ jobs:
   #      - name: Setup | Node.js
   #        uses: re-taro/actions/setup-node@v3.5.4
   #        with:
-  #          node-version-file: .tool-versions
+  #          node-version-file: .nvmrc
   #      - name: Setup | Playwright
   #        uses: ./.github/actions/setup-playwright
   #      - name: Build | Storybook

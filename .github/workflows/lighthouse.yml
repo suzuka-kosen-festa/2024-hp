@@ -27,7 +27,7 @@ jobs:
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.4
         with:
-          node-version-file: .tool-versions
+          node-version-file: .nvmrc
       - name: Run | Audit URLs using Lighthouse
         id: lighthouse_audit
         uses: treosh/lighthouse-ci-action@11.4.0

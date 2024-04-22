@@ -32,7 +32,7 @@ jobs:
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.4
         with:
-          node-version-file: .tool-versions
+          node-version-file: .nvmrc
       - name: Deploy | Build
         run: pnpm build
       - name: Deploy | Deploy to Cloudflare Pages
