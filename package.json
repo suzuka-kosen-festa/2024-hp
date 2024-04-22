@@ -2,7 +2,7 @@
 	"name": "2024-hp",
 	"type": "module",
 	"version": "0.0.0",
-	"packageManager": "pnpm@9.0.1+sha256.46d50ee2afecb42b185ebbd662dc7bdd52ef5be56bf035bb615cab81a75345df",
+	"packageManager": "pnpm@9.0.4",
 	"description": "第59回鈴鹿高専祭 公式HP",
 	"author": {
 		"name": "suzuka-kosen-festa"
@@ -49,5 +49,8 @@
 		"vite": "5.2.9",
 		"vite-tsconfig-paths": "4.3.2",
 		"wrangler": "3.51.0"
-	}
+	},
+	"browserslist": [
+		"defaults and > 0.3%"
+	]
 }
