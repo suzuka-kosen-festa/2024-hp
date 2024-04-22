@@ -7,11 +7,6 @@ on:
         description: URL to audit
         required: true
         type: string
-    secrets:
-      APP_ID:
-        required: true
-      PRIVATE_KEY:
-        required: true
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
