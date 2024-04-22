@@ -54,15 +54,13 @@ export default defineConfig(({ mode }) => ({
 		cloudflare({ getLoadContext }),
 		remixDevTools(),
 		!isStorybook
-		&& remix({
-        	serverModuleFormat: "esm",
-		}),
+		&& remix({ serverModuleFormat: "esm" }),
 		typecript(),
 		mode === "analyze"
 		&& visualizer({
-        	gzipSize: true,
-        	brotliSize: true,
-        	emitFile: true, // `emitFile` is necessary since Remix builds more than one bundle
+			gzipSize: true,
+			brotliSize: true,
+			emitFile: true, // `emitFile` is necessary since Remix builds more than one bundle
 		}),
 	],
 }));

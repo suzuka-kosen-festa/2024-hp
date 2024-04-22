@@ -1,0 +1,23 @@
+name: Package Size
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  bundle-analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .nvmrc
+      - name: Analyze | Bundle Size
+        uses: preactjs/compressed-size-action@2.5.0
+        with:
+          pattern: build/client/assets/*.{js,css}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

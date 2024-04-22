@@ -36,8 +36,10 @@ function App(): ReactNode {
 	);
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const links: LinksFunction = () => [];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
 	{ name: "viewport", content: "width=device-width" },
