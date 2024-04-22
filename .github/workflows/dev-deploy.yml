@@ -41,7 +41,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy --project-name portfolio --directory build/client
+          command: pages deploy --project-name 2024-hp --directory build/client
       - name: PostDeploy | Comment deploy url
         uses: mshick/add-pr-comment@v2.8.2
         with:
