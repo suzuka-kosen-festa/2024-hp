@@ -38,8 +38,7 @@ function App(): ReactNode {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const links: LinksFunction = () => [
-];
+export const links: LinksFunction = () => [];
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
@@ -48,7 +47,7 @@ export const meta: MetaFunction = () => [
 	{ name: "description", content: "第59回鈴鹿高専祭公式サイト" },
 	{ name: "og:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
-	{ name: "og:url", content: "https://re-taro.dev" },
+	{ name: "og:url", content: "https://snct-fes.info" },
 	{ name: "og:type", content: "website" },
 	{ name: "twitter:card", content: "summary_large_image" },
 	{ name: "twitter:title", content: "第59回 鈴鹿高専祭" },
