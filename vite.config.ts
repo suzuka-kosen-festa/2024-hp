@@ -4,6 +4,7 @@ import { remixDevTools } from "remix-development-tools";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
 import { getLoadContext } from "./load-context";
 
@@ -56,6 +57,9 @@ export default defineConfig(({ mode }) => ({
 		!isStorybook
 		&& remix({ serverModuleFormat: "esm" }),
 		typecript(),
+		vanillaExtractPlugin({
+			identifiers: mode === "production" ? "short" : "debug",
+		}),
 		mode === "analyze"
 		&& visualizer({
 			gzipSize: true,
