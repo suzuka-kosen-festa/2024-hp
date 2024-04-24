@@ -1,3 +1,5 @@
 node_modules/
 build/
 .wrangler/
+playwright-report/
+test-results/

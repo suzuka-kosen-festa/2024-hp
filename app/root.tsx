@@ -43,6 +43,15 @@ export const links: LinksFunction = () => [];
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
 	{ name: "viewport", content: "width=device-width" },
+	{ name: "description", content: "第59回鈴鹿高専祭公式サイト" },
+	{ name: "og:title", content: "第59回 鈴鹿高専祭" },
+	{ name: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
+	{ name: "og:url", content: "https://re-taro.dev" },
+	{ name: "og:type", content: "website" },
+	{ name: "twitter:card", content: "summary_large_image" },
+	{ name: "twitter:title", content: "第59回 鈴鹿高専祭" },
+	{ name: "twitter:description", content: "第59回鈴鹿高専祭公式サイト" },
+	{ name: "twitter:site", content: "@KOSENFESTA" },
 ];
 
 export function ErrorBoundary() {
