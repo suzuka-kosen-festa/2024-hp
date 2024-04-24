@@ -1,6 +1,7 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
+import "@/styles/globals.css";
 
 interface Props {
 	title?: string;
@@ -37,7 +38,8 @@ function App(): ReactNode {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const links: LinksFunction = () => [];
+export const links: LinksFunction = () => [
+];
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
