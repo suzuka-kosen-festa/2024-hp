@@ -56,7 +56,7 @@
 		"remix-development-tools": "4.1.4",
 		"rollup-plugin-visualizer": "5.12.0",
 		"serve": "14.2.3",
-		"terser": "5.30.4",
+		"terser": "5.31.0",
 		"typescript": "5.4.5",
 		"vite": "5.2.10",
 		"vite-tsconfig-paths": "4.3.2",
