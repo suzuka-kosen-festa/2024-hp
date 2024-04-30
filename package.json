@@ -45,7 +45,7 @@
 		"@types/react": "18.3.1",
 		"@types/react-dom": "18.3.0",
 		"@vanilla-extract/css": "1.15.1",
-		"@vanilla-extract/vite-plugin": "4.0.8",
+		"@vanilla-extract/vite-plugin": "4.0.9",
 		"browserslist-to-esbuild": "2.1.1",
 		"concurrently": "8.2.2",
 		"eslint": "8.57.0",
