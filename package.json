@@ -42,7 +42,7 @@
 		"@playwright/test": "1.43.1",
 		"@re-taro/eslint-config": "4.1.0",
 		"@remix-run/dev": "2.9.2",
-		"@types/react": "18.3.1",
+		"@types/react": "18.3.2",
 		"@types/react-dom": "18.3.0",
 		"@vanilla-extract/css": "1.15.1",
 		"@vanilla-extract/vite-plugin": "4.0.9",
