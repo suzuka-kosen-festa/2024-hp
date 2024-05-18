@@ -41,7 +41,7 @@ importers:
         version: 4.1.0(eslint-plugin-format@0.1.1(eslint@8.57.0))(eslint@8.57.0)(typescript@5.4.5)
       '@remix-run/dev':
         specifier: 2.9.2
-        version: 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0))(wrangler@3.56.0(@cloudflare/workers-types@4.20240512.0))
+        version: 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))(wrangler@3.56.0(@cloudflare/workers-types@4.20240512.0))
       '@types/react':
         specifier: 18.3.2
         version: 18.3.2
@@ -53,7 +53,7 @@ importers:
         version: 1.15.1(babel-plugin-macros@3.1.0)
       '@vanilla-extract/vite-plugin':
         specifier: 4.0.9
-        version: 4.0.9(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0))
+        version: 4.0.9(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))
       browserslist-to-esbuild:
         specifier: 2.1.1
         version: 2.1.1(browserslist@4.23.0)
@@ -67,8 +67,8 @@ importers:
         specifier: 0.1.1
         version: 0.1.1(eslint@8.57.0)
       lightningcss:
-        specifier: 1.24.1
-        version: 1.24.1
+        specifier: 1.25.0
+        version: 1.25.0
       npm-run-all2:
         specifier: 6.2.0
         version: 6.2.0
@@ -77,7 +77,7 @@ importers:
         version: 1.43.1
       remix-development-tools:
         specifier: 4.1.6
-        version: 4.1.6(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0))
+        version: 4.1.6(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))
       rollup-plugin-visualizer:
         specifier: 5.12.0
         version: 5.12.0(rollup@4.14.3)
@@ -92,10 +92,10 @@ importers:
         version: 5.4.5
       vite:
         specifier: 5.2.11
-        version: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+        version: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
       vite-tsconfig-paths:
         specifier: 4.3.2
-        version: 4.3.2(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0))
+        version: 4.3.2(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))
       wait-on:
         specifier: 7.2.0
         version: 7.2.0
@@ -2278,6 +2278,7 @@ packages:
   detect-libc@1.0.3:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
+    hasBin: true
 
   detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
@@ -3299,62 +3300,62 @@ packages:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
 
-  lightningcss-darwin-arm64@1.24.1:
-    resolution: {integrity: sha512-1jQ12jBy+AE/73uGQWGSafK5GoWgmSiIQOGhSEXiFJSZxzV+OXIx+a9h2EYHxdJfX864M+2TAxWPWb0Vv+8y4w==}
+  lightningcss-darwin-arm64@1.25.0:
+    resolution: {integrity: sha512-neCU5PrQUAec/b2mpXv13rrBWObQVaG/y0yhGKzAqN9cj7lOv13Wegnpiro0M66XAxx/cIkZfmJstRfriOR2SQ==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [darwin]
 
-  lightningcss-darwin-x64@1.24.1:
-    resolution: {integrity: sha512-R4R1d7VVdq2mG4igMU+Di8GPf0b64ZLnYVkubYnGG0Qxq1KaXQtAzcLI43EkpnoWvB/kUg8JKCWH4S13NfiLcQ==}
+  lightningcss-darwin-x64@1.25.0:
+    resolution: {integrity: sha512-h1XBxDHdED7TY4/1V30UNjiqXceGbcL8ARhUfbf8CWAEhD7wMKK/4UqMHi94RDl31ko4LTmt9fS2u1uyeWYE6g==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [darwin]
 
-  lightningcss-freebsd-x64@1.24.1:
-    resolution: {integrity: sha512-z6NberUUw5ALES6Ixn2shmjRRrM1cmEn1ZQPiM5IrZ6xHHL5a1lPin9pRv+w6eWfcrEo+qGG6R9XfJrpuY3e4g==}
+  lightningcss-freebsd-x64@1.25.0:
+    resolution: {integrity: sha512-f7v6QwrqCFtQOG1Y7iZ4P1/EAmMsyUyRBrYbSmDxihMzdsL7xyTM753H2138/oCpam+maw2RZrXe/NA1r/I5cQ==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [freebsd]
 
-  lightningcss-linux-arm-gnueabihf@1.24.1:
-    resolution: {integrity: sha512-NLQLnBQW/0sSg74qLNI8F8QKQXkNg4/ukSTa+XhtkO7v3BnK19TS1MfCbDHt+TTdSgNEBv0tubRuapcKho2EWw==}
+  lightningcss-linux-arm-gnueabihf@1.25.0:
+    resolution: {integrity: sha512-7KSVcjci9apHxUKNjiLKXn8hVQJqCtwFg5YNvTeKi/BM91A9lQTuO57RpmpPbRIb20Qm8vR7fZtL1iL5Yo3j9A==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm]
     os: [linux]
 
-  lightningcss-linux-arm64-gnu@1.24.1:
-    resolution: {integrity: sha512-AQxWU8c9E9JAjAi4Qw9CvX2tDIPjgzCTrZCSXKELfs4mCwzxRkHh2RCxX8sFK19RyJoJAjA/Kw8+LMNRHS5qEg==}
+  lightningcss-linux-arm64-gnu@1.25.0:
+    resolution: {integrity: sha512-1+6tuAsUyMVG5N2rzgwaOOf84yEU+Gjl71b+wLcz26lyM/ohgFgeqPWeB/Dor0wyUnq7vg184l8goGT26cRxoQ==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
 
-  lightningcss-linux-arm64-musl@1.24.1:
-    resolution: {integrity: sha512-JCgH/SrNrhqsguUA0uJUM1PvN5+dVuzPIlXcoWDHSv2OU/BWlj2dUYr3XNzEw748SmNZPfl2NjQrAdzaPOn1lA==}
+  lightningcss-linux-arm64-musl@1.25.0:
+    resolution: {integrity: sha512-4kw3ZnGQzxD8KkaB4doqfi32hP5h3o04OlrdfZ7T9VLTbUxeh3YZUKcJmhINV2rdMOOmVODqaRw1kuvvF16Q+Q==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
 
-  lightningcss-linux-x64-gnu@1.24.1:
-    resolution: {integrity: sha512-TYdEsC63bHV0h47aNRGN3RiK7aIeco3/keN4NkoSQ5T8xk09KHuBdySltWAvKLgT8JvR+ayzq8ZHnL1wKWY0rw==}
+  lightningcss-linux-x64-gnu@1.25.0:
+    resolution: {integrity: sha512-oVEP5rBrFQB5V7fRIPYkDxKLmd2fAbz9VagKWIRu1TlYDUFWXK4F3KztAtAKuD7tLMBSGGi1LMUueFzVe+cZbw==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
 
-  lightningcss-linux-x64-musl@1.24.1:
-    resolution: {integrity: sha512-HLfzVik3RToot6pQ2Rgc3JhfZkGi01hFetHt40HrUMoeKitLoqUUT5owM6yTZPTytTUW9ukLBJ1pc3XNMSvlLw==}
+  lightningcss-linux-x64-musl@1.25.0:
+    resolution: {integrity: sha512-7ssY6HwCvmPDohqtXuZG2Mh9q32LbVBhiF/SS/VMj2jUcXcsBilUEviq/zFDzhZMxl5f1lXi5/+mCuSGrMir1A==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
 
-  lightningcss-win32-x64-msvc@1.24.1:
-    resolution: {integrity: sha512-joEupPjYJ7PjZtDsS5lzALtlAudAbgIBMGJPNeFe5HfdmJXFd13ECmEM+5rXNxYVMRHua2w8132R6ab5Z6K9Ow==}
+  lightningcss-win32-x64-msvc@1.25.0:
+    resolution: {integrity: sha512-DUVxj1S6dCQkixQ5qiHcYojamxE02bgmSpc4p6lejPwW7WRd/pvDPDAr+BvZWAkX5MRphxB7ei6+93+42ZtvmQ==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [win32]
 
-  lightningcss@1.24.1:
-    resolution: {integrity: sha512-kUpHOLiH5GB0ERSv4pxqlL0RYKnOXtgGtVe7shDGfhS0AZ4D1ouKFYAcLcZhql8aMspDNzaUCumGHZ78tb2fTg==}
+  lightningcss@1.25.0:
+    resolution: {integrity: sha512-B08o6QQikGaY4rPuQohtFVE+X2++mm/QemwAJ/1sgnMgTwwUnafJbTmSSBWC8Tv4JPfhelXZB6sWA0Y/6eYJmQ==}
     engines: {node: '>= 12.0.0'}
 
   lilconfig@3.1.1:
@@ -6150,7 +6151,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
-  '@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0))(wrangler@3.56.0(@cloudflare/workers-types@4.20240512.0))':
+  '@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))(wrangler@3.56.0(@cloudflare/workers-types@4.20240512.0))':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/generator': 7.24.4
@@ -6167,7 +6168,7 @@ snapshots:
       '@remix-run/router': 1.16.1
       '@remix-run/server-runtime': 2.9.2(typescript@5.4.5)
       '@types/mdx': 2.0.13
-      '@vanilla-extract/integration': 6.5.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)
+      '@vanilla-extract/integration': 6.5.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)
       arg: 5.0.2
       cacache: 17.1.4
       chalk: 4.1.2
@@ -6208,7 +6209,7 @@ snapshots:
       ws: 7.5.9
     optionalDependencies:
       typescript: 5.4.5
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
       wrangler: 3.56.0(@cloudflare/workers-types@4.20240512.0)
     transitivePeerDependencies:
       - '@types/node'
@@ -6649,7 +6650,7 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
-  '@vanilla-extract/integration@6.5.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)':
+  '@vanilla-extract/integration@6.5.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/plugin-syntax-typescript': 7.24.1(@babel/core@7.24.4)
@@ -6662,8 +6663,8 @@ snapshots:
       lodash: 4.17.21
       mlly: 1.6.1
       outdent: 0.8.0
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
-      vite-node: 1.5.0(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
+      vite-node: 1.5.0(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -6675,7 +6676,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@vanilla-extract/integration@7.1.3(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)':
+  '@vanilla-extract/integration@7.1.3(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/plugin-syntax-typescript': 7.24.1(@babel/core@7.24.4)
@@ -6687,8 +6688,8 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.6.1
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
-      vite-node: 1.5.0(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
+      vite-node: 1.5.0(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -6702,10 +6703,10 @@ snapshots:
 
   '@vanilla-extract/private@1.0.4': {}
 
-  '@vanilla-extract/vite-plugin@4.0.9(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0))':
+  '@vanilla-extract/vite-plugin@4.0.9(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.3(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.24.1)(terser@5.31.0)
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      '@vanilla-extract/integration': 7.1.3(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -8607,46 +8608,46 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  lightningcss-darwin-arm64@1.24.1:
+  lightningcss-darwin-arm64@1.25.0:
     optional: true
 
-  lightningcss-darwin-x64@1.24.1:
+  lightningcss-darwin-x64@1.25.0:
     optional: true
 
-  lightningcss-freebsd-x64@1.24.1:
+  lightningcss-freebsd-x64@1.25.0:
     optional: true
 
-  lightningcss-linux-arm-gnueabihf@1.24.1:
+  lightningcss-linux-arm-gnueabihf@1.25.0:
     optional: true
 
-  lightningcss-linux-arm64-gnu@1.24.1:
+  lightningcss-linux-arm64-gnu@1.25.0:
     optional: true
 
-  lightningcss-linux-arm64-musl@1.24.1:
+  lightningcss-linux-arm64-musl@1.25.0:
     optional: true
 
-  lightningcss-linux-x64-gnu@1.24.1:
+  lightningcss-linux-x64-gnu@1.25.0:
     optional: true
 
-  lightningcss-linux-x64-musl@1.24.1:
+  lightningcss-linux-x64-musl@1.25.0:
     optional: true
 
-  lightningcss-win32-x64-msvc@1.24.1:
+  lightningcss-win32-x64-msvc@1.25.0:
     optional: true
 
-  lightningcss@1.24.1:
+  lightningcss@1.25.0:
     dependencies:
       detect-libc: 1.0.3
     optionalDependencies:
-      lightningcss-darwin-arm64: 1.24.1
-      lightningcss-darwin-x64: 1.24.1
-      lightningcss-freebsd-x64: 1.24.1
-      lightningcss-linux-arm-gnueabihf: 1.24.1
-      lightningcss-linux-arm64-gnu: 1.24.1
-      lightningcss-linux-arm64-musl: 1.24.1
-      lightningcss-linux-x64-gnu: 1.24.1
-      lightningcss-linux-x64-musl: 1.24.1
-      lightningcss-win32-x64-msvc: 1.24.1
+      lightningcss-darwin-arm64: 1.25.0
+      lightningcss-darwin-x64: 1.25.0
+      lightningcss-freebsd-x64: 1.25.0
+      lightningcss-linux-arm-gnueabihf: 1.25.0
+      lightningcss-linux-arm64-gnu: 1.25.0
+      lightningcss-linux-arm64-musl: 1.25.0
+      lightningcss-linux-x64-gnu: 1.25.0
+      lightningcss-linux-x64-musl: 1.25.0
+      lightningcss-win32-x64-msvc: 1.25.0
 
   lilconfig@3.1.1: {}
 
@@ -9791,7 +9792,7 @@ snapshots:
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
 
-  remix-development-tools@4.1.6(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)):
+  remix-development-tools@4.1.6(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)):
     dependencies:
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-select': 1.2.2(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9811,7 +9812,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       tailwind-merge: 1.14.0
       uuid: 9.0.1
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
       zod: 3.22.4
     transitivePeerDependencies:
       - '@types/react'
@@ -10495,13 +10496,13 @@ snapshots:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
-  vite-node@1.5.0(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0):
+  vite-node@1.5.0(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -10512,18 +10513,18 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)):
+  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)):
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 3.0.3(typescript@5.4.5)
     optionalDependencies:
-      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.2.11(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.31.0):
+  vite@5.2.11(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -10531,7 +10532,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.12.7
       fsevents: 2.3.3
-      lightningcss: 1.24.1
+      lightningcss: 1.25.0
       terser: 5.31.0
 
   wait-on@7.2.0:
