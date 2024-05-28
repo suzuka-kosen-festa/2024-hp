@@ -5,6 +5,8 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import icons from "unplugin-icons/vite";
+import { FileSystemIconLoader } from "unplugin-icons/loaders";
 
 import { getLoadContext } from "./load-context";
 
@@ -59,6 +61,16 @@ export default defineConfig(({ mode }) => ({
 		typecript(),
 		vanillaExtractPlugin({
 			identifiers: mode === "production" ? "short" : "debug",
+		}),
+		icons({
+			compiler: "jsx",
+			jsx: "react",
+			customCollections: {
+				custom: FileSystemIconLoader(
+					"app/assets/icons",
+					svg => svg.replace(/^<svg /, "<svg fill=\"currentColor\" "),
+				),
+			},
 		}),
 		mode === "analyze"
 		&& visualizer({
