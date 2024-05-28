@@ -7,7 +7,6 @@ import typecript from "vite-tsconfig-paths";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
-
 import { getLoadContext } from "./load-context";
 
 // eslint-disable-next-line node/prefer-global/process

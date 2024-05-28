@@ -42,18 +42,18 @@ jobs:
           node-version-file: .nvmrc
       - name: Run | tsc
         run: pnpm run lint:tsc
-  #  unit-test:
-  #    runs-on: ubuntu-latest
-  #    timeout-minutes: 5
-  #    steps:
-  #      - name: Setup | Checkout
-  #        uses: actions/checkout@v4.1.1
-  #      - name: Setup | Node.js
-  #        uses: re-taro/actions/setup-node@v3.5.3
-  #        with:
-  #          node-version-file: .nvmrc
-  #      - name: Test | Unit
-  #        run: pnpm run test:unit
+  unit-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.6
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .nvmrc
+      - name: Test | Unit
+        run: pnpm run test:unit
   integration-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5

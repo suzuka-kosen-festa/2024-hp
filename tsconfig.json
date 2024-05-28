@@ -10,7 +10,7 @@
 			"@/*": ["./app/*"]
 		},
 		"resolveJsonModule": true,
-		"types": ["unplugin-icons/types/react"],
+		"types": ["vitest/globals", "@testing-library/jest-dom", "unplugin-icons/types/react"],
 		"allowJs": true,
 		"strict": true,
 		"noEmit": true,
