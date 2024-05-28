@@ -14,9 +14,15 @@ export const vars = createThemeContract({
 		 * #3227A7
 		 */
 		blue: null,
-
+		/**
+		 * #FFFFFF
+		 */
+		white: null,
+		/**
+		 * #000000
+		 */
+		black: null,
 	},
-
 });
 
 createGlobalTheme(":root", vars, {
@@ -24,5 +30,7 @@ createGlobalTheme(":root", vars, {
 		red: "#C81A54",
 		purple: "#6B007C",
 		blue: "#3227A7",
+		white: "#FFFFFF",
+		black: "#000000",
 	},
 });
