@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-	testDir: "app/tests",
+	testDir: "tests",
 	testMatch: "**/*.test.ts",
 	fullyParallel: true,
 	expect: {
