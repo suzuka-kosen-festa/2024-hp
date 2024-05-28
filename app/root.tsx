@@ -38,12 +38,16 @@ function App(): ReactNode {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const links: LinksFunction = () => [];
+export const links: LinksFunction = () => [
+	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
+	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" },
+];
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
-	{ name: "viewport", content: "width=device-width" },
+	{ name: "viewport", content: "width=device-width, initial-scale=1" },
 	{ name: "description", content: "第59回鈴鹿高専祭公式サイト" },
 	{ name: "og:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
