@@ -1,6 +1,6 @@
 import { composeStory } from "@storybook/react";
 import { Temporal } from "temporal-polyfill";
-import { act, render, waitFor } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import meta, { Default as DefaultStory } from "./Countdown.stories";
 
 describe("countdown.tsx", () => {
