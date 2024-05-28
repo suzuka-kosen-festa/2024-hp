@@ -53,8 +53,10 @@ export default defineConfig(({ mode }) => ({
 		},
 	},
 	plugins: [
-		cloudflare({ getLoadContext }),
-		remixDevTools(),
+		!isStorybook
+		&& cloudflare({ getLoadContext }),
+		!isStorybook
+		&& remixDevTools(),
 		!isStorybook
 		&& remix({ serverModuleFormat: "esm" }),
 		typecript(),
