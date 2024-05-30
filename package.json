@@ -44,7 +44,7 @@
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "4.9.1",
-		"@cloudflare/workers-types": "4.20240524.0",
+		"@cloudflare/workers-types": "4.20240529.0",
 		"@playwright/test": "1.44.1",
 		"@re-taro/eslint-config": "4.1.0",
 		"@remix-run/dev": "2.9.2",
