@@ -3,3 +3,4 @@ build/
 .wrangler/
 playwright-report/
 test-results/
+storybook-static/
