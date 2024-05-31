@@ -44,7 +44,7 @@ importers:
         version: 4.1.0(eslint-plugin-format@0.1.1(eslint@8.57.0))(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.12.7)(jsdom@24.1.0)(lightningcss@1.25.0)(terser@5.31.0))
       '@remix-run/dev':
         specifier: 2.9.2
-        version: 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.12(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))(wrangler@3.57.2(@cloudflare/workers-types@4.20240529.0))
+        version: 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.12(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))(wrangler@3.58.0(@cloudflare/workers-types@4.20240529.0))
       '@storybook/addon-a11y':
         specifier: 8.1.5
         version: 8.1.5
@@ -169,8 +169,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       wrangler:
-        specifier: 3.57.2
-        version: 3.57.2(@cloudflare/workers-types@4.20240529.0)
+        specifier: 3.58.0
+        version: 3.58.0(@cloudflare/workers-types@4.20240529.0)
 
 packages:
 
@@ -6176,8 +6176,8 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  miniflare@3.20240524.0:
-    resolution: {integrity: sha512-RQAfpz7spI6gWlczeUYvJBgGyt0gNR2pYoCydgukCYZ+0bGfJl0yAiNFW62uH7uMZli/4juWPpQOBI5m7URoyA==}
+  miniflare@3.20240524.1:
+    resolution: {integrity: sha512-5d3pRxvd5pT7lX1SsBH9+AjXuyHJnChSNOnYhubfi7pxMek4ZfULwhnUmNUp1R7b2xKuzqdFDZa0fsZuUoFxlw==}
     engines: {node: '>=16.13'}
     hasBin: true
 
@@ -8264,8 +8264,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.57.2:
-    resolution: {integrity: sha512-QegYf0FW+4prlFKE9iHr1EGrCo8ejcGL9gaqEXrzQ0vbTdazykYbY0I5UpHFLNq2dIF9I/ifEoLRKr636tyHEw==}
+  wrangler@3.58.0:
+    resolution: {integrity: sha512-h9gWER7LXLnmHABDNP1p3aqXtchlvSBN8Dp22ZurnkxaLMZ3L3H1Ze1ftiFSs0VRWv0BUnz7AWIUqZmzuBY4Nw==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -10427,7 +10427,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
-  '@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.12(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))(wrangler@3.57.2(@cloudflare/workers-types@4.20240529.0))':
+  '@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(lightningcss@1.25.0)(terser@5.31.0)(typescript@5.4.5)(vite@5.2.12(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0))(wrangler@3.58.0(@cloudflare/workers-types@4.20240529.0))':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/generator': 7.24.4
@@ -10486,7 +10486,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
       vite: 5.2.12(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.31.0)
-      wrangler: 3.57.2(@cloudflare/workers-types@4.20240529.0)
+      wrangler: 3.58.0(@cloudflare/workers-types@4.20240529.0)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -16014,7 +16014,7 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  miniflare@3.20240524.0:
+  miniflare@3.20240524.1:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       acorn: 8.11.3
@@ -18341,7 +18341,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20240524.0
       '@cloudflare/workerd-windows-64': 1.20240524.0
 
-  wrangler@3.57.2(@cloudflare/workers-types@4.20240529.0):
+  wrangler@3.58.0(@cloudflare/workers-types@4.20240529.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.2
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
@@ -18349,7 +18349,7 @@ snapshots:
       blake3-wasm: 2.1.5
       chokidar: 3.6.0
       esbuild: 0.17.19
-      miniflare: 3.20240524.0
+      miniflare: 3.20240524.1
       nanoid: 3.3.7
       path-to-regexp: 6.2.2
       resolve: 1.22.8
