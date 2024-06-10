@@ -77,7 +77,7 @@
 		"npm-run-all2": "6.2.0",
 		"playwright": "1.44.1",
 		"plop": "4.0.1",
-		"remix-development-tools": "4.1.6",
+		"remix-development-tools": "4.2.0",
 		"rollup-plugin-visualizer": "5.12.0",
 		"serve": "14.2.3",
 		"sirv-cli": "2.0.2",
