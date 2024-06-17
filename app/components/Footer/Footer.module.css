@@ -1,0 +1,13 @@
+Footer{
+    background-color: #242424;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    
+    padding-bottom: 16px;
+    padding-top: 32px;
+}
