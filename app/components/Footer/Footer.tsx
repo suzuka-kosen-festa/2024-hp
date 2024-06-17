@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import styles from "./Footer.module.css";
+import footer from "./styles.css";
 
 interface FooterProps {
 	title:string
@@ -7,7 +7,7 @@ interface FooterProps {
 
 export function Footer({ title }: FooterProps): ReactNode {
 	return (
-		<footer className={styles.Footer}>
+		<footer className={footer}>
 			<h1 >{title}</h1>
 		</footer>
 	);
