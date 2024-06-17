@@ -8,7 +8,7 @@ const meta: Meta = {
 	title: "SectionTitle",
 	component: SectionTitle,
 	parameters: {
-		layout: "centered",
+		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
 	args: {
