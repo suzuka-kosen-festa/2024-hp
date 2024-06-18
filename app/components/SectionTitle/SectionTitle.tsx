@@ -18,7 +18,8 @@ export function SectionTitle({
 }: Props): ReactNode {
 	return (
 		<span className={styles.wrapper}>
-			<hr
+			<span
+				role="presentation"
 				className={styles.line}
 				style={assignInlineVars({
 					[styles.lineBackgroundColor]: variant === "red"
