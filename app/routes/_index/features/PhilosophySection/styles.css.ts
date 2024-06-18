@@ -115,7 +115,6 @@ export const text = style({
 			"color": vars.color.white,
 			"fontSize": "1rem",
 			"letterSpacing": "0.2rem",
-			"fontFamily": vars.typography.fontFamily.sans,
 			"textAlign": "center",
 			"wordBreak": "keep-all",
 			"lineBreak": "strict",
