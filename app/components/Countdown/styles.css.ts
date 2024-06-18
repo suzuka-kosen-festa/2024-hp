@@ -8,7 +8,7 @@ export const heading = style({
 		[layers.component]: {
 			"display": "flex",
 			"alignItems": "center",
-			"fontFamily": "DotGothic16, sans-serif",
+			"fontFamily": vars.typography.fontFamily.dot,
 			"fontWeight": 400,
 			"fontStyle": "normal",
 			"color": vars.color.white,

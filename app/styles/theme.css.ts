@@ -10,6 +10,13 @@ export const vars = createThemeContract({
 		white: "#FFFFFF" as const,
 		black: "#000000" as const,
 	},
+	typography: {
+		fontFamily: {
+			dot: "DotGothic16, sans-serif" as const,
+			jura: "Jura, sans-serif" as const,
+			sans: "Inter, \"Noto Sans JP\", sans-serif" as const,
+		},
+	},
 });
 
 createGlobalTheme(":root", vars, {
@@ -21,5 +28,12 @@ createGlobalTheme(":root", vars, {
 		blueShadow: "#302449",
 		white: "#FFFFFF",
 		black: "#000000",
+	},
+	typography: {
+		fontFamily: {
+			dot: "DotGothic16, sans-serif",
+			jura: "Jura, sans-serif",
+			sans: "Inter, \"Noto Sans JP\", sans-serif",
+		},
 	},
 });
