@@ -16,7 +16,7 @@ export const heading = style({
 			"textAlign": "center",
 
 			"@media": {
-				[Breakpoints.sm]: {
+				[Breakpoints.md]: {
 					fontSize: "4.5rem",
 				},
 			},
@@ -33,7 +33,7 @@ export const heartBox = style({
 			"height": "6rem",
 
 			"@media": {
-				[Breakpoints.sm]: {
+				[Breakpoints.md]: {
 					width: "11.25rem",
 					height: "11.25rem",
 					padding: "1rem 0.5rem",
@@ -75,7 +75,7 @@ export const close = style({
 			"margin": "0 1.375rem",
 
 			"@media": {
-				[Breakpoints.sm]: {
+				[Breakpoints.md]: {
 					width: "3.5rem",
 					height: "3.5rem",
 					margin: "0 2.5rem",
