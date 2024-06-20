@@ -41,7 +41,7 @@ function App(): ReactNode {
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" },
+	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap" },
 ];
 
 // eslint-disable-next-line react-refresh/only-export-components

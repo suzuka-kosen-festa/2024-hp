@@ -6,10 +6,11 @@ test.describe("/", () => {
 		await page.goto("http://localhost:8788/");
 	});
 	test.describe("rendering", () => {
-		test("should render text", async ({ page }) => {
-			const heading = page.getByRole("heading", { name: "第59回鈴鹿高専祭" });
+		test("should render philosophy heading", async ({ page }) => {
+			const h2 = page.locator("section[aria-label=\"philosophy section\"] h2");
+			const text = await h2.textContent();
 
-			await expect(heading).toContainText("第59回鈴鹿高専祭");
+			expect(text).toBe("BORDER");
 		});
 	});
 	test.describe("action", () => {});
