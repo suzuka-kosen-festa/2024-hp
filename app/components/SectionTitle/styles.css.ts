@@ -25,7 +25,6 @@ export const line = style({
 			width: "100%",
 			height: "0.25rem",
 			backgroundImage: lineBackgroundColor,
-			zIndex: -1,
 		},
 	},
 });
@@ -42,6 +41,7 @@ export const iconBox = style({
 			"height": "2.75rem",
 			"padding": "0.75rem",
 			"borderRadius": "9999px",
+			"zIndex": 1,
 			"backgroundColor": iconBoxBackgroundColor,
 			boxShadow,
 
