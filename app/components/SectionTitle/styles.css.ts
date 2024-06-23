@@ -24,7 +24,7 @@ export const line = style({
 			transform: "translateY(-50%)",
 			width: "100%",
 			height: "0.25rem",
-			backgroundImage: lineBackgroundColor,
+			background: lineBackgroundColor,
 			zIndex: -1,
 		},
 	},

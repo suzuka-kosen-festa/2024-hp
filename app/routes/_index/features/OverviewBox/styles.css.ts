@@ -8,7 +8,7 @@ export const box = style({
 			position: "relative",
 			padding: "1rem",
 			borderRadius: "1.25rem",
-			backgroundImage: "linear-gradient(154deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.03) 100%)",
+			background: "linear-gradient(154deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.03) 100%)",
 			backdropFilter: "blur(32px)",
 			boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 0.20)",
 		},

@@ -51,7 +51,7 @@ export const lattice = style({
 			"width": "100%",
 			"maxWidth": "72.5rem",
 			"height": "100%",
-			"backgroundImage": `linear-gradient(0deg, transparent 0, transparent calc(100% - 1px), ${vars.color.borderRed} calc(100% - 1px), ${vars.color.borderRed} 100%),
+			"background": `linear-gradient(0deg, transparent 0, transparent calc(100% - 1px), ${vars.color.borderRed} calc(100% - 1px), ${vars.color.borderRed} 100%),
 				linear-gradient(90deg, transparent 0, transparent calc(100% - 1px), ${vars.color.borderRed} calc(100% - 1px), ${vars.color.borderRed} 100%)`,
 			"backgroundRepeat": "repeat",
 			"backgroundSize": "1.875rem 2.375rem",
@@ -75,7 +75,7 @@ export const vertical = style({
 			transform: "translateY(-50%)",
 			width: "100%",
 			height: "0.25rem",
-			backgroundImage: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`,
+			background: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`,
 		},
 	},
 });
