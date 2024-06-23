@@ -21,9 +21,9 @@ type Story = StoryObj<T>;
 
 export const Default: Story = {};
 
-export const Purple: Story = {
+export const Blue: Story = {
 	args: {
-		variant: "purple",
+		variant: "blue",
 	},
 };
 
