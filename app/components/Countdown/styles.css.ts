@@ -8,11 +8,7 @@ export const heading = style({
 		[layers.component]: {
 			"display": "flex",
 			"alignItems": "center",
-<<<<<<< HEAD
-			"fontFamily": "DotGothic16, sans-serif",
-=======
 			"fontFamily": vars.typography.fontFamily.dot,
->>>>>>> origin/main
 			"fontWeight": 400,
 			"fontStyle": "normal",
 			"color": vars.color.white,
@@ -20,11 +16,7 @@ export const heading = style({
 			"textAlign": "center",
 
 			"@media": {
-<<<<<<< HEAD
-				[Breakpoints.sm]: {
-=======
 				[Breakpoints.md]: {
->>>>>>> origin/main
 					fontSize: "4.5rem",
 				},
 			},
@@ -41,11 +33,7 @@ export const heartBox = style({
 			"height": "6rem",
 
 			"@media": {
-<<<<<<< HEAD
-				[Breakpoints.sm]: {
-=======
 				[Breakpoints.md]: {
->>>>>>> origin/main
 					width: "11.25rem",
 					height: "11.25rem",
 					padding: "1rem 0.5rem",
@@ -87,11 +75,7 @@ export const close = style({
 			"margin": "0 1.375rem",
 
 			"@media": {
-<<<<<<< HEAD
-				[Breakpoints.sm]: {
-=======
 				[Breakpoints.md]: {
->>>>>>> origin/main
 					width: "3.5rem",
 					height: "3.5rem",
 					margin: "0 2.5rem",
