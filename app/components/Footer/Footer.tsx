@@ -1,14 +1,10 @@
 import type { ReactNode } from "react";
-import * as styles from "./style.css"
+import * as styles from "./style.css";
 
-interface FooterProps {
-	title:string
-}
-
-export function Footer({ title }: FooterProps): ReactNode {
+export function Footer(): ReactNode {
 	return (
 		<footer className={styles.footer}>
-			<h1 >{title}</h1>
+			<h1>鈴鹿工業高等専門学校 高専祭実行委員</h1>
 		</footer>
 	);
 }
