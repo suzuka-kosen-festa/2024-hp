@@ -7,8 +7,6 @@ export const footer = style({
 	"@layer": {
 		[layers.component]: {
 			"backgroundColor": vars.color.gray,
-			"bottom": 0,
-			"width": "100%",
 
 			"color": vars.color.white,
 			"textAlign": "center",
