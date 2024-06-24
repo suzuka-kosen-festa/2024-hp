@@ -8,7 +8,7 @@ const meta: Meta = {
 	title: "TitleScrean",
 	component: TitleScrean,
 	parameters: {
-		layout: "centered",
+		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
 } satisfies Meta<T>;
