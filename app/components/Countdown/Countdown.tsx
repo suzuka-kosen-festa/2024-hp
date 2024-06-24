@@ -6,7 +6,11 @@ import * as styles from "./styles.css";
 import Close from "~icons/custom/close.svg";
 import Heart from "~icons/custom/heart.svg";
 
-export function Countdown(): ReactNode {
+interface Props {
+	className?: string;
+}
+
+export function Countdown({ className }: Props): ReactNode {
 	const [diff, setDiff] = useState(Temporal.Duration.from({ seconds: 0 }));
 
 	useEffect(() => {
@@ -23,7 +27,7 @@ export function Countdown(): ReactNode {
 	}, [setDiff]);
 
 	return (
-		<section>
+		<section className={className}>
 			<h2 className={styles.heading}>
 				<span className={styles.heartBox}>
 					<Heart className={styles.heart} aria-label="days" />
