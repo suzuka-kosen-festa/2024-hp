@@ -9,6 +9,7 @@ export const vars = createThemeContract({
 		blueShadow: "#302449" as const,
 		white: "#FFFFFF" as const,
 		black: "#000000" as const,
+		gray: "#242424" as const,
 	},
 	typography: {
 		fontFamily: {
@@ -27,6 +28,7 @@ createGlobalTheme(":root", vars, {
 		blueShadow: "#302449",
 		white: "#FFFFFF",
 		black: "#000000",
+		gray: "#242424",
 	},
 	typography: {
 		fontFamily: {
