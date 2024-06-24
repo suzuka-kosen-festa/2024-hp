@@ -10,7 +10,8 @@ export const section = style({
 			"flexDirection": "column",
 			"rowGap": "1.5rem",
 			"width": "100%",
-			"height": "100lvh",
+			"height": "100%",
+			"minHeight": "100lvh",
 			"paddingInline": "1rem",
 			"paddingTop": "1.5rem",
 			"backgroundColor": "rgb(0 0 0 / 0.8)",
@@ -92,16 +93,6 @@ export const place = style({
 	},
 });
 
-export const placeInner = style({
-	"@layer": {
-		[layers.feature]: {
-			position: "relative",
-			width: "100%",
-			height: "100%",
-		},
-	},
-});
-
 export const placeContent = style({
 	"@layer": {
 		[layers.feature]: {
@@ -130,8 +121,8 @@ export const placeLink = style({
 	"@layer": {
 		[layers.feature]: {
 			"position": "absolute",
-			"bottom": 0,
-			"right": 0,
+			"bottom": "1rem",
+			"right": "1rem",
 			"padding": "0.5rem 1rem",
 			"borderRadius": "0.5rem",
 			"backgroundColor": vars.color.blue,

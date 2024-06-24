@@ -21,17 +21,15 @@ export function OverviewSection(): ReactNode {
 					</p>
 				</OverviewBox>
 				<OverviewBox title="開催場所" className={styles.place}>
-					<div className={styles.placeInner}>
-						<p className={styles.placeContent}>鈴鹿工業高等専門学校</p>
-						<a
-							href="https://maps.app.goo.gl/VDg3tuqMG3iYxfhx9"
-							target="_brank"
-							rel="noreferrer"
-							className={styles.placeLink}
-						>
-							Google Mapで確認する
-						</a>
-					</div>
+					<p className={styles.placeContent}>鈴鹿工業高等専門学校</p>
+					<a
+						href="https://maps.app.goo.gl/VDg3tuqMG3iYxfhx9"
+						target="_brank"
+						rel="noreferrer"
+						className={styles.placeLink}
+					>
+						Google Mapで確認する
+					</a>
 				</OverviewBox>
 				<OverviewBox className={styles.comingsoon}>
 					<p>Coming soon...</p>
