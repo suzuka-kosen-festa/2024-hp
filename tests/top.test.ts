@@ -7,10 +7,18 @@ test.describe("/", () => {
 	});
 	test.describe("rendering", () => {
 		test("should render philosophy heading", async ({ page }) => {
-			const h2 = page.locator("section[aria-label=\"philosophy section\"] h2");
-			const text = await h2.textContent();
+			const section = page.getByRole("region", { name: "philosophy section" });
+			const heading = section.getByRole("heading", { name: "BORDER" });
 
-			expect(text).toBe("BORDER");
+			await expect(heading).toContainText("BORDER");
+		});
+		test("should render overview date", async ({ page }) => {
+			const section = page.getByRole("region", { name: "overview section" });
+			const dateHeading = section.getByRole("heading", { name: "開催日時" });
+			const placeHeading = section.getByRole("heading", { name: "開催場所" });
+
+			await expect(dateHeading).toContainText("開催日時");
+			await expect(placeHeading).toContainText("開催場所");
 		});
 	});
 	test.describe("action", () => {});
