@@ -61,6 +61,7 @@ function DropdownContent() {
 						href="https://www.facebook.com/people/KOSEN-FESTA-%E9%88%B4%E9%B9%BF%E9%AB%98%E5%B0%82%E7%A5%AD/61556514660247/"
 						rel="noreferrer"
 						target="_blank"
+						title="Facebook"
 					>
 						<Facebook className={styles.icon} />
 					</a>
@@ -70,6 +71,7 @@ function DropdownContent() {
 						href="https://www.instagram.com/kosenfesta"
 						rel="noreferrer"
 						target="_blank"
+						title="Instagram"
 					>
 						<Instagram className={styles.icon} />
 					</a>
@@ -79,6 +81,7 @@ function DropdownContent() {
 						href="https://x.com/KOSENFESTA"
 						rel="noreferrer"
 						target="_blank"
+						title="Twitter"
 					>
 						<X className={styles.icon} />
 					</a>
