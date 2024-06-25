@@ -5,7 +5,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 export function OverviewSection(): ReactNode {
 	return (
-		<section className={styles.section} aria-label="overview section">
+		<section className={styles.section} aria-label="overview section" id="overview">
 			<SectionTitle variant="blue" icon="info" />
 			<div className={styles.box}>
 				<OverviewBox title="開催日時" className={styles.date}>
