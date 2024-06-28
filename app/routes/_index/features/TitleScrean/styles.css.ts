@@ -9,7 +9,7 @@ export const text = style({
 			"color": vars.color.white,
 			"textAlign": "center",
 			"fontFamily": vars.typography.fontFamily.dot,
-			"WebkitTextStrokeWidth": 0,
+			"WebkitTextStrokeWidth": "calc(1px / 2)",
 			"WebkitTextStrokeColor": vars.color.black,
 			"fontSize": "1.5rem",
 			"letterSpacing": "0.3rem",
@@ -36,11 +36,15 @@ export const box = style({
 			"display": "flex",
 			"flexDirection": "column",
 			"padding": "1rem 0",
+			"backgroundImage": "url(/images/start.webp)",
+			"backgroundRepeat": "no-repeat",
+			"backgroundSize": "cover",
+			"backgroundPosition": "center",
 
 			"@media": {
 				[Breakpoints.md]: {
-					maxWidth: "56.25rem",
-					padding: "7.25rem 0",
+					maxWidth: "48.5rem",
+					backgroundImage: "url(/images/start@2x.webp)",
 				},
 			},
 		},
@@ -56,7 +60,7 @@ export const border = style({
 			"fontFamily": vars.typography.fontFamily.dot,
 			"textShadow": `0px 2px 0 ${vars.color.red}`,
 			"letterSpacing": "0.4rem",
-			"WebkitTextStrokeWidth": 0,
+			"WebkitTextStrokeWidth": "calc(1px / 2)",
 			"WebkitTextStrokeColor": vars.color.black,
 			"marginBottom": "0.75rem",
 
