@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 export function PhilosophySection(): ReactNode {
 	return (
-		<section className={styles.section} aria-label="philosophy section">
+		<section className={styles.section} aria-label="philosophy section" id="philosophy">
 			<SectionTitle variant="red" icon="message" />
 			<div className={styles.box}>
 				<span

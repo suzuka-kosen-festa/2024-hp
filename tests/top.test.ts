@@ -6,6 +6,12 @@ test.describe("/", () => {
 		await page.goto("http://localhost:8788/");
 	});
 	test.describe("rendering", () => {
+		test("should render hero heading", async ({ page }) => {
+			const section = page.getByRole("region", { name: "hero section" });
+			const heading = section.getByRole("heading", { name: "第59回高専祭" });
+
+			await expect(heading).toContainText("第59回高専祭");
+		});
 		test("should render philosophy heading", async ({ page }) => {
 			const section = page.getByRole("region", { name: "philosophy section" });
 			const heading = section.getByRole("heading", { name: "BORDER" });
