@@ -6,7 +6,7 @@ import { Countdown } from "@/components/Countdown";
 
 export function HeroSection(): ReactNode {
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} aria-label="hero section">
 			<Header />
 			<HeroContentBox className={styles.contentBox}>
 				<Countdown />
