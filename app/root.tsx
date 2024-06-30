@@ -42,6 +42,8 @@ export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
 	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap" },
+	{ rel: "icon", href: "/images/favicon.svg", type: "image/svg+xml" },
+	{ rel: "icon", href: "/images/favicon.ico", sizes: "any" },
 ];
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -52,10 +54,12 @@ export const meta: MetaFunction = () => [
 	{ name: "og:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
 	{ name: "og:url", content: "https://snct-fes.info" },
+	{ name: "og:image", content: "/images/ogp.png" },
 	{ name: "og:type", content: "website" },
 	{ name: "twitter:card", content: "summary_large_image" },
 	{ name: "twitter:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "twitter:description", content: "第59回鈴鹿高専祭公式サイト" },
+	{ name: "twitter:image", content: "/images/ogp.png" },
 	{ name: "twitter:site", content: "@KOSENFESTA" },
 ];
 
