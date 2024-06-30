@@ -17,7 +17,7 @@ export const background = style({
 	},
 });
 
-export const splashWrapper = style({
+export const landingWrapper = style({
 	"@layer": {
 		[layers.page]: {
 			display: "flex",
@@ -25,8 +25,16 @@ export const splashWrapper = style({
 			justifyContent: "center",
 			width: "100%",
 			height: "100%",
-			minHeight: "100lvh",
+			minHeight: "100dvh",
 			backgroundColor: vars.color.black,
+		},
+	},
+});
+
+export const main = style({
+	"@layer": {
+		[layers.page]: {
+			pointerEvents: "none",
 		},
 	},
 });
