@@ -1,3 +1,4 @@
+import { join } from "node:path";
 import { cloudflareDevProxyVitePlugin as cloudflare, vitePlugin as remix } from "@remix-run/dev";
 import browserslistToEsbuild from "browserslist-to-esbuild";
 import { remixDevTools } from "remix-development-tools";
@@ -7,6 +8,7 @@ import typecript from "vite-tsconfig-paths";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
+import { partytownVite } from "@builder.io/partytown/utils";
 import { getLoadContext } from "./load-context";
 
 // eslint-disable-next-line node/prefer-global/process
@@ -59,6 +61,10 @@ export default defineConfig(({ mode }) => ({
 		&& remixDevTools(),
 		!isStorybook
 		&& remix({ serverModuleFormat: "esm" }),
+		!isStorybook
+		&& partytownVite({
+			dest: join(__dirname, "build/client", "~partytown"),
+		}),
 		typecript(),
 		vanillaExtractPlugin({
 			identifiers: mode === "production" ? "short" : "debug",
