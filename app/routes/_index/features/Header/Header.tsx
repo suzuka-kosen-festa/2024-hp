@@ -21,21 +21,23 @@ export function Header(): ReactNode {
 				height={96}
 				className={styles.logo}
 			/>
-			<Dropdown.Root>
-				<Dropdown.Trigger>
-					<button className={styles.trigger} title="ドロップダウンを開く">
-						<BookOpen className={styles.bookOpen} />
-					</button>
-				</Dropdown.Trigger>
-				<Dropdown.Content>
-					<HeroContentBox>
-						<DropdownContent />
-					</HeroContentBox>
-				</Dropdown.Content>
-			</Dropdown.Root>
 			<HeroContentBox className={styles.visible}>
 				<DropdownContent />
 			</HeroContentBox>
+			<div className={styles.triggerWrapper}>
+				<Dropdown.Root>
+					<Dropdown.Trigger>
+						<button className={styles.trigger} title="ドロップダウンを開く">
+							<BookOpen className={styles.bookOpen} />
+						</button>
+					</Dropdown.Trigger>
+					<Dropdown.Content>
+						<HeroContentBox>
+							<DropdownContent />
+						</HeroContentBox>
+					</Dropdown.Content>
+				</Dropdown.Root>
+			</div>
 		</header>
 	);
 }
