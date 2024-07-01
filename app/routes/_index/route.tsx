@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
-import type { KeyboardEvent, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { HeroSection } from "./features/HeroSection";
@@ -27,7 +27,7 @@ export default function Page(): ReactNode {
 		};
 	}, []);
 
-	const handleClick = useCallback(() => {
+	const animation = useCallback(() => {
 		context.add(() => {
 			const tl = gsap.timeline();
 
@@ -53,17 +53,26 @@ export default function Page(): ReactNode {
 		});
 	}, [context]);
 
-	const handleKeyDown = useCallback(
-		(event: KeyboardEvent<HTMLDivElement>) => {
-			if (event.key === "Enter")
-				handleClick();
-		},
-		[handleClick],
-	);
+	const keydown = useCallback((e: KeyboardEvent) => {
+		if (e.key === "Enter")
+			animation();
+	}, [animation]);
+
+	useEffect(() => {
+		const elm = landingRef.current;
+
+		elm?.addEventListener("click", animation, { once: true });
+		elm?.addEventListener("keydown", keydown, { once: true });
+
+		return () => {
+			elm?.removeEventListener("click", animation);
+			elm?.removeEventListener("keydown", keydown);
+		};
+	}, []);
 
 	return (
 		<>
-			<div data-test="splash" onClick={handleClick} onKeyDown={handleKeyDown} tabIndex={0} ref={landingRef} className={styles.landingWrapper}>
+			<div data-test="splash" ref={landingRef} className={styles.landingWrapper}>
 				<TitleScrean />
 			</div>
 			<picture>
