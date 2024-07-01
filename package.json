@@ -17,7 +17,9 @@
 	],
 	"scripts": {
 		"analyze": "remix vite:build --mode analyze && serve build/client",
-		"build": "remix vite:build",
+		"build": "run-s -c build:*",
+		"build:partytown": "partytown copylib public/~partytown",
+		"build:remix": "remix vite:build",
 		"build-storybook": "storybook build",
 		"dev": "remix vite:dev",
 		"fmt": "run-s -c fmt:*",
@@ -34,6 +36,7 @@
 		"test:unit": "vitest"
 	},
 	"dependencies": {
+		"@builder.io/partytown": "0.10.2",
 		"@remix-run/cloudflare": "2.10.0",
 		"@remix-run/cloudflare-pages": "2.10.0",
 		"@remix-run/react": "2.10.0",

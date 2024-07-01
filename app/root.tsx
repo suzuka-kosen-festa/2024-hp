@@ -2,6 +2,7 @@ import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
 import "@/styles/globals.css";
+import { Partytown } from "@builder.io/partytown/react";
 
 interface Props {
 	title?: string;
@@ -14,6 +15,23 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 		<html lang="ja-JP">
 			<head>
 				{noIndex && <meta name="robots" content="noindex" />}
+				{import.meta.env.PROD && (
+					<>
+						<Partytown forward={["dataLayer.push"]} />
+						<script
+							type="text/partytown"
+							dangerouslySetInnerHTML={{
+								__html: `
+								(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+								new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+								j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+								'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+								})(window,document,'script','dataLayer','GTM-KLPTTQ82');
+							`,
+							}}
+						/>
+					</>
+				)}
 				<Meta />
 				<Links />
 				{title ? <title data-title-override="">{title}</title> : <title>第59回 鈴鹿高専祭</title>}
@@ -42,6 +60,8 @@ export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
 	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap" },
+	{ rel: "icon", href: "/images/favicon.svg", type: "image/svg+xml" },
+	{ rel: "icon", href: "/images/favicon.ico", sizes: "any" },
 ];
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -52,10 +72,12 @@ export const meta: MetaFunction = () => [
 	{ name: "og:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
 	{ name: "og:url", content: "https://snct-fes.info" },
+	{ name: "og:image", content: "/images/ogp.png" },
 	{ name: "og:type", content: "website" },
 	{ name: "twitter:card", content: "summary_large_image" },
 	{ name: "twitter:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "twitter:description", content: "第59回鈴鹿高専祭公式サイト" },
+	{ name: "twitter:image", content: "/images/ogp.png" },
 	{ name: "twitter:site", content: "@KOSENFESTA" },
 ];
 
