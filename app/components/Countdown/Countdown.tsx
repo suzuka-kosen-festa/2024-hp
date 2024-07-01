@@ -30,7 +30,8 @@ export function Countdown({ className }: Props): ReactNode {
 		<section className={className}>
 			<h2 className={styles.heading}>
 				<span className={styles.heartBox}>
-					<Heart className={styles.heart} aria-label="days" />
+					<Heart className={styles.heart} aria-label="heart" />
+					<span className={styles.days}>DAYS</span>
 				</span>
 				<Close className={styles.close} />
 				<time className={styles.time} dateTime={diff.days.toString().padStart(3, "0")} data-test="time">{diff.days.toString().padStart(3, "0")}</time>
