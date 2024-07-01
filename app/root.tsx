@@ -2,6 +2,7 @@ import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
 import "@/styles/globals.css";
+import { Partytown } from "@builder.io/partytown/react";
 
 interface Props {
 	title?: string;
@@ -14,6 +15,23 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 		<html lang="ja-JP">
 			<head>
 				{noIndex && <meta name="robots" content="noindex" />}
+				{import.meta.env.PROD && (
+					<>
+						<Partytown forward={["dataLayer.push"]} />
+						<script
+							type="text/partytown"
+							dangerouslySetInnerHTML={{
+								__html: `
+								(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+								new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+								j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+								'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+								})(window,document,'script','dataLayer','GTM-KLPTTQ82');
+							`,
+							}}
+						/>
+					</>
+				)}
 				<Meta />
 				<Links />
 				{title ? <title data-title-override="">{title}</title> : <title>第59回 鈴鹿高専祭</title>}
