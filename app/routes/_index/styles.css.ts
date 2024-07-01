@@ -30,11 +30,3 @@ export const landingWrapper = style({
 		},
 	},
 });
-
-export const main = style({
-	"@layer": {
-		[layers.page]: {
-			pointerEvents: "none",
-		},
-	},
-});

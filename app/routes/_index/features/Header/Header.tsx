@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Suspense } from "react";
 import { clsx } from "clsx";
+import { Link } from "@remix-run/react";
 import { HeroContentBox } from "../HeroContentBox";
 import * as styles from "./styles.css";
 import BookOpen from "~icons/pixelarticons/book-open";
@@ -49,8 +50,8 @@ function DropdownContent() {
 	return (
 		<nav className={styles.dropdownContent}>
 			<BookOpen className={clsx(styles.bookOpen, styles.visible)} />
-			<a className={clsx(styles.link, styles.half)} href="#philosophy">高専祭について</a>
-			<a className={styles.link} href="#overview">開催概要</a>
+			<Link className={clsx(styles.link, styles.half)} to="#philosophy">高専祭について</Link>
+			<Link className={styles.link} to="#overview">開催概要</Link>
 			<hr className={styles.hr} />
 			<a
 				className={clsx(styles.link, styles.half)}
