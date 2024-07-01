@@ -2,6 +2,8 @@ import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
 import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import "@/styles/globals.css";
 
 interface Props {
@@ -32,6 +34,8 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 
 function App(): ReactNode {
 	useEffect(() => {
+		gsap.registerPlugin(useGSAP);
+
 		if (import.meta.env.PROD) {
 			const gtmScript = document.createElement("script");
 
