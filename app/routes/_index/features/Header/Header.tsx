@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Suspense } from "react";
 import { clsx } from "clsx";
 import { HeroContentBox } from "../HeroContentBox";
 import * as styles from "./styles.css";
@@ -25,18 +26,20 @@ export function Header(): ReactNode {
 				<DropdownContent />
 			</HeroContentBox>
 			<div className={styles.triggerWrapper}>
-				<Dropdown.Root>
-					<Dropdown.Trigger>
-						<button className={styles.trigger} title="ドロップダウンを開く">
-							<BookOpen className={styles.bookOpen} />
-						</button>
-					</Dropdown.Trigger>
-					<Dropdown.Content>
-						<HeroContentBox>
-							<DropdownContent />
-						</HeroContentBox>
-					</Dropdown.Content>
-				</Dropdown.Root>
+				<Suspense fallback={null}>
+					<Dropdown.Root>
+						<Dropdown.Trigger>
+							<button className={styles.trigger} title="ドロップダウンを開く">
+								<BookOpen className={styles.bookOpen} />
+							</button>
+						</Dropdown.Trigger>
+						<Dropdown.Content>
+							<HeroContentBox>
+								<DropdownContent />
+							</HeroContentBox>
+						</Dropdown.Content>
+					</Dropdown.Root>
+				</Suspense>
 			</div>
 		</header>
 	);
