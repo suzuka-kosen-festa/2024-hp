@@ -7,6 +7,7 @@ import { OverviewSection } from "./features/OverviewSection";
 import { PhilosophySection } from "./features/PhilosophySection";
 import { TitleScrean } from "./features/TitleScrean";
 import * as styles from "./styles.css";
+import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
 	const landingRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export default function Page(): ReactNode {
 
 		return () => {
 			if (elm)
-				elm.style.display = "";
+				elm.style.display = "block";
 		};
 	}, []);
 
@@ -45,7 +46,7 @@ export default function Page(): ReactNode {
 						duration: 2,
 						onStart() {
 							if (mainRef.current)
-								mainRef.current.style.display = "";
+								mainRef.current.style.display = "block";
 						},
 					},
 				);
@@ -78,6 +79,7 @@ export default function Page(): ReactNode {
 				<HeroSection />
 				<PhilosophySection />
 				<OverviewSection />
+				<Footer />
 			</div>
 		</>
 	);
