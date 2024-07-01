@@ -1,7 +1,7 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "@/styles/globals.css";
@@ -57,7 +57,9 @@ function App(): ReactNode {
 
 	return (
 		<Document>
-			<Outlet />
+			<Suspense fallback={null}>
+				<Outlet />
+			</Suspense>
 		</Document>
 	);
 }
