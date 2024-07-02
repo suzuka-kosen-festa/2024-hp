@@ -30,7 +30,7 @@ export function Header(): ReactNode {
 				<Suspense fallback={null}>
 					<Dropdown.Root>
 						<Dropdown.Trigger>
-							<button className={styles.trigger} title="ドロップダウンを開く">
+							<button className={styles.trigger} title="メニューを開く">
 								<BookOpen className={styles.bookOpen} />
 							</button>
 						</Dropdown.Trigger>
