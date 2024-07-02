@@ -11,6 +11,7 @@ import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
 	const landingRef = useRef<HTMLDivElement>(null);
+	const imgRef = useRef<HTMLImageElement>(null);
 	const mainRef = useRef<HTMLDivElement>(null);
 
 	const { context } = useGSAP();
@@ -19,10 +20,13 @@ export default function Page(): ReactNode {
 		context.add(() => {
 			const tl = gsap.timeline();
 
-			tl.to(landingRef.current, {
-				opacity: 0,
-				duration: 3,
+			tl.set(imgRef.current, {
+				display: "inline",
 			})
+				.to(landingRef.current, {
+					opacity: 0,
+					duration: 3,
+				})
 				.set(landingRef.current, {
 					display: "none",
 				})
@@ -55,7 +59,7 @@ export default function Page(): ReactNode {
 			elm?.removeEventListener("click", animation);
 			elm?.removeEventListener("keydown", keydown);
 		};
-	}, []);
+	}, [animation, keydown]);
 
 	return (
 		<>
@@ -69,7 +73,7 @@ export default function Page(): ReactNode {
 				<source media="(min-height: 1152px)" srcSet="/images/background@4x.webp" type="image/webp" />
 				<source media="(min-height: 1080px)" srcSet="/images/background@3x.webp" type="image/webp" />
 				<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
-				<img className={styles.background} src="/images/background.webp" alt="" />
+				<img ref={imgRef} className={styles.background} src="/images/background.webp" alt="" />
 			</picture>
 			<div className={styles.mainWrapper} ref={mainRef}>
 				<HeroSection />

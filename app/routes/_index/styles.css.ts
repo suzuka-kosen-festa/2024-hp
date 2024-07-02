@@ -5,6 +5,7 @@ import { vars } from "@/styles/theme.css";
 export const background = style({
 	"@layer": {
 		[layers.page]: {
+			display: "none",
 			position: "fixed",
 			top: 0,
 			left: 0,
