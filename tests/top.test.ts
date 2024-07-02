@@ -1,4 +1,5 @@
-import { test } from "@playwright/test";
+import { AxeBuilder } from "@axe-core/playwright";
+import { expect, test } from "@playwright/test";
 
 test.describe("/", () => {
 	test.beforeEach(async ({ page }) => {
@@ -25,16 +26,16 @@ test.describe("/", () => {
 	//		await expect(dateHeading).toContainText("開催日時");
 	//		await expect(placeHeading).toContainText("開催場所");
 	//	});
-	// });
-	// test.describe("action", () => {});
-	// test.describe("validation", () => {});
-	// test.describe("a11y", () => {
-	//	test("should not have any automatically detectable accessibility issues", async ({
-	//		page,
-	//	}) => {
-	//		const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
-	//
-	//		expect(accessibilityScanResults.violations).toEqual([]);
-	//	});
 	// }); TODO: そのうちなおす
+	test.describe("action", () => {});
+	test.describe("validation", () => {});
+	test.describe("a11y", () => {
+		test("should not have any automatically detectable accessibility issues", async ({
+			page,
+		}) => {
+			const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+
+			expect(accessibilityScanResults.violations).toEqual([]);
+		});
+	});
 });
