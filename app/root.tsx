@@ -81,12 +81,12 @@ export const meta: MetaFunction = () => [
 	{ name: "og:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
 	{ name: "og:url", content: "https://snct-fes.info" },
-	{ name: "og:image", content: "/images/ogp.png" },
+	{ name: "og:image", content: "https://www.snct-fes.info/images/ogp.png" },
 	{ name: "og:type", content: "website" },
 	{ name: "twitter:card", content: "summary_large_image" },
 	{ name: "twitter:title", content: "第59回 鈴鹿高専祭" },
 	{ name: "twitter:description", content: "第59回鈴鹿高専祭公式サイト" },
-	{ name: "twitter:image", content: "/images/ogp.png" },
+	{ name: "twitter:image", content: "https://www.snct-fes.info/images/ogp.png" },
 	{ name: "twitter:site", content: "@KOSENFESTA" },
 ];
 
