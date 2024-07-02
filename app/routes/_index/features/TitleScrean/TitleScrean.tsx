@@ -6,7 +6,7 @@ export function TitleScrean(): ReactNode {
 	return (
 		<div className={styles.box}>
 			<h2 className={styles.border}>BORDER</h2>
-			<Countdown className={styles.countdown} />
+			<Countdown isLanding className={styles.countdown} />
 			<p className={styles.text}>-TAP TO START-</p>
 		</div>
 	);
