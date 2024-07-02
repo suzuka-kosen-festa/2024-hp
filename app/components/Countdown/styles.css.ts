@@ -61,7 +61,7 @@ export const days = style({
 			left: "40%",
 			transform: "translate(-40%, -40%)",
 			WebkitTextStrokeColor: vars.color.black,
-			WebkitTextStrokeWidth: "2px",
+			WebkitTextStrokeWidth: "1px",
 		},
 	},
 });

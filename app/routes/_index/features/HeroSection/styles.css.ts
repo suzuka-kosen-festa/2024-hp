@@ -10,7 +10,7 @@ export const section = style({
 			gridTemplateRows: "auto 1fr auto",
 			width: "100%",
 			height: "100%",
-			minHeight: "100lvh",
+			minHeight: "100dvh",
 		},
 	},
 });
@@ -49,7 +49,10 @@ export const title = style({
 		[layers.feature]: {
 			"color": vars.color.white,
 			"fontSize": "2rem",
-			"letterSpacing": "0.4rem",
+			"wordBreak": "keep-all",
+			"lineBreak": "strict",
+			"hangingPunctuation": "allow-end",
+			"overflowWrap": "anywhere",
 
 			"@media": {
 				[Breakpoints.md]: {

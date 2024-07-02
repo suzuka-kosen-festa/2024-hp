@@ -153,23 +153,30 @@ export const half = style({
 	},
 });
 
+export const triggerWrapper = style({
+	"@layer": {
+		[layers.feature]: {
+			"display": "inline-box",
+
+			"@media": {
+				[Breakpoints.md]: {
+					display: "none",
+				},
+			},
+		},
+	},
+});
+
 export const trigger = style({
 	"@layer": {
 		[layers.feature]: {
 			"width": "2.75rem",
 			"height": "2.75rem",
 			"padding": "0.5rem",
-			"display": "inline-box",
 			"transition": "transform 0.3s ease-in",
 
 			":hover": {
 				transform: "scale(1.05)",
-			},
-
-			"@media": {
-				[Breakpoints.md]: {
-					display: "none",
-				},
 			},
 		},
 	},

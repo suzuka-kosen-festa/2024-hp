@@ -9,8 +9,6 @@ export const text = style({
 			"color": vars.color.white,
 			"textAlign": "center",
 			"fontFamily": vars.typography.fontFamily.dot,
-			"WebkitTextStrokeWidth": "calc(1px / 2)",
-			"WebkitTextStrokeColor": vars.color.black,
 			"fontSize": "1.5rem",
 			"letterSpacing": "0.3rem",
 
@@ -18,7 +16,6 @@ export const text = style({
 				[Breakpoints.md]: {
 					fontSize: "2rem",
 					letterSpacing: "0.4rem",
-					WebkitTextStrokeWidth: "1px",
 				},
 			},
 		},

@@ -1,8 +1,11 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
-import "@/styles/globals.css";
+import { Suspense, useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { Partytown } from "@builder.io/partytown/react";
+import "@/styles/globals.css";
 
 interface Props {
 	title?: string;
@@ -22,12 +25,12 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 							type="text/partytown"
 							dangerouslySetInnerHTML={{
 								__html: `
-								(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-								new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-								j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-								'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-								})(window,document,'script','dataLayer','GTM-KLPTTQ82');
-							`,
+									(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+									new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+									j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+									'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+									})(window,document,'script','dataLayer','GTM-KLPTTQ82');
+								`,
 							}}
 						/>
 					</>
@@ -48,9 +51,15 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 }
 
 function App(): ReactNode {
+	useEffect(() => {
+		gsap.registerPlugin(useGSAP);
+	}, []);
+
 	return (
 		<Document>
-			<Outlet />
+			<Suspense fallback={null}>
+				<Outlet />
+			</Suspense>
 		</Document>
 	);
 }
@@ -60,8 +69,8 @@ export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
 	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap" },
-	{ rel: "icon", href: "/images/favicon.svg", type: "image/svg+xml" },
-	{ rel: "icon", href: "/images/favicon.ico", sizes: "any" },
+	{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+	{ rel: "icon", href: "/favicon.ico", sizes: "any" },
 ];
 
 // eslint-disable-next-line react-refresh/only-export-components

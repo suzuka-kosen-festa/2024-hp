@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
+import { vars } from "@/styles/theme.css";
 
 export const background = style({
 	"@layer": {
@@ -12,6 +13,20 @@ export const background = style({
 			objectFit: "cover",
 			objectPosition: "center",
 			zIndex: -1,
+		},
+	},
+});
+
+export const landingWrapper = style({
+	"@layer": {
+		[layers.page]: {
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			width: "100%",
+			height: "100%",
+			minHeight: "100dvh",
+			backgroundColor: vars.color.black,
 		},
 	},
 });
