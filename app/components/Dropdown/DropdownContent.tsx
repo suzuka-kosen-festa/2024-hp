@@ -1,20 +1,8 @@
 import type { PropsWithChildren, ReactNode } from "react";
-import { createContext, useContext } from "react";
-import { DropdownContext } from "./Dropdown";
+import { useContext } from "react";
 import type { ElementProps as InnerElementProps } from "./DropdownContentInner";
 import { DropdownContentInner } from "./DropdownContentInner";
-
-export const DropdownContentContext = createContext<{
-	onClickCloser: () => void;
-	controllable: boolean;
-	scrollable: boolean;
-}>({
-			onClickCloser: () => {
-				/* noop */
-			},
-			controllable: false,
-			scrollable: true,
-		});
+import { DropdownContentContext, DropdownContext } from "./contexts";
 
 type Props = PropsWithChildren<{
 	/**

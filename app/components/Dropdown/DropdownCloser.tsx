@@ -7,8 +7,7 @@ import { useContext, useMemo } from "react";
 import { clsx } from "clsx";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import * as styles from "./styles.css";
-import { DropdownContentContext } from "./DropdownContent";
-import { DropdownContentInnerContext } from "./DropdownContentInner";
+import { DropdownContentContext, DropdownContentInnerContext } from "./contexts";
 
 type Props = PropsWithChildren<ComponentProps<"div">>;
 

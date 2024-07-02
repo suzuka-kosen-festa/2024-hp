@@ -3,7 +3,7 @@ import type {
 	PropsWithChildren,
 	ReactNode,
 } from "react";
-import { createContext, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { clsx } from "clsx";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { DropdownCloser } from "./DropdownCloser";
@@ -11,6 +11,7 @@ import type { ContentBoxStyle, Rect } from "./helper";
 import { getContentBoxStyle } from "./helper";
 import { useKeyboardNavigation } from "./useKeyboardNavigation";
 import * as styles from "./styles.css";
+import { DropdownContentInnerContext } from "./contexts";
 
 type Props = PropsWithChildren<{
 	triggerRect: Rect;
@@ -19,15 +20,6 @@ type Props = PropsWithChildren<{
 }>;
 
 export type ElementProps = Omit<ComponentProps<"div">, keyof Props>;
-
-interface DropdownContentInnerContextType {
-	maxHeight: string;
-}
-
-export const DropdownContentInnerContext
-	= createContext<DropdownContentInnerContextType>({
-		maxHeight: "",
-	});
 
 export function DropdownContentInner({
 	triggerRect,

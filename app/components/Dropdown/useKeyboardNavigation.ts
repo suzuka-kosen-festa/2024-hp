@@ -1,7 +1,7 @@
 import type { RefObject } from "react";
 import { useCallback, useContext, useEffect } from "react";
-import { DropdownContext } from "./Dropdown";
 import { getFirstTabbable, tabbable } from "./helper";
+import { DropdownContext } from "./contexts";
 
 export function useKeyboardNavigation(
 	wrapperRef: RefObject<HTMLDivElement>,
