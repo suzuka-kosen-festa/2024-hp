@@ -1,9 +1,9 @@
 import type { FC, ReactNode } from "react";
 import { useContext, useEffect, useId, useMemo, useRef, useState } from "react";
-import { DropdownContext } from "./Dropdown";
 import type { Rect } from "./helper";
 import { getFirstTabbable, initialRect, isEventFromChild } from "./helper";
 import { usePortal } from "./usePortal";
+import { DropdownContext } from "./contexts";
 
 export function DropdownRoot({ children }: { children: ReactNode }): ReactNode {
 	const [active, setActive] = useState(false);

@@ -14,8 +14,8 @@ import {
 	useEffect,
 } from "react";
 import * as styles from "./styles.css";
-import { DropdownContext } from "./Dropdown";
 import { includeDisabledTrigger, tabbable } from "./helper";
+import { DropdownContext } from "./contexts";
 
 type Props = PropsWithChildren<ComponentProps<"div">>;
 
