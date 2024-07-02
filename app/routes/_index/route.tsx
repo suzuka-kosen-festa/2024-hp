@@ -15,18 +15,6 @@ export default function Page(): ReactNode {
 
 	const { context } = useGSAP();
 
-	useEffect(() => {
-		const elm = mainRef.current;
-
-		if (elm)
-			elm.style.display = "none";
-
-		return () => {
-			if (elm)
-				elm.style.display = "block";
-		};
-	}, []);
-
 	const animation = useCallback(() => {
 		context.add(() => {
 			const tl = gsap.timeline();
@@ -38,16 +26,15 @@ export default function Page(): ReactNode {
 				.set(landingRef.current, {
 					display: "none",
 				})
+				.set(mainRef.current, {
+					display: "block",
+				})
 				.fromTo(
 					mainRef.current,
 					{ opacity: 0 },
 					{
 						opacity: 1,
 						duration: 2,
-						onStart() {
-							if (mainRef.current)
-								mainRef.current.style.display = "block";
-						},
 					},
 				);
 		});
@@ -84,7 +71,7 @@ export default function Page(): ReactNode {
 				<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
 				<img className={styles.background} src="/images/background.webp" alt="" />
 			</picture>
-			<div ref={mainRef}>
+			<div className={styles.mainWrapper} ref={mainRef}>
 				<HeroSection />
 				<PhilosophySection />
 				<OverviewSection />

@@ -30,3 +30,11 @@ export const landingWrapper = style({
 		},
 	},
 });
+
+export const mainWrapper = style({
+	"@layer": {
+		[layers.page]: {
+			display: "none",
+		},
+	},
+});
