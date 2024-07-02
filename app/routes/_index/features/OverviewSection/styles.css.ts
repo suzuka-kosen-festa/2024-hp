@@ -11,7 +11,7 @@ export const section = style({
 			"rowGap": "1.5rem",
 			"width": "100%",
 			"height": "100%",
-			"minHeight": "100dvh",
+			"minHeight": "100svh",
 			"paddingInline": "1rem",
 			"paddingTop": "1.5rem",
 			"backgroundColor": "rgb(0 0 0 / 0.8)",

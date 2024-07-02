@@ -21,9 +21,13 @@ export function PhilosophySection(): ReactNode {
 					<wbr />
 					「BORDER」です。
 					<br />
-					現実と非日常の境界となるような
+					高専祭に関わるすべての人が
 					<wbr />
-					高専祭をお届けします。
+					”境界”を越えて協力し、
+					<br />
+					高専祭を日常と非日常の“境界”にする。
+					<wbr />
+					という想いが込められています。
 				</p>
 			</div>
 		</section>

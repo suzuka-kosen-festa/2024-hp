@@ -7,6 +7,7 @@ import Close from "~icons/custom/close.svg";
 import Heart from "~icons/custom/heart.svg";
 
 interface Props {
+	isLanding?: boolean;
 	className?: string;
 }
 
@@ -38,19 +39,34 @@ function CountdownTime(): ReactNode {
 	);
 }
 
-export function Countdown({ className }: Props): ReactNode {
+export function Countdown({ isLanding = false, className }: Props): ReactNode {
 	return (
 		<section className={className}>
-			<h2 className={styles.heading}>
-				<span className={styles.heartBox}>
-					<Heart className={styles.heart} aria-label="heart" />
-					<span className={styles.days}>DAYS</span>
-				</span>
-				<Close className={styles.close} />
-				<Suspense fallback={<time>000</time>}>
-					<CountdownTime />
-				</Suspense>
-			</h2>
+			{isLanding
+				? (
+					<h1 className={styles.heading}>
+						<span className={styles.heartBox}>
+							<Heart className={styles.heart} aria-label="heart" />
+							<span className={styles.days}>DAYS</span>
+						</span>
+						<Close className={styles.close} />
+						<Suspense fallback={<time>000</time>}>
+							<CountdownTime />
+						</Suspense>
+					</h1>
+					)
+				: (
+					<h2 className={styles.heading}>
+						<span className={styles.heartBox}>
+							<Heart className={styles.heart} aria-label="heart" />
+							<span className={styles.days}>DAYS</span>
+						</span>
+						<Close className={styles.close} />
+						<Suspense fallback={<time>000</time>}>
+							<CountdownTime />
+						</Suspense>
+					</h2>
+					)}
 		</section>
 	);
 }
