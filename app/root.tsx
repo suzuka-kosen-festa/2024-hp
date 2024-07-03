@@ -81,6 +81,7 @@ export const meta: MetaFunction = () => [
 	{ property: "og:title", content: "第59回 鈴鹿高専祭" },
 	{ property: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
 	{ property: "og:url", content: "https://snct-fes.info" },
+	{ property: "og:image", content: "https://www.snct-fes.info/images/ogp.png" },
 	{ property: "og:image:url", content: "https://www.snct-fes.info/images/ogp.png" },
 	{ property: "og:image:alt", content: "第59回 鈴鹿高専祭" },
 	{ property: "og:type", content: "website" },
