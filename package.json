@@ -2,7 +2,7 @@
 	"name": "2024-hp",
 	"type": "module",
 	"version": "0.0.0",
-	"packageManager": "pnpm@9.4.0",
+	"packageManager": "pnpm@9.5.0",
 	"description": "第59回鈴鹿高専祭 公式HP",
 	"author": {
 		"name": "suzuka-kosen-festa"
