@@ -33,8 +33,8 @@ importers:
         specifier: 3.12.5
         version: 3.12.5
       isbot:
-        specifier: 5.1.11
-        version: 5.1.11
+        specifier: 5.1.12
+        version: 5.1.12
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -5639,8 +5639,8 @@ packages:
     resolution: {integrity: sha512-GvcjojwonMjWbTkfMpnVHVqXW/wKMYDfEpY94/8zy8HFMOqb/VL6oeONq9v87q4ttVlaTLnGXnJD4B5B1OTGIg==}
     engines: {node: '>= 18.0.0'}
 
-  isbot@5.1.11:
-    resolution: {integrity: sha512-Asuou7OsKVbATgXlrlqdeSRw4fYnD6CNcc0IXy1f5m1AImL2S6IP0xRcRRzjGjoARbegvnBnju9kk5z/Itf70Q==}
+  isbot@5.1.12:
+    resolution: {integrity: sha512-Igy8nbj3Yn/XgYboRFTixH5ccUBvNPA89ek2zx3jCcBYkDkEnuFs0RkT36EPag5OFd2nLlK7u4uzG5AXfXR46w==}
     engines: {node: '>=18'}
 
   isexe@2.0.0:
@@ -15134,7 +15134,7 @@ snapshots:
 
   isbinaryfile@5.0.2: {}
 
-  isbot@5.1.11: {}
+  isbot@5.1.12: {}
 
   isexe@2.0.0: {}
 
