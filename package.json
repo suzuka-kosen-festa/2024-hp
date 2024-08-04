@@ -50,7 +50,7 @@
 	"devDependencies": {
 		"@axe-core/playwright": "4.9.1",
 		"@cloudflare/workers-types": "4.20240729.0",
-		"@iconify-json/ion": "1.1.18",
+		"@iconify-json/ion": "1.1.19",
 		"@iconify-json/pixelarticons": "1.1.12",
 		"@playwright/test": "1.45.3",
 		"@re-taro/eslint-config": "4.1.0",
