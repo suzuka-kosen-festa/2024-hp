@@ -48,7 +48,7 @@
 		"temporal-polyfill": "0.2.5"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "4.9.1",
+		"@axe-core/playwright": "4.10.0",
 		"@cloudflare/workers-types": "4.20240815.0",
 		"@iconify-json/ion": "1.1.19",
 		"@iconify-json/pixelarticons": "1.1.13",
