@@ -49,7 +49,7 @@
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "4.10.0",
-		"@cloudflare/workers-types": "4.20240815.0",
+		"@cloudflare/workers-types": "4.20240821.1",
 		"@iconify-json/ion": "1.1.19",
 		"@iconify-json/pixelarticons": "1.1.13",
 		"@playwright/test": "1.46.1",
