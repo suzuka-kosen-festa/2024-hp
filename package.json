@@ -51,7 +51,7 @@
 		"@axe-core/playwright": "4.10.0",
 		"@cloudflare/workers-types": "4.20240821.1",
 		"@iconify-json/ion": "1.2.0",
-		"@iconify-json/pixelarticons": "1.1.13",
+		"@iconify-json/pixelarticons": "1.2.0",
 		"@playwright/test": "1.46.1",
 		"@re-taro/eslint-config": "4.1.0",
 		"@remix-run/dev": "2.11.2",

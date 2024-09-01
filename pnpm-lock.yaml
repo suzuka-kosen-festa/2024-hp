@@ -55,8 +55,8 @@ importers:
         specifier: 1.2.0
         version: 1.2.0
       '@iconify-json/pixelarticons':
-        specifier: 1.1.13
-        version: 1.1.13
+        specifier: 1.2.0
+        version: 1.2.0
       '@playwright/test':
         specifier: 1.46.1
         version: 1.46.1
@@ -1591,8 +1591,8 @@ packages:
   '@iconify-json/ion@1.2.0':
     resolution: {integrity: sha512-uyFGINF59wOZDgXNkUTXTnzL2qeTfwbjP45JidRwhFK2JvFH9wyhXHz+TXqrG80PbQsNCqhIgGfwHmASWbutsg==}
 
-  '@iconify-json/pixelarticons@1.1.13':
-    resolution: {integrity: sha512-Sl2dIKHsFicomoCdTYd1OcWZ+xkmSFp0ymhQONetR23nft2Yi5ClK1uDvs08ZYAER/2ToL+uQ0h7t1xYzLjPsA==}
+  '@iconify-json/pixelarticons@1.2.0':
+    resolution: {integrity: sha512-rCEJ3uO59VqdDTmiK8idfxxtApn1lHN/PM8ORc5q8HkQMGBH9V/d7DjOzJLpEESzfu/gv8v64WhCtyYnu5m9Hw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -9725,7 +9725,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/pixelarticons@1.1.13':
+  '@iconify-json/pixelarticons@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
