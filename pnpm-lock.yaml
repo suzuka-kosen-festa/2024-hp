@@ -52,8 +52,8 @@ importers:
         specifier: 4.20240821.1
         version: 4.20240821.1
       '@iconify-json/ion':
-        specifier: 1.1.19
-        version: 1.1.19
+        specifier: 1.2.0
+        version: 1.2.0
       '@iconify-json/pixelarticons':
         specifier: 1.1.13
         version: 1.1.13
@@ -1588,8 +1588,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@iconify-json/ion@1.1.19':
-    resolution: {integrity: sha512-ijYnInYvTsyw/H9WrVlyptiryogi95BhLSKLk/lX8lshctoK7Gaw21Rlatn7qk4RJPNLQNIy/vT1N9trA5Creg==}
+  '@iconify-json/ion@1.2.0':
+    resolution: {integrity: sha512-uyFGINF59wOZDgXNkUTXTnzL2qeTfwbjP45JidRwhFK2JvFH9wyhXHz+TXqrG80PbQsNCqhIgGfwHmASWbutsg==}
 
   '@iconify-json/pixelarticons@1.1.13':
     resolution: {integrity: sha512-Sl2dIKHsFicomoCdTYd1OcWZ+xkmSFp0ymhQONetR23nft2Yi5ClK1uDvs08ZYAER/2ToL+uQ0h7t1xYzLjPsA==}
@@ -9721,7 +9721,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@iconify-json/ion@1.1.19':
+  '@iconify-json/ion@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -15941,7 +15941,7 @@ snapshots:
       consola: 3.2.3
       execa: 8.0.1
       pathe: 1.1.2
-      ufo: 1.5.3
+      ufo: 1.5.4
 
   object-assign@4.1.1: {}
 
