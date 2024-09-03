@@ -27,8 +27,8 @@ export default function Page(): ReactNode {
 
 			tl
 				.to(landingRef.current, {
-					opacity: 0,
 					duration: 0.5,
+					opacity: 0,
 				})
 				.set(eyeContainerRef.current, {
 					display: "block",
@@ -41,44 +41,44 @@ export default function Page(): ReactNode {
 				})
 				.add([
 					gsap.to(eyeTopRef.current, {
-						yPercent: 0,
+						delay: 0.4,
 						duration: 0.4,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.4,
+						yPercent: 0,
 					}),
 					gsap.to(eyeBottomRef.current, {
-						yPercent: 0,
+						delay: 0.4,
 						duration: 0.4,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.4,
+						yPercent: 0,
 					}),
 				])
 				.add([
 					gsap.to(eyeTopRef.current, {
+						delay: 0.2,
+						duration: 0.6,
+						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
 						yPercent: -101,
-						duration: 0.6,
-						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.2,
 					}),
 					gsap.to(eyeBottomRef.current, {
-						yPercent: 101,
+						delay: 0.2,
 						duration: 0.6,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.2,
+						yPercent: 101,
 					}),
 				])
 				.add([
 					gsap.to(eyeTopRef.current, {
-						yPercent: 0,
+						delay: 0.5,
 						duration: 0.5,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.5,
+						yPercent: 0,
 					}),
 					gsap.to(eyeBottomRef.current, {
-						yPercent: 0,
+						delay: 0.5,
 						duration: 0.5,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.5,
+						yPercent: 0,
 					}),
 				])
 				.set(blurredImgRef.current, {
@@ -89,44 +89,44 @@ export default function Page(): ReactNode {
 				})
 				.add([
 					gsap.to(eyeTopRef.current, {
-						yPercent: -101,
+						delay: 0.6,
 						duration: 0.3,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.6,
+						yPercent: -101,
 					}),
 					gsap.to(eyeBottomRef.current, {
-						yPercent: 101,
+						delay: 0.6,
 						duration: 0.3,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.6,
+						yPercent: 101,
 					}),
 				])
 				.add([
 					gsap.to(eyeTopRef.current, {
-						yPercent: 0,
+						delay: 1.2,
 						duration: 0.22,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 1.2,
+						yPercent: 0,
 					}),
 					gsap.to(eyeBottomRef.current, {
-						yPercent: 0,
+						delay: 1.2,
 						duration: 0.22,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 1.2,
+						yPercent: 0,
 					}),
 				])
 				.add([
 					gsap.to(eyeTopRef.current, {
-						yPercent: -101,
+						delay: 0.3,
 						duration: 0.5,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.3,
+						yPercent: -101,
 					}),
 					gsap.to(eyeBottomRef.current, {
-						yPercent: 101,
+						delay: 0.3,
 						duration: 0.5,
 						ease: "cubic-bezier(0, 0, 0.11, 0.99)",
-						delay: 0.3,
+						yPercent: 101,
 					}),
 				])
 				.to({}, {
@@ -142,8 +142,8 @@ export default function Page(): ReactNode {
 					mainRef.current,
 					{ opacity: 0 },
 					{
-						opacity: 1,
 						duration: 1,
+						opacity: 1,
 					},
 				);
 		});
@@ -168,7 +168,7 @@ export default function Page(): ReactNode {
 
 	return (
 		<>
-			<div data-test="splash" ref={landingRef} className={styles.landingWrapper}>
+			<div className={styles.landingWrapper} data-test="splash" ref={landingRef}>
 				<TitleScrean />
 			</div>
 			<>
@@ -179,12 +179,12 @@ export default function Page(): ReactNode {
 					<source media="(min-height: 1152px)" srcSet="/images/background@4x.webp" type="image/webp" />
 					<source media="(min-height: 1080px)" srcSet="/images/background@3x.webp" type="image/webp" />
 					<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
-					<img ref={blurredImgRef} className={styles.blurredBackground} src="/images/background.webp" alt="" />
-					<img ref={imgRef} className={clsx(styles.background)} src="/images/background.webp" alt="" />
+					<img alt="" className={styles.blurredBackground} ref={blurredImgRef} src="/images/background.webp" />
+					<img alt="" className={clsx(styles.background)} ref={imgRef} src="/images/background.webp" />
 				</picture>
-				<div ref={eyeContainerRef} className={styles.eyeWrapper}>
-					<span ref={eyeTopRef} className={clsx(styles.eye, styles.eyeTop)} role="presentation" />
-					<span ref={eyeBottomRef} className={clsx(styles.eye, styles.eyeBottom)} role="presentation" />
+				<div className={styles.eyeWrapper} ref={eyeContainerRef}>
+					<span className={clsx(styles.eye, styles.eyeTop)} ref={eyeTopRef} role="presentation" />
+					<span className={clsx(styles.eye, styles.eyeBottom)} ref={eyeBottomRef} role="presentation" />
 				</div>
 			</>
 			<div className={styles.mainWrapper} ref={mainRef}>

@@ -5,12 +5,6 @@ import { HeroContentBox } from "./HeroContentBox";
 type T = typeof HeroContentBox;
 
 const meta: Meta = {
-	title: "HeroContentBox",
-	component: HeroContentBox,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
 	args: {
 		children: (
 			<div>
@@ -20,6 +14,12 @@ const meta: Meta = {
 			</div>
 		),
 	},
+	component: HeroContentBox,
+	parameters: {
+		layout: "centered",
+	},
+	tags: ["autodocs"],
+	title: "HeroContentBox",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

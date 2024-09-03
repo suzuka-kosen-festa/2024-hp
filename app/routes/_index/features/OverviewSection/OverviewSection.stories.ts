@@ -5,12 +5,12 @@ import { OverviewSection } from "./OverviewSection";
 type T = typeof OverviewSection;
 
 const meta: Meta = {
-	title: "OverviewSection",
 	component: OverviewSection,
 	parameters: {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
+	title: "OverviewSection",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

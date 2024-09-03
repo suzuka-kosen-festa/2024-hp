@@ -8,9 +8,9 @@ export const section = style({
 		[layers.feature]: {
 			display: "grid",
 			gridTemplateRows: "auto 1fr auto",
-			width: "100%",
 			height: "100%",
 			minHeight: "100svh",
+			width: "100%",
 		},
 	},
 });
@@ -27,19 +27,19 @@ export const contentBox = style({
 export const bottom = style({
 	"@layer": {
 		[layers.feature]: {
-			"display": "flex",
-			"flexDirection": "column",
-			"rowGap": "0.75rem",
-			"padding": "2rem 0.75rem",
-
 			"@media": {
 				[Breakpoints.md]: {
+					alignItems: "center",
 					flexDirection: "row",
 					justifyContent: "space-between",
-					alignItems: "center",
 					padding: "3rem 2rem",
 				},
 			},
+			"display": "flex",
+			"flexDirection": "column",
+			"padding": "2rem 0.75rem",
+
+			"rowGap": "0.75rem",
 		},
 	},
 });
@@ -47,19 +47,19 @@ export const bottom = style({
 export const title = style({
 	"@layer": {
 		[layers.feature]: {
-			"color": vars.color.white,
-			"fontSize": "2rem",
-			"wordBreak": "keep-all",
-			"lineBreak": "strict",
-			"hangingPunctuation": "allow-end",
-			"overflowWrap": "anywhere",
-
 			"@media": {
 				[Breakpoints.md]: {
 					fontSize: "clamp(3rem, calc(0.6585365853658534rem + 4.878048780487805vw), 4.5rem)",
 					letterSpacing: "0.9rem",
 				},
 			},
+			"color": vars.color.white,
+			"fontSize": "2rem",
+			"hangingPunctuation": "allow-end",
+			"lineBreak": "strict",
+			"overflowWrap": "anywhere",
+
+			"wordBreak": "keep-all",
 		},
 	},
 });
@@ -67,9 +67,9 @@ export const title = style({
 export const dateBox = style({
 	"@layer": {
 		[layers.feature]: {
-			maxWidth: "fit-content",
-			justifyContent: "center",
 			alignItems: "center",
+			justifyContent: "center",
+			maxWidth: "fit-content",
 		},
 	},
 });
@@ -77,17 +77,17 @@ export const dateBox = style({
 export const date = style({
 	"@layer": {
 		[layers.feature]: {
-			"color": vars.color.white,
-			"fontSize": "1rem",
-			"fontFamily": vars.typography.fontFamily.dot,
-			"letterSpacing": "0.3rem",
-
 			"@media": {
 				[Breakpoints.md]: {
 					fontSize: "1.5rem",
 					letterSpacing: "0.45rem",
 				},
 			},
+			"color": vars.color.white,
+			"fontFamily": vars.typography.fontFamily.dot,
+			"fontSize": "1rem",
+
+			"letterSpacing": "0.3rem",
 		},
 	},
 });

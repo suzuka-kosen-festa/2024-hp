@@ -1,3 +1,5 @@
+/* eslint-disable react-dom/no-missing-button-type */
+
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -6,9 +8,9 @@ import { Dropdown } from "./Dropdown";
 type T = typeof Dropdown.Root;
 
 const meta: Meta = {
-	title: "Dropdown",
 	component: Dropdown.Root,
 	tags: ["autodocs"],
+	title: "Dropdown",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

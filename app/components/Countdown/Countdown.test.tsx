@@ -14,7 +14,7 @@ describe("countdown.tsx", () => {
 	const Default = composeStory(DefaultStory, meta);
 
 	it("should render 100 days ago in the countdown", () => {
-		const mockDate = Temporal.ZonedDateTime.from({ year: 2024, month: 7, day: 25, hour: 0, minute: 0, second: 0, timeZone: Temporal.TimeZone.from("Asia/Tokyo") });
+		const mockDate = Temporal.ZonedDateTime.from({ day: 25, hour: 0, minute: 0, month: 7, second: 0, timeZone: Temporal.TimeZone.from("Asia/Tokyo"), year: 2024 });
 		vi.setSystemTime(mockDate.toInstant().epochMilliseconds);
 
 		const { container } = render(<Default />);
@@ -24,7 +24,7 @@ describe("countdown.tsx", () => {
 	});
 
 	it("should change the display date when the date changes", () => {
-		const mockDate = Temporal.ZonedDateTime.from({ year: 2024, month: 7, day: 24, hour: 0, minute: 0, second: 0, timeZone: Temporal.TimeZone.from("Asia/Tokyo") });
+		const mockDate = Temporal.ZonedDateTime.from({ day: 24, hour: 0, minute: 0, month: 7, second: 0, timeZone: Temporal.TimeZone.from("Asia/Tokyo"), year: 2024 });
 		vi.setSystemTime(mockDate.toInstant().epochMilliseconds);
 
 		const { container } = render(<Default />);

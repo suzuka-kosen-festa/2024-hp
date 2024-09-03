@@ -5,16 +5,16 @@ import { SectionTitle } from "./SectionTitle";
 type T = typeof SectionTitle;
 
 const meta: Meta = {
-	title: "SectionTitle",
+	args: {
+		icon: "message",
+		variant: "red",
+	},
 	component: SectionTitle,
 	parameters: {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
-	args: {
-		icon: "message",
-		variant: "red",
-	},
+	title: "SectionTitle",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

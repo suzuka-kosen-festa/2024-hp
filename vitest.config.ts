@@ -12,20 +12,20 @@ export default defineConfig({
 		vanillaExtractPlugin(),
 		icons({
 			compiler: "jsx",
-			jsx: "react",
 			customCollections: {
 				custom: FileSystemIconLoader(
 					"app/assets/icons",
 					svg => svg.replace(/^<svg /, "<svg fill=\"currentColor\" "),
 				),
 			},
+			jsx: "react",
 		}),
 	],
 	test: {
+		environment: "jsdom",
+		exclude: [...configDefaults.exclude, "tests/**/*"],
 		globals: true,
 		root: "app",
-		environment: "jsdom",
 		setupFiles: ["./vitest.setup.ts"],
-		exclude: [...configDefaults.exclude, "tests/**/*"],
 	},
 });

@@ -7,7 +7,7 @@ export function useKeyboardNavigation(
 	wrapperRef: RefObject<HTMLDivElement>,
 	dummyFocusRef: RefObject<HTMLElement>,
 ) {
-	const { triggerElementRef, rootTriggerRef, onClickCloser }
+	const { onClickCloser, rootTriggerRef, triggerElementRef }
 		= useContext(DropdownContext);
 
 	const handleKeyDown = useCallback(
@@ -17,8 +17,9 @@ export function useKeyboardNavigation(
 					!wrapperRef.current
 					|| !triggerElementRef.current
 					|| !rootTriggerRef?.current
-				)
+				) {
 					return;
+				}
 
 				const tabbablesInContent = tabbable(wrapperRef.current);
 				if (tabbablesInContent.length === 0)

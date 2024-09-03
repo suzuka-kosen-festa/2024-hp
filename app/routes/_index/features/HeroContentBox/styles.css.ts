@@ -5,13 +5,13 @@ import { vars } from "@/styles/theme.css";
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
+			alignItems: "flex-start",
+			backgroundColor: "rgb(60 60 60 / 0.8)",
+			border: `2px solid ${vars.color.red}`,
+			borderRadius: "0.75rem",
 			display: "flex",
 			flexDirection: "column",
-			alignItems: "flex-start",
 			padding: "1rem",
-			borderRadius: "0.75rem",
-			border: `2px solid ${vars.color.red}`,
-			backgroundColor: "rgb(60 60 60 / 0.8)",
 		},
 	},
 });

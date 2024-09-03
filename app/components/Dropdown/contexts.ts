@@ -7,26 +7,26 @@ interface DropdownContentInnerContextType {
 	maxHeight: string;
 }
 
-interface DropdownContextType {
+export interface DropdownContextType {
 	active: boolean;
-	triggerRect: Rect;
-	triggerElementRef: MutableRefObject<HTMLDivElement | null>;
-	rootTriggerRef: MutableRefObject<HTMLDivElement | null> | null;
-	onClickTrigger: (rect: Rect) => void;
-	onClickCloser: () => void;
-	DropdownContentRoot: ({ children }: { children: ReactNode }) => ReactNode;
 	contentId: string;
+	DropdownContentRoot: ({ children }: { children: ReactNode }) => ReactNode;
+	onClickCloser: () => void;
+	onClickTrigger: (rect: Rect) => void;
+	rootTriggerRef: MutableRefObject<HTMLDivElement | null> | null;
+	triggerElementRef: MutableRefObject<HTMLDivElement | null>;
+	triggerRect: Rect;
 }
 
 export const DropdownContentContext = createContext<{
-	onClickCloser: () => void;
 	controllable: boolean;
+	onClickCloser: () => void;
 	scrollable: boolean;
 }>({
+			controllable: false,
 			onClickCloser: () => {
 				/* noop */
 			},
-			controllable: false,
 			scrollable: true,
 		});
 
@@ -36,15 +36,16 @@ export const DropdownContentInnerContext = createContext<DropdownContentInnerCon
 
 export const DropdownContext = createContext<DropdownContextType>({
 	active: false,
-	triggerRect: initialRect,
-	triggerElementRef: createRef(),
-	rootTriggerRef: null,
-	onClickTrigger: () => {
-		/* noop */
-	},
+	contentId: "",
+	DropdownContentRoot: () => null,
 	onClickCloser: () => {
 		/* noop */
 	},
-	DropdownContentRoot: () => null,
-	contentId: "",
+	onClickTrigger: () => {
+		/* noop */
+	},
+	rootTriggerRef: null,
+	// eslint-disable-next-line react/no-create-ref
+	triggerElementRef: createRef(),
+	triggerRect: initialRect,
 });

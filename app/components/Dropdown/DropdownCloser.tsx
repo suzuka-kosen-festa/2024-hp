@@ -15,7 +15,7 @@ export function DropdownCloser({
 	children,
 	className,
 }: Props): ReactNode {
-	const { onClickCloser, controllable, scrollable } = useContext(
+	const { controllable, onClickCloser, scrollable } = useContext(
 		DropdownContentContext,
 	);
 	const { maxHeight } = useContext(DropdownContentInnerContext);

@@ -20,29 +20,29 @@ const defaultOption: Option = {
 	shouldIgnoreVisibility: false,
 };
 
-export const initialRect: Rect = { top: 0, right: 0, bottom: 0, left: 0 };
+export const initialRect: Rect = { bottom: 0, left: 0, right: 0, top: 0 };
 
 interface Option {
 	shouldIgnoreVisibility: boolean;
 }
 
 interface Size {
-	width: number;
 	height: number;
+	width: number;
 }
 
 export interface Rect {
-	top: number;
-	right: number;
 	bottom: number;
 	left: number;
+	right: number;
+	top: number;
 }
 
 export interface ContentBoxStyle {
+	maxHeight: string;
 	top: string;
 	left?: string;
 	right?: string;
-	maxHeight: string;
 }
 
 export function isEventFromChild(e: Event, parent: Element | null): boolean {
@@ -94,6 +94,7 @@ export function getFirstTabbable(ref: RefObject<HTMLElement>) {
 }
 
 export function includeDisabledTrigger(trigger: React.ReactNode) {
+	// eslint-disable-next-line react/no-children-map
 	return Children.map(trigger, t => isValidElement(t) && t.props.disabled)?.some(
 		(bool: boolean) => bool,
 	);
@@ -104,13 +105,13 @@ export function getContentBoxStyle(
 	contentSize: Size,
 	windowSize: Size,
 	scroll: {
-		top: number;
 		left: number;
+		top: number;
 	},
 ) {
 	const contentBox: ContentBoxStyle = {
-		top: "auto",
 		maxHeight: "",
+		top: "auto",
 	};
 
 	if (triggerRect.bottom + contentSize.height <= windowSize.height) {

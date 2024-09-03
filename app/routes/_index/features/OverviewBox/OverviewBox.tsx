@@ -3,12 +3,12 @@ import { clsx } from "clsx";
 import * as styles from "./styles.css";
 
 interface Props {
-	title?: string;
 	children: ReactNode;
 	className?: string;
+	title?: string;
 }
 
-export function OverviewBox({ title, children, className }: Props): ReactNode {
+export function OverviewBox({ children, className, title }: Props): ReactNode {
 	return (
 		<div className={clsx(styles.box, className)}>
 			{title && <h2 className={styles.title}>{title}</h2>}

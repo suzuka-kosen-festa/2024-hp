@@ -7,11 +7,11 @@ const DropdownScrollArea = lazy(() => import("./DropdownScrollArea").then(mod =>
 const DropdownTrigger = lazy(() => import("./DropdownTrigger").then(mod => ({ default: mod.DropdownTrigger })));
 
 interface DropdownBase {
-	Trigger: typeof DropdownTrigger;
-	Content: typeof DropdownContent;
 	Closer: typeof DropdownCloser;
+	Content: typeof DropdownContent;
 	Root: typeof DropdownRoot;
 	ScrollArea: typeof DropdownScrollArea;
+	Trigger: typeof DropdownTrigger;
 };
 
 export const Dropdown = new Proxy<DropdownBase>({} as DropdownBase, {

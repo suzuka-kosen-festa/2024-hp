@@ -5,26 +5,26 @@ import { OverviewBox } from "./OverviewBox";
 type T = typeof OverviewBox;
 
 const meta: Meta = {
-	title: "OverviewBox",
-	component: OverviewBox,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
 	args: {
 		children: (
 			<div
 				style={{
-					width: "200px",
-					height: "100px",
 					display: "grid",
+					height: "100px",
 					placeItems: "center",
+					width: "200px",
 				}}
 			>
 				test children
 			</div>
 		),
 	},
+	component: OverviewBox,
+	parameters: {
+		layout: "centered",
+	},
+	tags: ["autodocs"],
+	title: "OverviewBox",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
