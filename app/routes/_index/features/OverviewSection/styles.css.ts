@@ -19,8 +19,7 @@ export const section = style({
 			"minHeight": "100svh",
 			"paddingInline": "1rem",
 			"paddingTop": "1.5rem",
-			"rowGap": "1.5rem",
-
+			"rowGap": "2rem",
 			"width": "100%",
 		},
 	},
@@ -29,20 +28,64 @@ export const section = style({
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
+			display: "flex",
+			flexDirection: "column",
+			margin: "0 auto",
+			padding: "0.5rem",
+			rowGap: "1.5rem",
+		},
+	},
+});
+
+export const place = style({
+	"@layer": {
+		[layers.feature]: {
+			position: "relative",
+		},
+	},
+});
+
+export const text = style({
+	"@layer": {
+		[layers.feature]: {
 			"@media": {
 				[Breakpoints.md]: {
-					display: "grid",
-					gap: "2rem",
-					gridTemplateAreas: "\"date place\" \"date comingsoon\"",
-					gridTemplateColumns: "1fr 2fr",
-					gridTemplateRows: "1fr 3fr",
+					fontSize: "1.5rem",
 				},
 			},
-			"display": "flex",
-			"flexDirection": "column",
-			"gap": "1.5rem",
+			"color": vars.color.white,
+			"fontSize": "1rem",
+			"fontWeight": 600,
+			"margin": "0.75rem 0.5rem 0",
+			"textAlign": "center",
+		},
+	},
+});
 
-			"width": "100%",
+export const googleMap = style({
+	"@layer": {
+		[layers.feature]: {
+			":hover": {
+				transform: "scale(1.05) translateX(-50%)",
+			},
+			"@media": {
+				[Breakpoints.md]: {
+					margin: "1rem auto 0",
+				},
+			},
+			"border": `1px solid ${vars.color.white}`,
+			"borderRadius": "0.5rem",
+			"boxShadow": "0 0 0 0.25rem rgb(0 0 0 / 0.25)",
+			"color": vars.color.white,
+			"display": "inline-flex",
+			"fontSize": "0.875rem",
+			"fontWeight": 600,
+			"left": "50%",
+			"margin": "1.5rem auto 0",
+			"padding": "0.5rem 1rem",
+			"position": "absolute",
+			"transform": "translateX(-50%)",
+			"transition": "transform 0.3s ease-in",
 		},
 	},
 });
