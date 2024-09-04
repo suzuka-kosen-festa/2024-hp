@@ -8,7 +8,7 @@ export const section = style({
 		[layers.feature]: {
 			"@media": {
 				[Breakpoints.md]: {
-					paddingInline: "1.5rem",
+					paddingInline: "4rem",
 					rowGap: "2.875rem",
 				},
 			},
@@ -18,7 +18,7 @@ export const section = style({
 			"height": "100%",
 			"minHeight": "100svh",
 			"paddingInline": "1rem",
-			"paddingTop": "1.5rem",
+			"paddingTop": "6rem",
 			"rowGap": "4.75rem",
 
 			"width": "100%",
