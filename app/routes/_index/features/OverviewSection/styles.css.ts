@@ -37,14 +37,6 @@ export const box = style({
 	},
 });
 
-export const place = style({
-	"@layer": {
-		[layers.feature]: {
-			position: "relative",
-		},
-	},
-});
-
 export const text = style({
 	"@layer": {
 		[layers.feature]: {
@@ -62,11 +54,20 @@ export const text = style({
 	},
 });
 
+export const span = style({
+	"@layer": {
+		[layers.feature]: {
+			display: "block",
+			textAlign: "center",
+		},
+	},
+});
+
 export const googleMap = style({
 	"@layer": {
 		[layers.feature]: {
 			":hover": {
-				transform: "scale(1.05) translateX(-50%)",
+				transform: "scale(1.05)",
 			},
 			"@media": {
 				[Breakpoints.md]: {
@@ -83,9 +84,54 @@ export const googleMap = style({
 			"left": "50%",
 			"margin": "1.5rem auto 0",
 			"padding": "0.5rem 1rem",
-			"position": "absolute",
-			"transform": "translateX(-50%)",
+			"textAlign": "center",
 			"transition": "transform 0.3s ease-in",
+		},
+	},
+});
+
+export const eventSection = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					padding: "2rem 1rem",
+				},
+			},
+			"padding": "0",
+		},
+	},
+});
+
+export const eventTitle = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "1.5rem",
+				},
+			},
+			"color": vars.color.white,
+			"fontSize": "1.25rem",
+			"fontWeight": 600,
+			"marginBottom": "2rem",
+		},
+	},
+});
+
+export const eventLinks = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					flexDirection: "row",
+				},
+			},
+			"display": "flex",
+			"flexDirection": "column",
+			"gap": "1.25rem",
+			"gridTemplateColumns": "repeat(auto-fill, minmax(20rem, 1fr))",
+			"marginBottom": "3rem",
 		},
 	},
 });
