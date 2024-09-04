@@ -7,35 +7,49 @@ import { vars } from "@/styles/theme.css";
 const MessageText = lazy(() => import("~icons/custom/message-text"));
 const InfoBox = lazy(() => import("~icons/custom/info-box.svg"));
 
-interface Props {
+type Props = {
 	icon: "info" | "message";
 	variant: "blue" | "red";
-}
+	title?: never;
+} | {
+	title: string;
+	icon?: never;
+	variant?: never;
+};
 
 export function SectionTitle({
 	icon,
+	title,
 	variant,
 }: Props): ReactNode {
 	return (
 		<span className={styles.wrapper}>
 			<span
 				style={assignInlineVars({
-					[styles.lineBackgroundColor]: variant === "red"
-						? `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`
-						: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.blue} 50%, ${vars.color.black} 100%)`,
+					[styles.lineBackgroundColor]: typeof title !== "undefined"
+						? "linear-gradient(to left, rgb(255 255 255 / 0.5) 0%, rgb(255 255 255 / 0.2) 50%, rgb(255 255 255 / 0.5) 100%)"
+						: variant === "red"
+							? `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`
+							: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.blue} 50%, ${vars.color.black} 100%)`,
 				})}
 				className={styles.line}
 				role="presentation"
 			/>
-			<span
-				style={assignInlineVars({
-					[styles.boxShadow]: variant === "red" ? `0px 0px 50px 0px ${vars.color.red}` : `0px 0px 50px 0px ${vars.color.blue}`,
-					[styles.iconBoxBackgroundColor]: variant === "red" ? vars.color.red : vars.color.blue,
-				})}
-				className={styles.iconBox}
-			>
-				{icon === "message" ? <MessageText className={styles.icon} /> : <InfoBox className={styles.icon} />}
-			</span>
+			{typeof title !== "undefined"
+				? (
+						<h2 className={styles.title}>{title}</h2>
+					)
+				: (
+						<span
+							style={assignInlineVars({
+								[styles.boxShadow]: variant === "red" ? `0px 0px 50px 0px ${vars.color.red}` : `0px 0px 50px 0px ${vars.color.blue}`,
+								[styles.iconBoxBackgroundColor]: variant === "red" ? vars.color.red : vars.color.blue,
+							})}
+							className={styles.iconBox}
+						>
+							{icon === "message" ? <MessageText className={styles.icon} /> : <InfoBox className={styles.icon} />}
+						</span>
+					)}
 		</span>
 	);
 }
