@@ -27,13 +27,13 @@ export const contentInnerMaxWidth = createVar();
 export const contentInnerWrapper = style({
 	"@layer": {
 		[layers.component]: {
-			position: "absolute",
-			zIndex: 10_000,
-			visibility: contentInnerVisibility,
 			insetBlockStart: contentInnerInsetBlockStart,
-			insetInlineStart: contentInnerInsetInlineStart,
 			insetInlineEnd: contentInnerInsetInlineEnd,
+			insetInlineStart: contentInnerInsetInlineStart,
 			maxWidth: contentInnerMaxWidth,
+			position: "absolute",
+			visibility: contentInnerVisibility,
+			zIndex: 10_000,
 		},
 	},
 });

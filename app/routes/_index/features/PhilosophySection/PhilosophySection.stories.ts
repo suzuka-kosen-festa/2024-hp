@@ -5,12 +5,12 @@ import { PhilosophySection } from "./PhilosophySection";
 type T = typeof PhilosophySection;
 
 const meta: Meta = {
-	title: "PhilosophySection",
 	component: PhilosophySection,
 	parameters: {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
+	title: "PhilosophySection",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

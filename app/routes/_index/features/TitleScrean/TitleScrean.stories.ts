@@ -5,12 +5,12 @@ import { TitleScrean } from "./TitleScrean";
 type T = typeof TitleScrean;
 
 const meta: Meta = {
-	title: "TitleScrean",
 	component: TitleScrean,
 	parameters: {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
+	title: "TitleScrean",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

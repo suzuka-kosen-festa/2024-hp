@@ -10,7 +10,7 @@ export function DropdownRoot({ children }: { children: ReactNode }): ReactNode {
 	const [triggerRect, setTriggerRect] = useState<Rect>(initialRect);
 
 	const { rootTriggerRef } = useContext(DropdownContext);
-	const { createPortal, portalRoot, isChildPortal, PortalParentProvider }
+	const { createPortal, isChildPortal, PortalParentProvider, portalRoot }
 		= usePortal();
 
 	const triggerElementRef = useRef<HTMLDivElement>(null);
@@ -25,8 +25,9 @@ export function DropdownRoot({ children }: { children: ReactNode }): ReactNode {
 			if (
 				isEventFromChild(e, triggerElementRef.current)
 				|| isChildPortal(e.target)
-			)
+			) {
 				return;
+			}
 
 			setActive(false);
 		};
@@ -51,25 +52,26 @@ export function DropdownRoot({ children }: { children: ReactNode }): ReactNode {
 	return (
 		<PortalParentProvider>
 			<DropdownContext.Provider
+				// eslint-disable-next-line react/no-unstable-context-value
 				value={{
 					active,
-					triggerRect,
-					triggerElementRef,
-					rootTriggerRef: (rootTriggerRef ?? triggerElementRef) || null,
-					onClickTrigger: (rect) => {
-						const newActive = !active;
-						setActive(newActive);
-						if (newActive)
-							setTriggerRect(rect);
-					},
+					contentId,
+					DropdownContentRoot,
 					onClickCloser: () => {
 						setActive(false);
 						const trigger = getFirstTabbable(triggerElementRef);
 						if (trigger)
 							trigger.focus();
 					},
-					DropdownContentRoot,
-					contentId,
+					onClickTrigger: (rect) => {
+						const newActive = !active;
+						setActive(newActive);
+						if (newActive)
+							setTriggerRect(rect);
+					},
+					rootTriggerRef: (rootTriggerRef ?? triggerElementRef) || null,
+					triggerElementRef,
+					triggerRect,
 				}}
 			>
 				{children}

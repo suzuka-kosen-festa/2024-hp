@@ -2,14 +2,14 @@ import { createGlobalTheme, createThemeContract } from "@vanilla-extract/css";
 
 export const vars = createThemeContract({
 	color: {
-		red: "#C81A54" as const,
-		borderRed: "#61102B" as const,
-		purple: "#6B007C" as const,
+		black: "#000000" as const,
 		blue: "#3227A7" as const,
 		blueShadow: "#302449" as const,
-		white: "#FFFFFF" as const,
-		black: "#000000" as const,
+		borderRed: "#61102B" as const,
 		gray: "#242424" as const,
+		purple: "#6B007C" as const,
+		red: "#C81A54" as const,
+		white: "#FFFFFF" as const,
 	},
 	typography: {
 		fontFamily: {
@@ -21,14 +21,14 @@ export const vars = createThemeContract({
 
 createGlobalTheme(":root", vars, {
 	color: {
-		red: "#C81A54",
-		borderRed: "#61102B",
-		purple: "#6B007C",
+		black: "#000000",
 		blue: "#3227A7",
 		blueShadow: "#302449",
-		white: "#FFFFFF",
-		black: "#000000",
+		borderRed: "#61102B",
 		gray: "#242424",
+		purple: "#6B007C",
+		red: "#C81A54",
+		white: "#FFFFFF",
 	},
 	typography: {
 		fontFamily: {

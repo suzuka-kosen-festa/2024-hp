@@ -2,8 +2,11 @@
 import { re_taro } from "@re-taro/eslint-config";
 
 export default re_taro({
-	astro: false,
-	react: true,
 	formatters: true,
 	ignores: ["functions/*.ts"],
+}, {
+	files: ["app/**/*.tsx"],
+	rules: {
+		"react-dom/no-dangerously-set-innerhtml": "off",
+	},
 });

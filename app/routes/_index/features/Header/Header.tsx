@@ -14,14 +14,14 @@ export function Header(): ReactNode {
 	return (
 		<header className={styles.header}>
 			<img
+				alt="鈴鹿高専祭「BORDER」ロゴ"
+				className={styles.logo}
 				decoding="async"
+				height={96}
 				loading="eager"
 				src="/images/logo.webp"
 				srcSet={["/images/logo.webp 1x", "/images/logo@2x.webp 2x"].join(", ")}
-				alt="鈴鹿高専祭「BORDER」ロゴ"
 				width={58.29}
-				height={96}
-				className={styles.logo}
 			/>
 			<HeroContentBox className={styles.visible}>
 				<DropdownContent />
@@ -30,7 +30,7 @@ export function Header(): ReactNode {
 				<Suspense fallback={null}>
 					<Dropdown.Root>
 						<Dropdown.Trigger>
-							<button className={styles.trigger} title="メニューを開く">
+							<button className={styles.trigger} title="メニューを開く" type="button">
 								<BookOpen className={styles.bookOpen} />
 							</button>
 						</Dropdown.Trigger>

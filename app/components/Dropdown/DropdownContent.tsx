@@ -26,20 +26,21 @@ export function DropdownContent({
 	controllable = false,
 	scrollable = true,
 	...props
-}: Props & ElementProps): ReactNode {
-	const { DropdownContentRoot, triggerRect, onClickCloser }
+}: ElementProps & Props): ReactNode {
+	const { DropdownContentRoot, onClickCloser, triggerRect }
 		= useContext(DropdownContext);
 
 	return (
 		<DropdownContentRoot>
 			<DropdownContentContext.Provider
-				value={{ onClickCloser, controllable, scrollable }}
+				// eslint-disable-next-line react/no-unstable-context-value
+				value={{ controllable, onClickCloser, scrollable }}
 			>
 				<DropdownContentInner
 					{...props}
-					triggerRect={triggerRect}
-					scrollable={scrollable}
 					controllable={controllable}
+					scrollable={scrollable}
+					triggerRect={triggerRect}
 				/>
 			</DropdownContentContext.Provider>
 		</DropdownContentRoot>

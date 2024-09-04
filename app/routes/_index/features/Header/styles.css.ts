@@ -6,11 +6,11 @@ import { vars } from "@/styles/theme.css";
 export const header = style({
 	"@layer": {
 		[layers.feature]: {
-			display: "flex",
 			alignItems: "flex-start",
+			display: "flex",
 			justifyContent: "space-between",
-			width: "100%",
 			padding: "0.75rem 1rem",
+			width: "100%",
 		},
 	},
 });
@@ -18,15 +18,15 @@ export const header = style({
 export const logo = style({
 	"@layer": {
 		[layers.feature]: {
-			"width": "1.669375rem",
-			"height": "2.75rem",
-
 			"@media": {
 				[Breakpoints.md]: {
-					width: "3.643125rem",
 					height: "6rem",
+					width: "3.643125rem",
 				},
 			},
+			"height": "2.75rem",
+
+			"width": "1.669375rem",
 		},
 	},
 });
@@ -34,13 +34,13 @@ export const logo = style({
 export const visible = style({
 	"@layer": {
 		[layers.feature]: {
-			"display": "none",
-
 			"@media": {
 				[Breakpoints.md]: {
 					display: "inline",
 				},
 			},
+
+			"display": "none",
 		},
 	},
 });
@@ -48,9 +48,9 @@ export const visible = style({
 export const dropdownContent = style({
 	"@layer": {
 		[layers.feature]: {
+			alignItems: "center",
 			display: "inline-flex",
 			flexDirection: "column",
-			alignItems: "center",
 		},
 	},
 });
@@ -59,10 +59,10 @@ export const bookOpen = style({
 	"@layer": {
 		[layers.feature]: {
 			alignSelf: "flex-end",
-			width: "2rem",
+			color: vars.color.white,
 			height: "2rem",
 			marginBottom: "1rem",
-			color: vars.color.white,
+			width: "2rem",
 		},
 	},
 });
@@ -70,33 +70,33 @@ export const bookOpen = style({
 export const link = style({
 	"@layer": {
 		[layers.feature]: {
-			"position": "relative",
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "1.5rem",
+				},
+			},
+			"color": vars.color.white,
 			"fontFamily": vars.typography.fontFamily.dot,
 			"fontSize": "1rem",
-			"color": vars.color.white,
+
+			"position": "relative",
 
 			"selectors": {
 				"&::after": {
-					position: "absolute",
-					left: 0,
-					bottom: "-1px",
-					width: "100%",
-					height: "2px",
 					backgroundColor: vars.color.white,
+					bottom: "-1px",
 					content: "''",
+					height: "2px",
+					left: 0,
+					position: "absolute",
 					transform: "scale(0, 1)",
 					transformOrigin: "right top",
 					transition: "transform 0.3s",
+					width: "100%",
 				},
 				"&:hover::after": {
 					transform: "scale(1, 1)",
 					transformOrigin: "left top",
-				},
-			},
-
-			"@media": {
-				[Breakpoints.md]: {
-					fontSize: "1.5rem",
 				},
 			},
 		},
@@ -106,16 +106,16 @@ export const link = style({
 export const hr = style({
 	"@layer": {
 		[layers.feature]: {
-			"width": "100%",
-			"height": "1px",
-			"backgroundColor": vars.color.white,
-			"margin": "1rem 0",
-
 			"@media": {
 				[Breakpoints.md]: {
 					width: "12.875rem",
 				},
 			},
+			"backgroundColor": vars.color.white,
+			"height": "1px",
+			"margin": "1rem 0",
+
+			"width": "100%",
 		},
 	},
 });
@@ -132,15 +132,15 @@ export const sns = style({
 export const icon = style({
 	"@layer": {
 		[layers.feature]: {
-			"width": "2rem",
-			"height": "2rem",
-			"color": vars.color.white,
-
-			"transition": "transform 0.3s ease-in",
-
 			":hover": {
 				transform: "scale(1.1)",
 			},
+			"color": vars.color.white,
+			"height": "2rem",
+
+			"transition": "transform 0.3s ease-in",
+
+			"width": "2rem",
 		},
 	},
 });
@@ -156,13 +156,13 @@ export const half = style({
 export const triggerWrapper = style({
 	"@layer": {
 		[layers.feature]: {
-			"display": "inline-box",
-
 			"@media": {
 				[Breakpoints.md]: {
 					display: "none",
 				},
 			},
+
+			"display": "inline-box",
 		},
 	},
 });
@@ -170,14 +170,14 @@ export const triggerWrapper = style({
 export const trigger = style({
 	"@layer": {
 		[layers.feature]: {
-			"width": "2.75rem",
+			":hover": {
+				transform: "scale(1.05)",
+			},
 			"height": "2.75rem",
 			"padding": "0.5rem",
 			"transition": "transform 0.3s ease-in",
 
-			":hover": {
-				transform: "scale(1.05)",
-			},
+			"width": "2.75rem",
 		},
 	},
 });

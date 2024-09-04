@@ -16,7 +16,6 @@ const isStorybook = process.argv[1]?.includes("storybook");
 
 export default defineConfig(({ mode }) => ({
 	build: {
-		target: browserslistToEsbuild(),
 		cssMinify: "esbuild",
 		minify: "terser",
 		rollupOptions: {
@@ -34,18 +33,19 @@ export default defineConfig(({ mode }) => ({
 				},
 			},
 		},
+		target: browserslistToEsbuild(),
 		terserOptions: {
-			ecma: 2020,
 			compress: {
-				passes: 5,
 				ecma: 2020,
 				inline: 3,
+				passes: 5,
 			},
+			ecma: 2020,
 			format: {
 				comments: false,
 			},
-			toplevel: true,
 			nameCache: {},
+			toplevel: true,
 		},
 	},
 	optimizeDeps: {
@@ -71,19 +71,19 @@ export default defineConfig(({ mode }) => ({
 		}),
 		icons({
 			compiler: "jsx",
-			jsx: "react",
 			customCollections: {
 				custom: FileSystemIconLoader(
 					"app/assets/icons",
 					svg => svg.replace(/^<svg /, "<svg fill=\"currentColor\" "),
 				),
 			},
+			jsx: "react",
 		}),
 		mode === "analyze"
 		&& visualizer({
-			gzipSize: true,
 			brotliSize: true,
 			emitFile: true, // `emitFile` is necessary since Remix builds more than one bundle
+			gzipSize: true,
 		}),
 	],
 }));

@@ -40,6 +40,7 @@ export function usePortal() {
 
 	const PortalParentProvider: FC<{ children: ReactNode }> = useCallback(
 		({ children }) => {
+			// eslint-disable-next-line react/no-unstable-context-value
 			const value: ParentContextValue = {
 				seqs: parentSeqs,
 			};
@@ -64,10 +65,10 @@ export function usePortal() {
 	);
 
 	return {
-		portalRoot,
+		createPortal: wrappedCreatePortal,
 		isChildPortal,
 		PortalParentProvider,
-		createPortal: wrappedCreatePortal,
+		portalRoot,
 	};
 }
 

@@ -6,15 +6,15 @@ export const blurredBackground = style({
 	"@layer": {
 		[layers.page]: {
 			display: "none",
-			position: "fixed",
-			top: 0,
-			left: 0,
-			width: "100%",
+			filter: "blur(12px)",
 			height: "100%",
+			left: 0,
 			minHeight: "100svh",
 			objectFit: "cover",
 			objectPosition: "center",
-			filter: "blur(12px)",
+			position: "fixed",
+			top: 0,
+			width: "100%",
 			zIndex: -1,
 		},
 	},
@@ -24,14 +24,14 @@ export const background = style({
 	"@layer": {
 		[layers.page]: {
 			display: "none",
-			position: "fixed",
-			top: 0,
-			left: 0,
-			width: "100%",
 			height: "100%",
+			left: 0,
 			minHeight: "100svh",
 			objectFit: "cover",
 			objectPosition: "center",
+			position: "fixed",
+			top: 0,
+			width: "100%",
 			zIndex: -1,
 		},
 	},
@@ -41,13 +41,13 @@ export const eyeWrapper = style({
 	"@layer": {
 		[layers.page]: {
 			display: "none",
-			position: "absolute",
-			width: "100%",
 			height: "100%",
-			minHeight: "100svh",
-			top: 0,
 			left: 0,
+			minHeight: "100svh",
 			overflow: "hidden",
+			position: "absolute",
+			top: 0,
+			width: "100%",
 		},
 	},
 });
@@ -55,10 +55,10 @@ export const eyeWrapper = style({
 export const eye = style({
 	"@layer": {
 		[layers.page]: {
-			position: "absolute",
-			left: 0,
-			width: "100%",
 			height: "calc(50% + 120px)",
+			left: 0,
+			position: "absolute",
+			width: "100%",
 		},
 	},
 });
@@ -66,8 +66,8 @@ export const eye = style({
 export const eyeTop = style({
 	"@layer": {
 		[layers.page]: {
-			top: 0,
 			backgroundImage: `linear-gradient(${vars.color.black} calc(100% - 120px), transparent)`,
+			top: 0,
 		},
 	},
 });
@@ -75,8 +75,8 @@ export const eyeTop = style({
 export const eyeBottom = style({
 	"@layer": {
 		[layers.page]: {
-			bottom: 0,
 			backgroundImage: `linear-gradient(to top, ${vars.color.black} calc(100% - 120px), transparent)`,
+			bottom: 0,
 		},
 	},
 });
@@ -84,13 +84,13 @@ export const eyeBottom = style({
 export const landingWrapper = style({
 	"@layer": {
 		[layers.page]: {
-			display: "flex",
 			alignItems: "center",
-			justifyContent: "center",
-			width: "100%",
-			height: "100%",
-			minHeight: "100svh",
 			backgroundColor: vars.color.black,
+			display: "flex",
+			height: "100%",
+			justifyContent: "center",
+			minHeight: "100svh",
+			width: "100%",
 		},
 	},
 });

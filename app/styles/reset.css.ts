@@ -46,8 +46,8 @@ globalStyle("html", {
 	"@layer": {
 		[layers.reset]: {
 			MozTextSizeAdjust: "none",
-			WebkitTextSizeAdjust: "none",
 			textSizeAdjust: "none",
+			WebkitTextSizeAdjust: "none",
 		},
 	},
 });
@@ -80,8 +80,8 @@ globalStyle("ol, ul, menu, summary", {
 globalStyle("img", {
 	"@layer": {
 		[layers.reset]: {
-			maxInlineSize: "100%",
 			maxBlockSize: "100%",
+			maxInlineSize: "100%",
 		},
 	},
 });
@@ -126,8 +126,8 @@ globalStyle("textarea", {
 globalStyle("meter", {
 	"@layer": {
 		[layers.reset]: {
-			WebkitAppearance: "revert",
 			appearance: "revert",
+			WebkitAppearance: "revert",
 		},
 	},
 });
@@ -179,9 +179,9 @@ globalStyle(":where([contenteditable]:not([contenteditable=\"false\"]))", {
 	"@layer": {
 		[layers.reset]: {
 			MozUserModify: "read-write",
-			WebkitUserModify: "read-write",
 			overflowWrap: "break-word",
 			WebkitLineBreak: "after-white-space",
+			WebkitUserModify: "read-write",
 			WebkitUserSelect: "auto",
 		},
 	},

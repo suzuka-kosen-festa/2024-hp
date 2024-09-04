@@ -5,10 +5,10 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 export function OverviewSection(): ReactNode {
 	return (
-		<section className={styles.section} aria-label="overview section" id="overview">
-			<SectionTitle variant="blue" icon="info" />
+		<section aria-label="overview section" className={styles.section} id="overview">
+			<SectionTitle icon="info" variant="blue" />
 			<div className={styles.box}>
-				<OverviewBox title="開催日時" className={styles.date}>
+				<OverviewBox className={styles.date} title="開催日時">
 					<p>
 						2024年
 						<wbr />
@@ -20,13 +20,13 @@ export function OverviewSection(): ReactNode {
 						11月3日(日)
 					</p>
 				</OverviewBox>
-				<OverviewBox title="開催場所" className={styles.place}>
+				<OverviewBox className={styles.place} title="開催場所">
 					<p className={styles.placeContent}>鈴鹿工業高等専門学校</p>
 					<a
-						href="https://maps.app.goo.gl/VDg3tuqMG3iYxfhx9"
-						target="_brank"
-						rel="noreferrer"
 						className={styles.placeLink}
+						href="https://maps.app.goo.gl/VDg3tuqMG3iYxfhx9"
+						rel="noreferrer"
+						target="_brank"
 					>
 						Google Mapで確認する
 					</a>

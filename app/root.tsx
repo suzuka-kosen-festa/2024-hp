@@ -8,21 +8,20 @@ import { Partytown } from "@builder.io/partytown/react";
 import "@/styles/globals.css";
 
 interface Props {
-	title?: string;
-	noIndex?: boolean;
 	children: ReactNode;
+	noIndex?: boolean;
+	title?: string;
 }
 
-function Document({ title, noIndex, children }: Props): ReactNode {
+function Document({ children, noIndex, title }: Props): ReactNode {
 	return (
 		<html lang="ja-JP">
 			<head>
-				{noIndex && <meta name="robots" content="noindex" />}
+				{noIndex && <meta content="noindex" name="robots" />}
 				{import.meta.env.PROD && (
 					<>
 						<Partytown forward={["dataLayer.push"]} />
 						<script
-							type="text/partytown"
 							dangerouslySetInnerHTML={{
 								__html: `
 									(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -32,6 +31,7 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 									})(window,document,'script','dataLayer','GTM-KLPTTQ82');
 								`,
 							}}
+							type="text/partytown"
 						/>
 					</>
 				)}
@@ -64,41 +64,40 @@ function App(): ReactNode {
 	);
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const links: LinksFunction = () => [
-	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
-	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap" },
-	{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-	{ rel: "icon", href: "/favicon.ico", sizes: "any" },
+	{ href: "https://fonts.googleapis.com", rel: "preconnect" },
+	{ crossOrigin: "anonymous", href: "https://fonts.gstatic.com", rel: "preconnect" },
+	{ href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap", rel: "stylesheet" },
+	{ href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
+	{ href: "/favicon.ico", rel: "icon", sizes: "any" },
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
-	{ name: "viewport", content: "width=device-width, initial-scale=1" },
-	{ name: "description", content: "第59回鈴鹿高専祭公式サイト" },
-	{ property: "og:title", content: "第59回 鈴鹿高専祭" },
-	{ property: "og:description", content: "第59回鈴鹿高専祭公式サイト" },
-	{ property: "og:url", content: "https://snct-fes.info" },
-	{ property: "og:image", content: "https://www.snct-fes.info/images/ogp.png" },
-	{ property: "og:image:url", content: "https://www.snct-fes.info/images/ogp.png" },
-	{ property: "og:image:alt", content: "第59回 鈴鹿高専祭" },
-	{ property: "og:type", content: "website" },
-	{ name: "twitter:card", content: "summary_large_image" },
-	{ name: "twitter:title", content: "第59回 鈴鹿高専祭" },
-	{ name: "twitter:description", content: "第59回鈴鹿高専祭公式サイト" },
-	{ name: "twitter:image", content: "https://www.snct-fes.info/images/ogp.png" },
-	{ name: "twitter:image:alt", content: "第59回 鈴鹿高専祭" },
-	{ name: "twitter:site", content: "@KOSENFESTA" },
+	{ content: "width=device-width, initial-scale=1", name: "viewport" },
+	{ content: "第59回鈴鹿高専祭公式サイト", name: "description" },
+	{ content: "第59回 鈴鹿高専祭", property: "og:title" },
+	{ content: "第59回鈴鹿高専祭公式サイト", property: "og:description" },
+	{ content: "https://snct-fes.info", property: "og:url" },
+	{ content: "https://www.snct-fes.info/images/ogp.png", property: "og:image" },
+	{ content: "https://www.snct-fes.info/images/ogp.png", property: "og:image:url" },
+	{ content: "第59回 鈴鹿高専祭", property: "og:image:alt" },
+	{ content: "website", property: "og:type" },
+	{ content: "summary_large_image", name: "twitter:card" },
+	{ content: "第59回 鈴鹿高専祭", name: "twitter:title" },
+	{ content: "第59回鈴鹿高専祭公式サイト", name: "twitter:description" },
+	{ content: "https://www.snct-fes.info/images/ogp.png", name: "twitter:image" },
+	{ content: "第59回 鈴鹿高専祭", name: "twitter:image:alt" },
+	{ content: "@KOSENFESTA", name: "twitter:site" },
 ];
 
 export function ErrorBoundary() {
 	const error = useRouteError();
 	if (!(typeof window !== "undefined"
 		&& window.document
-		&& window.document.createElement))
+		&& window.document.createElement)) {
 		console.error(error);
+	}
 
 	if (isRouteErrorResponse(error)) {
 		return (

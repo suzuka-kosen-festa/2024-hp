@@ -23,7 +23,7 @@ export function DropdownTrigger({
 	children,
 	className,
 }: Props): ReactNode {
-	const { active, onClickTrigger, contentId, triggerElementRef }
+	const { active, contentId, onClickTrigger, triggerElementRef }
 		= useContext(DropdownContext);
 
 	useEffect(() => {
@@ -43,24 +43,26 @@ export function DropdownTrigger({
 
 	return (
 		<div
-			ref={triggerElementRef}
 			className={clsx(styles.triggerContainer, className)}
+			ref={triggerElementRef}
 		>
+			{/* eslint-disable-next-line react/no-children-map */}
 			{Children.map(children, (child) => {
 				if (foundFirstElement || !isValidElement(child))
 					return child;
 
 				foundFirstElement = true;
 
+				// eslint-disable-next-line react/no-clone-element
 				return cloneElement(child as ReactElement, {
 					onClick: (e: MouseEvent) => {
 						// 引き金となる要素が disabled な場合は発火させない
 						if (includeDisabledTrigger(children))
 							return;
 
-						const { top, right, bottom, left }
+						const { bottom, left, right, top }
 							= e.currentTarget.getBoundingClientRect();
-						onClickTrigger({ top, right, bottom, left });
+						onClickTrigger({ bottom, left, right, top });
 
 						if (child.props.onClick)
 							child.props.onClick(e);

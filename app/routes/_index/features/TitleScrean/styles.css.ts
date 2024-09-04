@@ -6,18 +6,18 @@ import { vars } from "@/styles/theme.css";
 export const text = style({
 	"@layer": {
 		[layers.feature]: {
-			"color": vars.color.white,
-			"textAlign": "center",
-			"fontFamily": vars.typography.fontFamily.dot,
-			"fontSize": "1.5rem",
-			"letterSpacing": "0.3rem",
-
 			"@media": {
 				[Breakpoints.md]: {
 					fontSize: "2rem",
 					letterSpacing: "0.4rem",
 				},
 			},
+			"color": vars.color.white,
+			"fontFamily": vars.typography.fontFamily.dot,
+			"fontSize": "1.5rem",
+			"letterSpacing": "0.3rem",
+
+			"textAlign": "center",
 		},
 	},
 });
@@ -25,25 +25,25 @@ export const text = style({
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
-			"maxWidth": "20.375rem",
-			"width": "100%",
+			"@media": {
+				[Breakpoints.md]: {
+					backgroundImage: "url(/images/start@2x.webp)",
+					maxWidth: "48.5rem",
+				},
+			},
+			"backgroundImage": "url(/images/start.webp)",
+			"backgroundPosition": "center",
+			"backgroundRepeat": "no-repeat",
+			"backgroundSize": "cover",
 			"border": `4px solid ${vars.color.red}`,
 			"borderRadius": "1.25rem",
 			"boxShadow": "0 0 80px rgb(200 26 84 / 0.5)",
 			"display": "flex",
 			"flexDirection": "column",
+			"maxWidth": "20.375rem",
 			"padding": "1rem 0",
-			"backgroundImage": "url(/images/start.webp)",
-			"backgroundRepeat": "no-repeat",
-			"backgroundSize": "cover",
-			"backgroundPosition": "center",
 
-			"@media": {
-				[Breakpoints.md]: {
-					maxWidth: "48.5rem",
-					backgroundImage: "url(/images/start@2x.webp)",
-				},
-			},
+			"width": "100%",
 		},
 	},
 });
@@ -51,25 +51,25 @@ export const box = style({
 export const border = style({
 	"@layer": {
 		[layers.feature]: {
-			"color": vars.color.white,
-			"fontSize": "2rem",
-			"textAlign": "center",
-			"fontFamily": vars.typography.fontFamily.dot,
-			"textShadow": `0px 2px 0 ${vars.color.red}`,
-			"letterSpacing": "0.4rem",
-			"WebkitTextStrokeWidth": "calc(1px / 2)",
-			"WebkitTextStrokeColor": vars.color.black,
-			"marginBottom": "0.75rem",
-
 			"@media": {
 				[Breakpoints.md]: {
-					marginBottom: "1.5rem",
 					fontSize: "5rem",
 					letterSpacing: "1rem",
+					marginBottom: "1.5rem",
 					textShadow: `0px 6px 0 ${vars.color.red}`,
 					WebkitTextStrokeWidth: "1px",
 				},
 			},
+			"color": vars.color.white,
+			"fontFamily": vars.typography.fontFamily.dot,
+			"fontSize": "2rem",
+			"letterSpacing": "0.4rem",
+			"marginBottom": "0.75rem",
+			"textAlign": "center",
+			"textShadow": `0px 2px 0 ${vars.color.red}`,
+			"WebkitTextStrokeColor": vars.color.black,
+
+			"WebkitTextStrokeWidth": "calc(1px / 2)",
 		},
 	},
 },
@@ -78,13 +78,13 @@ export const border = style({
 export const countdown = style({
 	"@layer": {
 		[layers.feature]: {
-			"margin": "0 auto 0.45rem",
-
 			"@media": {
 				[Breakpoints.md]: {
 					margin: "0 auto 4.5rem",
 				},
 			},
+
+			"margin": "0 auto 0.45rem",
 		},
 	},
 });

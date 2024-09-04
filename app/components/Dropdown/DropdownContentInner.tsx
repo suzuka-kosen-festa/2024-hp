@@ -14,25 +14,25 @@ import * as styles from "./styles.css";
 import { DropdownContentInnerContext } from "./contexts";
 
 type Props = PropsWithChildren<{
-	triggerRect: Rect;
-	scrollable: boolean;
 	controllable: boolean;
+	scrollable: boolean;
+	triggerRect: Rect;
 }>;
 
 export type ElementProps = Omit<ComponentProps<"div">, keyof Props>;
 
 export function DropdownContentInner({
-	triggerRect,
-	scrollable,
 	children,
 	className,
 	controllable,
+	scrollable,
+	triggerRect,
 	...props
-}: Props & ElementProps): ReactNode {
+}: ElementProps & Props): ReactNode {
 	const [isActive, setIsActive] = useState(false);
 	const [contentBox, setContentBox] = useState<ContentBoxStyle>({
-		top: "auto",
 		maxHeight: "",
+		top: "auto",
 	});
 	const wrapperRef = useRef<HTMLDivElement>(null);
 	const focusTargetRef = useRef<HTMLDivElement>(null);
@@ -51,11 +51,11 @@ export function DropdownContentInner({
 		return {
 			className: clsx(styles.contentInnerWrapper, className),
 			style: assignInlineVars({
-				[styles.contentInnerVisibility]: isActive ? "visible" : "hidden",
 				[styles.contentInnerInsetBlockStart]: contentBox.top,
-				[styles.contentInnerInsetInlineStart]: contentBox.left || undefined,
 				[styles.contentInnerInsetInlineEnd]: contentBox.right || undefined,
+				[styles.contentInnerInsetInlineStart]: contentBox.left || undefined,
 				[styles.contentInnerMaxWidth]: maxWidthStyle,
+				[styles.contentInnerVisibility]: isActive ? "visible" : "hidden",
 			}),
 		};
 	}, [
@@ -81,16 +81,16 @@ export function DropdownContentInner({
 				getContentBoxStyle(
 					triggerRect,
 					{
-						width: wrapperRef.current.offsetWidth,
 						height: wrapperRef.current.offsetHeight,
+						width: wrapperRef.current.offsetWidth,
 					},
 					{
-						width: document.body.clientWidth,
 						height: innerHeight,
+						width: document.body.clientWidth,
 					},
 					{
-						top: scrollY,
 						left: scrollX,
+						top: scrollY,
 					},
 				),
 			);
@@ -108,17 +108,18 @@ export function DropdownContentInner({
 	return (
 		<div {...props} {...wrapperStyleProps} ref={wrapperRef}>
 			{/* dummy element for focus management. */}
-			<div tabIndex={-1} ref={focusTargetRef} />
+			<div ref={focusTargetRef} tabIndex={-1} />
 			{controllable
 				? (
-					<div {...controllableWrapperStyleProps}>{children}</div>
+						<div {...controllableWrapperStyleProps}>{children}</div>
 					)
 				: (
-					<DropdownContentInnerContext.Provider
-						value={{ maxHeight: contentBox.maxHeight }}
-					>
-						<DropdownCloser>{children}</DropdownCloser>
-					</DropdownContentInnerContext.Provider>
+						<DropdownContentInnerContext.Provider
+							// eslint-disable-next-line react/no-unstable-context-value
+							value={{ maxHeight: contentBox.maxHeight }}
+						>
+							<DropdownCloser>{children}</DropdownCloser>
+						</DropdownContentInnerContext.Provider>
 					)}
 		</div>
 	);
