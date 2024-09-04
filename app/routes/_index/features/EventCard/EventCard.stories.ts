@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { createRemixStub } from "@remix-run/testing";
-import { OverviewSection } from "./OverviewSection";
+import { EventCard } from "./EventCard";
 
-type T = typeof OverviewSection;
+type T = typeof EventCard;
 
 const meta: Meta = {
-	component: OverviewSection,
+	component: EventCard,
 	decorators: [
 		(story) => {
 			const remixStub = createRemixStub([
@@ -22,14 +21,20 @@ const meta: Meta = {
 		},
 	],
 	parameters: {
-		layout: "fullscreen",
+		layout: "centered",
 	},
 	tags: ["autodocs"],
-	title: "OverviewSection",
+	title: "EventCard",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
 
-export const Default: Story = {};
+export const Default: Story = {
+	args: {
+		children: "test test test test test ああああああああああああああああああああああああ",
+		hash: "test",
+		title: "Test title",
+	},
+};
 
 export default meta;
