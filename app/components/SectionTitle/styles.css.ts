@@ -65,3 +65,18 @@ export const icon = style({
 		},
 	},
 });
+
+export const title = style({
+	"@layer": {
+		[layers.component]: {
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "2rem",
+				},
+			},
+			"color": vars.color.white,
+			"fontSize": "1.5rem",
+			"fontWeight": 600,
+		},
+	},
+});

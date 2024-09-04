@@ -33,4 +33,10 @@ export const Info: Story = {
 	},
 };
 
+export const Title: Story = {
+	args: {
+		title: "Title",
+	},
+};
+
 export default meta;
