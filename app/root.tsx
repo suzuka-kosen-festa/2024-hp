@@ -1,10 +1,11 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
 import { Suspense, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Partytown } from "@builder.io/partytown/react";
+import { ErrorBoundary as ErrorBoundaryComponent } from "./features/ErrorBoundary";
 import "@/styles/globals.css";
 
 interface Props {
@@ -93,48 +94,13 @@ export const meta: MetaFunction = () => [
 
 export function ErrorBoundary() {
 	const error = useRouteError();
-	if (!(typeof window !== "undefined"
-		&& window.document
-		&& window.document.createElement)) {
-		console.error(error);
-	}
-
-	if (isRouteErrorResponse(error)) {
-		return (
-			<Document
-				noIndex
-				title={error.statusText}
-			>
-				<main>
-					<div>
-						<h1>
-							{error.status}
-						</h1>
-						<a
-							href={`https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${error.status}`}
-							rel="noreferrer"
-							target="_blank"
-						>
-							{error.statusText}
-						</a>
-					</div>
-				</main>
-			</Document>
-		);
-	}
 
 	return (
-		<Document noIndex title="Error">
-			<main>
-				<div>
-					<h1>
-						Error
-					</h1>
-					<p>
-						問題が発生しました。しばらくしてから再度お試しください。
-					</p>
-				</div>
-			</main>
+		<Document
+			noIndex
+			title="Error"
+		>
+			<ErrorBoundaryComponent error={error} />
 		</Document>
 	);
 }
