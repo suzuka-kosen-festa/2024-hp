@@ -1,0 +1,1 @@
+export { ErrorTitle } from "./ErrorTitle";
