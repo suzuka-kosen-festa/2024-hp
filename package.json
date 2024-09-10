@@ -103,5 +103,10 @@
   },
   "browserslist": [
     ">0.2% and not dead, defaults"
-  ]
+  ],
+  "pnpm": {
+    "patchedDependencies": {
+      "@gsap/react@2.1.1": "patches/@gsap__react@2.1.1.patch"
+    }
+  }
 }

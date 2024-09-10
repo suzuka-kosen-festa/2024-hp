@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useRef } from "react";
 import type { ReactNode } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -19,13 +19,12 @@ export default function Page(): ReactNode {
 	const eyeTopRef = useRef<HTMLSpanElement>(null);
 	const eyeBottomRef = useRef<HTMLSpanElement>(null);
 
-	const { context } = useGSAP();
+	useGSAP((_, contextSafe) => {
+		if (typeof document === "undefined")
+			return;
 
-	const animation = useCallback(() => {
-		context.add(() => {
-			const tl = gsap.timeline();
-
-			tl
+		const animation = contextSafe(() => {
+			gsap.timeline()
 				.to(landingRef.current, {
 					duration: 0.5,
 					opacity: 0,
@@ -147,28 +146,28 @@ export default function Page(): ReactNode {
 					},
 				);
 		});
-	}, [context]);
 
-	const keydown = useCallback((e: KeyboardEvent) => {
-		if (e.key === "Enter")
-			animation();
-	}, [animation]);
+		const kewdown = (e: KeyboardEvent) => {
+			if (e.key === "Enter")
+				animation();
+		};
 
-	useEffect(() => {
-		const elm = landingRef.current;
-
-		elm?.addEventListener("click", animation, { once: true });
-		elm?.addEventListener("keydown", keydown, { once: true });
+		if (landingRef.current != null) {
+			landingRef.current.addEventListener("click", animation, { once: true });
+			landingRef.current.addEventListener("keydown", kewdown, { once: true });
+		}
 
 		return () => {
-			elm?.removeEventListener("click", animation);
-			elm?.removeEventListener("keydown", keydown);
+			if (landingRef.current != null) {
+				landingRef.current.removeEventListener("click", animation);
+				landingRef.current.removeEventListener("keydown", kewdown);
+			}
 		};
-	}, [animation, keydown]);
+	});
 
 	return (
 		<>
-			<div className={styles.landingWrapper} data-test="splash" ref={landingRef}>
+			<div className={styles.landingWrapper} data-test="splash" ref={landingRef} tabIndex={0}>
 				<TitleScrean />
 			</div>
 			<>
