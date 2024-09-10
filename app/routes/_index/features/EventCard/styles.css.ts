@@ -13,6 +13,7 @@ export const box = style({
 			},
 			"backdropFilter": "blur(32px)",
 			"backgroundImage": "linear-gradient(154deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.03) 100%)",
+			"border": `1px solid ${vars.color.white}`,
 			"borderRadius": "1.25rem",
 			"display": "flex",
 			"flexDirection": "column",
@@ -46,18 +47,36 @@ export const content = style({
 export const link = style({
 	"@layer": {
 		[layers.feature]: {
-			":hover": {
-				transform: "scale(1.05)",
+			display: "inline-flex",
+			justifyContent: "flex-end",
+			padding: "0.5rem 1rem",
+			rowGap: "0.5rem",
+		},
+	},
+});
+
+export const span = style({
+	"@layer": {
+		[layers.feature]: {
+			color: vars.color.white,
+			fontSize: "0.875rem",
+			fontWeight: 600,
+		},
+	},
+});
+
+export const arrow = style({
+	"@layer": {
+		[layers.feature]: {
+			color: vars.color.white,
+			height: "1.125rem",
+			selectors: {
+				[`${link}:hover &`]: {
+					transform: "scale(1.5)",
+				},
 			},
-			"alignSelf": "flex-end",
-			"border": `1px solid ${vars.color.white}`,
-			"borderRadius": "0.5rem",
-			"boxShadow": "0px 4px 4px 0px rgb(0 0 0 / 0.25)",
-			"color": vars.color.white,
-			"fontSize": "0.875rem",
-			"fontWeight": 600,
-			"padding": "0.5rem 1rem",
-			"transition": "transform 0.3s ease-in",
+			transition: "transform 0.3s ease-in",
+			width: "1.125rem",
 		},
 	},
 });
