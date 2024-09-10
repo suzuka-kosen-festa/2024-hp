@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import * as styles from "./styles.css";
 import { vars } from "@/styles/theme.css";
@@ -47,7 +47,9 @@ export function SectionTitle({
 							})}
 							className={styles.iconBox}
 						>
-							{icon === "message" ? <MessageText className={styles.icon} /> : <InfoBox className={styles.icon} />}
+							<Suspense fallback={null}>
+								{icon === "message" ? <MessageText className={styles.icon} /> : <InfoBox className={styles.icon} />}
+							</Suspense>
 						</span>
 					)}
 		</span>
