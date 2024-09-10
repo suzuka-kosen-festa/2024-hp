@@ -60,7 +60,15 @@ export default defineConfig(({ mode }) => ({
 		!isStorybook
 		&& remixDevTools(),
 		!isStorybook
-		&& remix({ serverModuleFormat: "esm" }),
+		&& remix({
+			future: {
+				unstable_optimizeDeps: true,
+				v3_fetcherPersist: true,
+				v3_relativeSplatPath: true,
+				v3_throwAbortReason: true,
+			},
+			serverModuleFormat: "esm",
+		}),
 		!isStorybook
 		&& partytownVite({
 			dest: join(__dirname, "build/client", "~partytown"),
