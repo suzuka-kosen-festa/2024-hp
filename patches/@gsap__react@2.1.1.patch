@@ -1,0 +1,13 @@
+diff --git a/types/index.d.ts b/types/index.d.ts
+index 91b62b0ceed6b74a9503806850f56d7bbdff5932..0be0281d94b06b8f20e81e790db7f5961c181046 100644
+--- a/types/index.d.ts
++++ b/types/index.d.ts
+@@ -7,7 +7,7 @@
+ import gsap from "gsap";
+
+ type ContextSafeFunc = <T extends Function>(func: T) => T;
+-type ContextFunc = (context: gsap.Context, contextSafe?: ContextSafeFunc) => Function | any | void;
++type ContextFunc = (context: gsap.Context, contextSafe: ContextSafeFunc) => Function | any | void;
+
+ interface ReactRef {
+   current: any | null;
