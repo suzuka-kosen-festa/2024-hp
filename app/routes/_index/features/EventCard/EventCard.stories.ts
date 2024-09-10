@@ -32,7 +32,7 @@ type Story = StoryObj<T>;
 export const Default: Story = {
 	args: {
 		children: "test test test test test ああああああああああああああああああああああああ",
-		hash: "test",
+		hash: "game",
 		title: "Test title",
 	},
 };
