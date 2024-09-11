@@ -9,6 +9,7 @@ export const vars = createThemeContract({
 		gray: "#242424" as const,
 		purple: "#6B007C" as const,
 		red: "#C81A54" as const,
+		textGray: "#C8C8C8" as const,
 		white: "#FFFFFF" as const,
 	},
 	typography: {
@@ -28,6 +29,7 @@ createGlobalTheme(":root", vars, {
 		gray: "#242424",
 		purple: "#6B007C",
 		red: "#C81A54",
+		textGray: "#C8C8C8",
 		white: "#FFFFFF",
 	},
 	typography: {
