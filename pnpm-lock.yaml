@@ -61,7 +61,7 @@ importers:
         version: 0.7.0(typescript@5.6.2)
       '@content-collections/remix-vite':
         specifier: 0.1.1
-        version: 0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.3(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.32.0))
+        version: 0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.4(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.32.0))
       '@iconify-json/ic':
         specifier: 1.2.0
         version: 1.2.0
@@ -9458,10 +9458,10 @@ snapshots:
       yaml: 2.5.1
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.3(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.32.0))':
+  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.4(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.32.0))':
     dependencies:
       '@content-collections/core': 0.7.0(typescript@5.6.2)
-      vite: 5.4.3(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.32.0)
+      vite: 5.4.4(@types/node@20.12.7)(lightningcss@1.25.0)(terser@5.32.0)
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
