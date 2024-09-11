@@ -71,7 +71,7 @@ export const text = style({
 export const overview = style({
 	"@layer": {
 		[layers.feature]: {
-			color: vars.color.textGray,
+			color: vars.color.white,
 			fontSize: "0.875rem",
 		},
 	},
