@@ -5,3 +5,4 @@ playwright-report/
 test-results/
 storybook-static/
 public/~partytown/
+.content-collections/

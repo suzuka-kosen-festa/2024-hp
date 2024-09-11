@@ -9,6 +9,7 @@ import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import { partytownVite } from "@builder.io/partytown/utils";
+import contentCollections from "@content-collections/remix-vite";
 import { getLoadContext } from "./load-context";
 
 // eslint-disable-next-line node/prefer-global/process
@@ -37,6 +38,7 @@ export default defineConfig(({ mode }) => ({
 		terserOptions: {
 			compress: {
 				ecma: 2020,
+				hoist_props: true,
 				inline: 3,
 				passes: 5,
 			},
@@ -69,6 +71,7 @@ export default defineConfig(({ mode }) => ({
 			},
 			serverModuleFormat: "esm",
 		}),
+		contentCollections(),
 		!isStorybook
 		&& partytownVite({
 			dest: join(__dirname, "build/client", "~partytown"),
