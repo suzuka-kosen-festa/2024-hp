@@ -6,7 +6,7 @@ const stageEvent = defineCollection({
 	include: "**/*.md",
 	name: "stageEvent",
 	schema: z => ({
-		date: z.string().refine((v) => {
+		endAt: z.string().refine((v) => {
 			try {
 				Temporal.ZonedDateTime.from(v);
 
@@ -15,8 +15,18 @@ const stageEvent = defineCollection({
 			catch {
 				return false;
 			}
-		}, { message: "Value of \"date\" must be a valid Temporal.ZonedDateTime." }),
+		}, { message: "Value of \"endAt\" must be a valid Temporal.ZonedDateTime." }),
 		overview: z.string().max(100, { message: "Value of \"overview\" must be less than 100 characters." }),
+		startAt: z.string().refine((v) => {
+			try {
+				Temporal.ZonedDateTime.from(v);
+
+				return true;
+			}
+			catch {
+				return false;
+			}
+		}, { message: "Value of \"startAt\" must be a valid Temporal.ZonedDateTime." }),
 		title: z.string(),
 	}),
 });
