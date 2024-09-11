@@ -40,6 +40,9 @@ importers:
       isbot:
         specifier: 5.1.17
         version: 5.1.17
+      lit-date:
+        specifier: 1.0.4
+        version: 1.0.4
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -5483,6 +5486,9 @@ packages:
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+
+  lit-date@1.0.4:
+    resolution: {integrity: sha512-OsYVNNBtiwEmunPI9eYkgRMPi0L8R7qIfMo5f0eeX1DF4LngS1o0d+8/bm1hBD7nhev84sJ+i9/y8TxYFCXWmw==}
 
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
@@ -14069,6 +14075,8 @@ snapshots:
   lilconfig@3.1.1: {}
 
   lines-and-columns@1.2.4: {}
+
+  lit-date@1.0.4: {}
 
   load-tsconfig@0.2.5: {}
 
