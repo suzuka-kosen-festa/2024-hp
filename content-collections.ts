@@ -78,6 +78,7 @@ const gameEvent = defineCollection({
 				return false;
 			}
 		}, { message: "Value of \"date\" must be a valid Temporal.ZonedDateTime." }),
+		day: z.union([z.literal(1), z.literal(2)]),
 		form: z.string().url({ message: "Value of \"form\" must be a valid URL." }),
 		guideBook: z.string().url({ message: "Value of \"guideBook\" must be a valid URL." }),
 		title: z.string(),
