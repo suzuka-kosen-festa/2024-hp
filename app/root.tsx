@@ -5,7 +5,7 @@ import { Suspense, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Partytown } from "@builder.io/partytown/react";
-import { ErrorBoundary as ErrorBoundaryComponent } from "./features/ErrorBoundary";
+import { ErrorBoundary as ErrorBoundaryComponent } from "./components/ErrorBoundary";
 import "@/styles/globals.css";
 
 interface Props {
