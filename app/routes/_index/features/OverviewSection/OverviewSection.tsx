@@ -36,9 +36,10 @@ export function OverviewSection(): ReactNode {
 					<EventCard hash="live" title="ライブステージ">第一体育館内で行われるライブの出演者情報など</EventCard>
 					<EventCard hash="game" title="ゲームイベント">第二合併講義室で行われるゲームイベントについて</EventCard>
 				</section>
-				<h2 className={styles.eventTitle}>中学生の皆様へ</h2>
-				<DetailCard title="進路説明会について" url="https://www.suzuka-ct.ac.jp/admission/admission_index/explanation/">来訪される中学生の方々で、進路説明会に出席をご希望される方は詳細をご覧ください。</DetailCard>
-				<section></section>
+				<section>
+					<h2 className={styles.eventTitle}>中学生の皆様へ</h2>
+					<DetailCard title="進路説明会について" url="https://www.suzuka-ct.ac.jp/admission/admission_index/explanation/">来訪される中学生の方々で、進路説明会に出席をご希望される方は詳細をご覧ください。</DetailCard>
+				</section>
 			</section>
 		</section>
 	);
