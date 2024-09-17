@@ -10,7 +10,7 @@ interface Props {
 
 export function GameEventSection({ gameEvents }: Props): ReactNode {
 	return (
-		<section aria-label="game events section" className={styles.section}>
+		<section aria-label="game events section" className={styles.section} id="game">
 			<SectionTitle title="Game Events" />
 			<ul className={styles.list}>
 				{gameEvents.map(gameEvent => (

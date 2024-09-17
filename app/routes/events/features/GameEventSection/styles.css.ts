@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
+import { Breakpoints } from "@/styles/media.css";
 
 export const section = style({
 	"@layer": {
@@ -15,13 +16,19 @@ export const list = style({
 	"@layer": {
 		[layers.feature]: {
 			"@media": {
-				"(min-width: 768px)": {
+				[Breakpoints.md]: {
 					gridTemplateColumns: "repeat(auto-fill, minmax(43.5rem, 1fr))",
+				},
+				[Breakpoints.xxl]: {
+					maxWidth: "88rem",
 				},
 			},
 			"display": "grid",
 			"gap": "1rem",
 			"gridTemplateColumns": "1fr",
+			"justifySelf": "center",
+			"maxWidth": "none",
+			"width": "100%",
 		},
 	},
 });

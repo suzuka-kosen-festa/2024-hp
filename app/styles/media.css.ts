@@ -4,6 +4,7 @@ const BREAKPOINT = [
 	["md", "(min-width: 768px)"],
 	["lg", "(min-width: 1024px)"],
 	["xl", "(min-width: 1280px)"],
+	["xxl", "(min-width: 1536px)"],
 ];
 
 export const Breakpoints = {
@@ -11,4 +12,5 @@ export const Breakpoints = {
 	md: "(min-width: 768px)",
 	sm: "(min-width: 640px)",
 	xl: "(min-width: 1280px)",
+	xxl: "(min-width: 1536px)",
 } as const satisfies Record<typeof BREAKPOINT[number][0], typeof BREAKPOINT[number][1]>;

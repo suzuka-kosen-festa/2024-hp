@@ -10,7 +10,7 @@ interface Props {
 
 export function LiveEventSection({ liveEvents }: Props): ReactNode {
 	return (
-		<section aria-label="live events section" className={styles.section}>
+		<section aria-label="live events section" className={styles.section} id="live">
 			<SectionTitle title="Live Events" />
 			<ul className={styles.list}>
 				{liveEvents.map(liveEvent => (

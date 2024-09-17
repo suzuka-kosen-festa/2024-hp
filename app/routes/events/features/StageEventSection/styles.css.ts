@@ -19,10 +19,16 @@ export const list = style({
 				[Breakpoints.md]: {
 					gridTemplateColumns: "repeat(auto-fill, minmax(21.25rem, 1fr))",
 				},
+				[Breakpoints.xxl]: {
+					maxWidth: "88rem",
+				},
 			},
 			"display": "grid",
 			"gap": "1rem",
 			"gridTemplateColumns": "1fr",
+			"justifySelf": "center",
+			"maxWidth": "none",
+			"width": "100%",
 		},
 	},
 });

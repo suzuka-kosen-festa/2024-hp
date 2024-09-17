@@ -179,7 +179,7 @@ export default function Page(): ReactNode {
 					<source media="(min-height: 1080px)" srcSet="/images/background@3x.webp" type="image/webp" />
 					<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
 					<img alt="" className={styles.blurredBackground} ref={blurredImgRef} src="/images/background.webp" />
-					<img alt="" className={clsx(styles.background)} ref={imgRef} src="/images/background.webp" />
+					<img alt="" className={styles.background} ref={imgRef} src="/images/background.webp" />
 				</picture>
 				<div className={styles.eyeWrapper} ref={eyeContainerRef}>
 					<span className={clsx(styles.eye, styles.eyeTop)} ref={eyeTopRef} role="presentation" />
