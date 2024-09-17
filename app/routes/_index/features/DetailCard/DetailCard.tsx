@@ -20,7 +20,7 @@ export function DetailCard({ children, title, url }: Props): ReactNode {
 				target="_blank"
 			>
 				<span className={styles.span}>
-					詳しく見る
+					本校 HP はこちら
 				</span>
 				<RightArrow className={styles.arrow} />
 			</a>

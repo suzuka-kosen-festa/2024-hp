@@ -38,7 +38,7 @@ export function OverviewSection(): ReactNode {
 				</section>
 				<h2 className={styles.eventTitle}>中学生の皆様へ</h2>
 				<section>
-					<DetailCard title="進路説明会について" url="https://www.suzuka-ct.ac.jp/admission/admission_index/explanation/">来訪される中学生の方々で、進路説明会に出席をご希望される方は詳細をご覧ください。</DetailCard>
+					<DetailCard title="受験相談会in高専祭" url="https://www.suzuka-ct.ac.jp/admission/admission_index/explanation/">皆様の疑問に可能な限りでお答えいたします！</DetailCard>
 				</section>
 			</section>
 		</section>
