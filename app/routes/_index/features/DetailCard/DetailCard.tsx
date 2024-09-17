@@ -16,7 +16,7 @@ export function DetailCard({ children, title, url }: Props): ReactNode {
 			<a
 				className={styles.link}
 				href={url}
-				rel="noopener noreferrer"
+				rel="noreferrer"
 				target="_blank"
 			>
 				<span className={styles.span}>
