@@ -6,15 +6,9 @@ import { Breakpoints } from "@/styles/media.css";
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
-			"@media": {
-				[Breakpoints.md]: {
-					width: "43.5rem",
-				},
-			},
-			"display": "flex",
-			"flexDirection": "column",
-			"rowGap": "1rem",
-			"width": "100%",
+			display: "flex",
+			flexDirection: "column",
+			rowGap: "1rem",
 		},
 	},
 });

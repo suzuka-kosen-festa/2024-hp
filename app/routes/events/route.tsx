@@ -1,9 +1,35 @@
 import type { ReactNode } from "react";
+import { useLoaderData } from "@remix-run/react";
+import * as styles from "./styles.css";
+import { StageEventSection } from "./features/StageEventSection";
+import { LiveEventSection } from "./features/LiveEventSection";
+import { GameEventSection } from "./features/GameEventSection";
+import { loader } from "./handlers";
+import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
+	const { gameEvents, liveEvents, stageEvents } = useLoaderData<typeof loader>();
+
 	return (
-		<div>
-			<h1>test</h1>
-		</div>
+		<>
+			<picture>
+				<source media="(min-height: 2160px)" srcSet="/images/background@7x.webp" type="image/webp" />
+				<source media="(min-height: 1800px)" srcSet="/images/background@6x.webp" type="image/webp" />
+				<source media="(min-height: 1440px)" srcSet="/images/background@5x.webp" type="image/webp" />
+				<source media="(min-height: 1152px)" srcSet="/images/background@4x.webp" type="image/webp" />
+				<source media="(min-height: 1080px)" srcSet="/images/background@3x.webp" type="image/webp" />
+				<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
+				<img alt="" className={styles.background} src="/images/background.webp" />
+			</picture>
+			<div className={styles.wrapper}>
+				<h1 className={styles.h1}>開催概要 / イベント詳細</h1>
+				<StageEventSection stageEvents={stageEvents} />
+				<LiveEventSection liveEvents={liveEvents} />
+				<GameEventSection gameEvents={gameEvents} />
+			</div>
+			<Footer />
+		</>
 	);
 }
+
+export { loader };
