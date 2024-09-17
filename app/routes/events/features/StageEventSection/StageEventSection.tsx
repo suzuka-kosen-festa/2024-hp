@@ -11,7 +11,7 @@ interface Props {
 export function StageEventSection({ stageEvents }: Props): ReactNode {
 	return (
 		<section aria-label="stage events section" className={styles.section} id="stage">
-			<SectionTitle title="Stage Events" />
+			<SectionTitle title="ステージイベント" />
 			<ul className={styles.list}>
 				{stageEvents.map(stageEvent => (
 					<li key={stageEvent._meta.fileName}>
