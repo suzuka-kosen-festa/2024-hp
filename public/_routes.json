@@ -9,7 +9,6 @@
     "/ogp.png",
     "/robots.txt",
     "/~partytown/*",
-    "/images/*",
-    "/assets/*.css"
+    "/images/*"
   ]
 }
