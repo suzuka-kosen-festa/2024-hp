@@ -6,6 +6,13 @@ type T = typeof GameEventCard;
 
 const meta: Meta = {
 	component: GameEventCard,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "centered",
 	},

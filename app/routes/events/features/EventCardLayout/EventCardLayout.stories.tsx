@@ -6,6 +6,13 @@ type T = typeof EventCardLayout;
 
 const meta: Meta = {
 	component: EventCardLayout,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "centered",
 	},

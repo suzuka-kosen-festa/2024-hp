@@ -23,6 +23,7 @@ export const list = style({
 					maxWidth: "88rem",
 				},
 			},
+			"alignItems": "stretch",
 			"display": "grid",
 			"gap": "1rem",
 			"gridTemplateColumns": "1fr",
