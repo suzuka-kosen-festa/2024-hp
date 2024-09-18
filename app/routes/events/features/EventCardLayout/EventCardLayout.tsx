@@ -13,11 +13,11 @@ interface Props {
 
 export function EventCardLayout({ children, kind }: Props): ReactNode {
 	return (
-		<div className={styles.container}>
+		<li className={styles.container}>
 			<div className={styles.innerContainer}>{children}</div>
 			<Suspense fallback={null}>
 				{kind === "game" ? <Gamepad className={styles.icon} /> : kind === "live" ? <Music className={styles.icon} /> : <Cracker className={styles.icon} />}
 			</Suspense>
-		</div>
+		</li>
 	);
 }

@@ -6,6 +6,13 @@ type T = typeof StageEventCard;
 
 const meta: Meta = {
 	component: StageEventCard,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "centered",
 	},

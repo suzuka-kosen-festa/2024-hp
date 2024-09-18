@@ -14,16 +14,15 @@ export function LiveEventSection({ liveEvents }: Props): ReactNode {
 			<SectionTitle title="ライブイベント" />
 			<ul className={styles.list}>
 				{liveEvents.map(liveEvent => (
-					<li key={liveEvent._meta.fileName}>
-						<LiveEventCard
-							endAt={liveEvent.endAt}
-							name={liveEvent.name}
-							overview={liveEvent.overview}
-							press={liveEvent.press}
-							stage={liveEvent.stage}
-							startAt={liveEvent.startAt}
-						/>
-					</li>
+					<LiveEventCard
+						endAt={liveEvent.endAt}
+						key={liveEvent._meta.fileName}
+						name={liveEvent.name}
+						overview={liveEvent.overview}
+						press={liveEvent.press}
+						stage={liveEvent.stage}
+						startAt={liveEvent.startAt}
+					/>
 				))}
 			</ul>
 		</section>

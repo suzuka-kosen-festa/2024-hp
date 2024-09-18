@@ -6,6 +6,13 @@ type T = typeof LiveEventCard;
 
 const meta: Meta = {
 	component: LiveEventCard,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "centered",
 	},

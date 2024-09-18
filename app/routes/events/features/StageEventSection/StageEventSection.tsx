@@ -14,14 +14,13 @@ export function StageEventSection({ stageEvents }: Props): ReactNode {
 			<SectionTitle title="ステージイベント" />
 			<ul className={styles.list}>
 				{stageEvents.map(stageEvent => (
-					<li key={stageEvent._meta.fileName}>
-						<StageEventCard
-							endAt={stageEvent.endAt}
-							overview={stageEvent.overview}
-							startAt={stageEvent.startAt}
-							title={stageEvent.title}
-						/>
-					</li>
+					<StageEventCard
+						endAt={stageEvent.endAt}
+						key={stageEvent._meta.fileName}
+						overview={stageEvent.overview}
+						startAt={stageEvent.startAt}
+						title={stageEvent.title}
+					/>
 				))}
 			</ul>
 		</section>

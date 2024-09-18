@@ -14,16 +14,15 @@ export function GameEventSection({ gameEvents }: Props): ReactNode {
 			<SectionTitle title="ゲームイベント" />
 			<ul className={styles.list}>
 				{gameEvents.map(gameEvent => (
-					<li key={gameEvent._meta.fileName}>
-						<GameEventCard
-							date={gameEvent.date}
-							day={gameEvent.day}
-							form={gameEvent.form}
-							guideBook={gameEvent.guideBook}
-							title={gameEvent.title}
-							venue={gameEvent.venue}
-						/>
-					</li>
+					<GameEventCard
+						date={gameEvent.date}
+						day={gameEvent.day}
+						form={gameEvent.form}
+						guideBook={gameEvent.guideBook}
+						key={gameEvent._meta.fileName}
+						title={gameEvent.title}
+						venue={gameEvent.venue}
+					/>
 				))}
 			</ul>
 		</section>
