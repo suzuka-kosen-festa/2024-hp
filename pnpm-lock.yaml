@@ -60,11 +60,11 @@ importers:
         specifier: 4.20240919.0
         version: 4.20240919.0
       '@content-collections/core':
-        specifier: 0.7.0
-        version: 0.7.0(typescript@5.6.2)
+        specifier: 0.7.1
+        version: 0.7.1(typescript@5.6.2)
       '@content-collections/remix-vite':
         specifier: 0.1.1
-        version: 0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.6(@types/node@22.5.4)(lightningcss@1.25.0)(terser@5.33.0))
+        version: 0.1.1(@content-collections/core@0.7.1(typescript@5.6.2))(vite@5.4.6(@types/node@22.5.4)(lightningcss@1.25.0)(terser@5.33.0))
       '@iconify-json/ic':
         specifier: 1.2.0
         version: 1.2.0
@@ -529,8 +529,8 @@ packages:
   '@cloudflare/workers-types@4.20240919.0':
     resolution: {integrity: sha512-DZwTpZVAV+fKTLxo6ntC2zMNRL/UJwvtMKUt/U7ZyJdR+t0qcBUZGx8jLi9gOFWYxkzO3s7slajwkR2hQRPXYQ==}
 
-  '@content-collections/core@0.7.0':
-    resolution: {integrity: sha512-S1YQ5WSNiQtmf8tPhRAzqEmst4fPCMGE5iCt04gBkuAJM3EZdIRbV06eQsyJAiRNk2/L7Bqz3VIKdYSgdk84zg==}
+  '@content-collections/core@0.7.1':
+    resolution: {integrity: sha512-qa9oR9Z9aHExNMu2LzAKIYC/rqgDnKQ7Lnc/AmKaYhf/PBWvJBvjXyeYQ3YFhEOrM6qdCqSKaml1fG7zzKpOrQ==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -3292,12 +3292,6 @@ packages:
   builtins@5.1.0:
     resolution: {integrity: sha512-SW9lzGTLvWTP1AY8xeAMZimqDrIaSdLQUcVr9DMef51niJ022Ri87SwRRKYm4A6iHfkPaiVUu/Duw2Wc4J7kKg==}
 
-  bundle-require@5.0.0:
-    resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      esbuild: '>=0.18'
-
   bytes@3.0.0:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
     engines: {node: '>= 0.8'}
@@ -5490,10 +5484,6 @@ packages:
 
   lit-date@1.0.4:
     resolution: {integrity: sha512-OsYVNNBtiwEmunPI9eYkgRMPi0L8R7qIfMo5f0eeX1DF4LngS1o0d+8/bm1hBD7nhev84sJ+i9/y8TxYFCXWmw==}
-
-  load-tsconfig@0.2.5:
-    resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   loader-utils@3.2.1:
     resolution: {integrity: sha512-ZvFw1KWS3GVyYBYb7qkmRM/WwL2TQQBxgCK62rlvm4WpVQ23Nb4tYjApUlfjrEGvOs7KHEsmyUn75OHZrJMWPw==}
@@ -7861,11 +7851,6 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  yaml@2.4.1:
-    resolution: {integrity: sha512-pIXzoImaqmfOrL7teGUBt/T7ZDnyeGBWyXQBvOVhLkWLN37GXv8NMLK406UY6dS51JfcQHsmcW5cJ441bHg6Lg==}
-    engines: {node: '>= 14'}
-    hasBin: true
-
   yaml@2.5.1:
     resolution: {integrity: sha512-bLQOjaX/ADgQ20isPJRvF0iRUHIxVhYvr53Of7wGcWlO2jvtUlH5m87DsmulFVxRpNLOnI4tB6p/oh8D7kpn9Q==}
     engines: {node: '>= 14'}
@@ -8250,10 +8235,9 @@ snapshots:
 
   '@cloudflare/workers-types@4.20240919.0': {}
 
-  '@content-collections/core@0.7.0(typescript@5.6.2)':
+  '@content-collections/core@0.7.1(typescript@5.6.2)':
     dependencies:
       '@parcel/watcher': 2.4.1
-      bundle-require: 5.0.0(esbuild@0.21.5)
       camelcase: 8.0.0
       esbuild: 0.21.5
       gray-matter: 4.0.3
@@ -8266,9 +8250,9 @@ snapshots:
       yaml: 2.5.1
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.6(@types/node@22.5.4)(lightningcss@1.25.0)(terser@5.33.0))':
+  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.1(typescript@5.6.2))(vite@5.4.6(@types/node@22.5.4)(lightningcss@1.25.0)(terser@5.33.0))':
     dependencies:
-      '@content-collections/core': 0.7.0(typescript@5.6.2)
+      '@content-collections/core': 0.7.1(typescript@5.6.2)
       vite: 5.4.6(@types/node@22.5.4)(lightningcss@1.25.0)(terser@5.33.0)
 
   '@cspotcode/source-map-support@0.8.1':
@@ -11436,11 +11420,6 @@ snapshots:
     dependencies:
       semver: 7.6.3
 
-  bundle-require@5.0.0(esbuild@0.21.5):
-    dependencies:
-      esbuild: 0.21.5
-      load-tsconfig: 0.2.5
-
   bytes@3.0.0: {}
 
   bytes@3.1.2: {}
@@ -14060,8 +14039,6 @@ snapshots:
   lines-and-columns@1.2.4: {}
 
   lit-date@1.0.4: {}
-
-  load-tsconfig@0.2.5: {}
 
   loader-utils@3.2.1: {}
 
@@ -16746,11 +16723,9 @@ snapshots:
     dependencies:
       eslint-visitor-keys: 3.4.3
       lodash: 4.17.21
-      yaml: 2.4.1
+      yaml: 2.5.1
 
   yaml@1.10.2: {}
-
-  yaml@2.4.1: {}
 
   yaml@2.5.1: {}
 

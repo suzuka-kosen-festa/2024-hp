@@ -51,7 +51,7 @@
   "devDependencies": {
     "@axe-core/playwright": "4.10.0",
     "@cloudflare/workers-types": "4.20240919.0",
-    "@content-collections/core": "0.7.0",
+    "@content-collections/core": "0.7.1",
     "@content-collections/remix-vite": "0.1.1",
     "@iconify-json/ic": "1.2.0",
     "@iconify-json/ion": "1.2.0",
