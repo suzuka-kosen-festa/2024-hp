@@ -22,7 +22,7 @@ export function GameEventCard({ date, day, form, guideBook, title, venue }: Prop
 					<span className={styles.meta}>
 						<Time className={styles.icon} />
 						<time dateTime={date}>
-							{litdate`${"YYYY"}年${"MM"}月${"MM"}日`(Temporal.ZonedDateTime.from(date).epochMilliseconds)}
+							{litdate`${"YYYY"}年${"MM"}月${"mm"}日`(Temporal.ZonedDateTime.from(date).epochMilliseconds)}
 						</time>
 					</span>
 					<span className={styles.meta}>
