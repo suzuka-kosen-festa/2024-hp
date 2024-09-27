@@ -47,6 +47,7 @@ export const content = style({
 export const link = style({
 	"@layer": {
 		[layers.feature]: {
+			alignItems: "center",
 			display: "inline-flex",
 			justifyContent: "flex-end",
 			padding: "0.5rem 1rem",
