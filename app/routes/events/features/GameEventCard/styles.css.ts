@@ -99,6 +99,7 @@ export const links = style({
 export const link = style({
 	"@layer": {
 		[layers.feature]: {
+			alignItems: "center",
 			display: "inline-flex",
 			padding: "0.5rem 1rem",
 			rowGap: "0.5rem",
