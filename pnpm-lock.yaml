@@ -90,8 +90,8 @@ importers:
         specifier: 2.12.1
         version: 2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)
       '@storybook/addon-a11y':
-        specifier: 8.3.4
-        version: 8.3.4(storybook@8.3.4)
+        specifier: 8.3.5
+        version: 8.3.5(storybook@8.3.4)
       '@storybook/addon-actions':
         specifier: 8.3.4
         version: 8.3.4(storybook@8.3.4)
@@ -2049,10 +2049,10 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@storybook/addon-a11y@8.3.4':
-    resolution: {integrity: sha512-mbLAJ9vW879Fq66zTUp7Gn7GQ9ZieYDj90ngMsZIjX42SsJEkeIrwbpkwbHlJBlWm2cm7hcF+BrULI0CmTIFpQ==}
+  '@storybook/addon-a11y@8.3.5':
+    resolution: {integrity: sha512-/19UO8IXbyfcYK5K8ejSYF+hC+EK79c0bBPHMNeYSFOHSqQM3KoMo+TLIcLsuhuRClmlM+4Zs+VSIYDwc+d3ig==}
     peerDependencies:
-      storybook: ^8.3.4
+      storybook: ^8.3.5
 
   '@storybook/addon-actions@8.3.4':
     resolution: {integrity: sha512-1y0yD3upKcyzNwwA6loAGW2cRDqExwl4oAT7GJQA4tmabI+fNwmANSgU/ezLvvSUf4Qo0eJHg2Zcn8y+Apq2eA==}
@@ -2083,6 +2083,11 @@ packages:
     resolution: {integrity: sha512-rxZTeuZyZ7RnU+xmRhS01COFLbGnVEmlUNxBw8ArsrTEZKW5PbKpIxNLTj9F0zdH8H0MfryJGP+Aadcm0oHWlw==}
     peerDependencies:
       storybook: ^8.3.4
+
+  '@storybook/addon-highlight@8.3.5':
+    resolution: {integrity: sha512-ku0epul9aReCR3Gv/emwYnsqg3vgux5OmYMjoDcJC7s+LyfweSzLV/f5t9gSHazikJElh5TehtVkWbC4QfbGSw==}
+    peerDependencies:
+      storybook: ^8.3.5
 
   '@storybook/addon-interactions@8.3.4':
     resolution: {integrity: sha512-ORxqe35wUmF7EDHo45mdDHiju3Ryk2pZ1vO9PyvW6ZItNlHt/IxAr7T/TysGejZ/eTBg6tMZR3ExGky3lTg/CQ==}
@@ -9754,9 +9759,9 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@storybook/addon-a11y@8.3.4(storybook@8.3.4)':
+  '@storybook/addon-a11y@8.3.5(storybook@8.3.4)':
     dependencies:
-      '@storybook/addon-highlight': 8.3.4(storybook@8.3.4)
+      '@storybook/addon-highlight': 8.3.5(storybook@8.3.4)
       axe-core: 4.10.0
       storybook: 8.3.4
 
@@ -9815,6 +9820,11 @@ snapshots:
       ts-dedent: 2.2.0
 
   '@storybook/addon-highlight@8.3.4(storybook@8.3.4)':
+    dependencies:
+      '@storybook/global': 5.0.0
+      storybook: 8.3.4
+
+  '@storybook/addon-highlight@8.3.5(storybook@8.3.4)':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 8.3.4

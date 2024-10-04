@@ -61,7 +61,7 @@
     "@re-taro/eslint-config": "5.2.0",
     "@remix-run/dev": "2.12.1",
     "@remix-run/testing": "2.12.1",
-    "@storybook/addon-a11y": "8.3.4",
+    "@storybook/addon-a11y": "8.3.5",
     "@storybook/addon-actions": "8.3.4",
     "@storybook/addon-essentials": "8.3.4",
     "@storybook/addon-interactions": "8.3.4",
