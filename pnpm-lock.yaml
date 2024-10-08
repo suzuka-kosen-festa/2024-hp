@@ -69,8 +69,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1
       '@iconify-json/ion':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.2.1
+        version: 1.2.1
       '@iconify-json/pixelarticons':
         specifier: 1.2.0
         version: 1.2.0
@@ -1240,8 +1240,8 @@ packages:
   '@iconify-json/ic@1.2.1':
     resolution: {integrity: sha512-UjL/bjJP/T5EV881+hTzcfTKVo0KEUjhnMiJcLtPzNgPtU2KZZmRx8BSKKR61H4CN/5FTEbyawGyG0aEt3SwGQ==}
 
-  '@iconify-json/ion@1.2.0':
-    resolution: {integrity: sha512-uyFGINF59wOZDgXNkUTXTnzL2qeTfwbjP45JidRwhFK2JvFH9wyhXHz+TXqrG80PbQsNCqhIgGfwHmASWbutsg==}
+  '@iconify-json/ion@1.2.1':
+    resolution: {integrity: sha512-33jiBdtP8+uBV0KRz8Z9g54QFujzssiT9W6wdNuY61VQM1s3cvoAX89yiczRs4/6b2xJE5vqqvsEJAQPqfY5JA==}
 
   '@iconify-json/pixelarticons@1.2.0':
     resolution: {integrity: sha512-rCEJ3uO59VqdDTmiK8idfxxtApn1lHN/PM8ORc5q8HkQMGBH9V/d7DjOzJLpEESzfu/gv8v64WhCtyYnu5m9Hw==}
@@ -8813,7 +8813,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/ion@1.2.0':
+  '@iconify-json/ion@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 
