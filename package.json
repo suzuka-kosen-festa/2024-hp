@@ -56,7 +56,7 @@
     "@iconify-json/ic": "1.2.1",
     "@iconify-json/ion": "1.2.1",
     "@iconify-json/pixelarticons": "1.2.1",
-    "@iconify-json/ri": "1.2.0",
+    "@iconify-json/ri": "1.2.1",
     "@playwright/test": "1.47.2",
     "@re-taro/eslint-config": "5.2.0",
     "@remix-run/dev": "2.12.1",
