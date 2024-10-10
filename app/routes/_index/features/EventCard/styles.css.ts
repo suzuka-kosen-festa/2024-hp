@@ -50,7 +50,7 @@ export const link = style({
 			alignItems: "center",
 			display: "inline-flex",
 			justifyContent: "flex-end",
-			padding: "0.5rem 1rem",
+			padding: "0.5rem 0",
 			rowGap: "0.5rem",
 		},
 	},
