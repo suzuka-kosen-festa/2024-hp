@@ -1,7 +1,10 @@
-import { style } from "@vanilla-extract/css";
+import { createVar, style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
 import { Breakpoints } from "@/styles/media.css";
+
+export const backgroundColor = createVar();
+export const borderColor = createVar();
 
 export const box = style({
 	"@layer": {
@@ -12,9 +15,11 @@ export const box = style({
 				},
 			},
 			"backdropFilter": "blur(32px)",
-			"backgroundImage": "linear-gradient(154deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.03) 100%)",
-			"border": `1px solid ${vars.color.white}`,
+			backgroundColor,
+			borderColor,
 			"borderRadius": "1.25rem",
+			"borderStyle": "solid",
+			"borderWidth": "1px",
 			"display": "flex",
 			"flexDirection": "column",
 			"maxWidth": "none",
