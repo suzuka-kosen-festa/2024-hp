@@ -188,8 +188,8 @@ export const scheduleRow = style({
 	"@layer": {
 		[layers.feature]: {
 			alignItems: "center",
-			border: `3px solid ${vars.color.blue}`,
-			borderRadius: "999em",
+			border: `2px solid ${vars.color.green}`,
+			borderRadius: "0.75rem",
 			columnGap: "1rem",
 			display: "inline-flex",
 			overflow: "hidden",
@@ -206,7 +206,7 @@ export const scheduleTime = style({
 					width: "9.125rem",
 				},
 			},
-			"backgroundColor": vars.color.blue,
+			"borderRight": `2px solid ${vars.color.green}`,
 			"color": vars.color.white,
 			"fontSize": "1rem",
 			"fontWeight": 600,

@@ -11,7 +11,7 @@ interface Props {
 export function GameEventSection({ gameEvents }: Props): ReactNode {
 	return (
 		<section aria-label="game events section" className={styles.section} id="game">
-			<SectionTitle title="ゲームイベント" />
+			<SectionTitle color="green" title="ゲームイベント" />
 			<ul className={styles.list}>
 				{gameEvents.map(gameEvent => (
 					<GameEventCard

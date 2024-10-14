@@ -11,7 +11,7 @@ interface Props {
 export function LiveEventSection({ liveEvents }: Props): ReactNode {
 	return (
 		<section aria-label="live events section" className={styles.section} id="live">
-			<SectionTitle title="ライブイベント" />
+			<SectionTitle color="blue" title="ライブイベント" />
 			<ul className={styles.list}>
 				{liveEvents.map(liveEvent => (
 					<LiveEventCard

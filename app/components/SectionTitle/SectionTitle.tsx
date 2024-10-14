@@ -8,16 +8,19 @@ const MessageText = lazy(() => import("~icons/custom/message-text"));
 const InfoBox = lazy(() => import("~icons/custom/info-box.svg"));
 
 type Props = {
-	icon: "info" | "message";
-	variant: "blue" | "red";
-	title?: never;
-} | {
+	color: "blue" | "green" | "red";
 	title: string;
 	icon?: never;
 	variant?: never;
+} | {
+	icon: "info" | "message";
+	variant: "blue" | "red";
+	color?: never;
+	title?: never;
 };
 
 export function SectionTitle({
+	color,
 	icon,
 	title,
 	variant,
@@ -26,11 +29,17 @@ export function SectionTitle({
 		<span className={styles.wrapper}>
 			<span
 				style={assignInlineVars({
-					[styles.lineBackgroundColor]: typeof title !== "undefined"
-						? "linear-gradient(to left, rgb(255 255 255 / 0.5) 0%, rgb(255 255 255 / 0.2) 50%, rgb(255 255 255 / 0.5) 100%)"
-						: variant === "red"
-							? `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`
-							: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.blue} 50%, ${vars.color.black} 100%)`,
+					[styles.lineBackgroundColor]: typeof color !== "undefined"
+						? color === "blue"
+							? `linear-gradient(to left, ${vars.color.blue} 0%, ${vars.color.black} 50%, ${vars.color.blue} 100%)`
+							: color === "green"
+								? `linear-gradient(to left, ${vars.color.green} 0%, ${vars.color.black} 50%, ${vars.color.green} 100%)`
+								: `linear-gradient(to left, ${vars.color.red} 0%, ${vars.color.black} 50%, ${vars.color.red} 100%)`
+						: typeof title !== "undefined"
+							? "linear-gradient(to left, rgb(255 255 255 / 0.5) 0%, rgb(255 255 255 / 0.2) 50%, rgb(255 255 255 / 0.5) 100%)"
+							: variant === "red"
+								? `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`
+								: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.blue} 50%, ${vars.color.black} 100%)`,
 				})}
 				className={styles.line}
 				role="presentation"

@@ -77,6 +77,7 @@ export const title = style({
 			"color": vars.color.white,
 			"fontSize": "1.5rem",
 			"fontWeight": 600,
+			"zIndex": 10,
 		},
 	},
 });
