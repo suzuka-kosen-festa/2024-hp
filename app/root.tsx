@@ -68,7 +68,7 @@ function App(): ReactNode {
 export const links: LinksFunction = () => [
 	{ href: "https://fonts.googleapis.com", rel: "preconnect" },
 	{ crossOrigin: "anonymous", href: "https://fonts.gstatic.com", rel: "preconnect" },
-	{ href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&display=swap", rel: "stylesheet" },
+	{ href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap", rel: "stylesheet" },
 	{ href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
 	{ href: "/favicon.ico", rel: "icon", sizes: "any" },
 ];
