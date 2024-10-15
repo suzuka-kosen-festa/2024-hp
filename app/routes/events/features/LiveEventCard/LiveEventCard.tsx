@@ -23,7 +23,7 @@ export function LiveEventCard({ endAt, name, overview, press, stage, startAt }: 
 					</span>
 					<span className={styles.meta}>
 						<MapPin className={styles.icon} />
-						<span>{stage === "main" ? "メインステージ" : "サブステージ"}</span>
+						<span>{stage === "main" ? "ライブステージ" : "サブステージ"}</span>
 					</span>
 				</div>
 				<div className={styles.overviewContainer}>
