@@ -100,11 +100,23 @@ const sponsor = defineCollection({
 	}),
 });
 
+const departmentExhibition = defineCollection({
+	directory: "contents/department_exhibition",
+	include: "**/*.md",
+	name: "departmentExhibition",
+	schema: z => ({
+		dept: z.string().max(1, { message: "Value of \"dept\" must be less than 1 characters." }),
+		overview: z.string().max(60, { message: "Value of \"overview\" must be less than 60 characters." }),
+		team: z.string(),
+	}),
+});
+
 export default defineConfig({
 	collections: [
 		stageEvent,
 		liveEvent,
 		gameEvent,
 		sponsor,
+		departmentExhibition,
 	],
 });
