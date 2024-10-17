@@ -105,7 +105,7 @@ const departmentExhibition = defineCollection({
 	include: "**/*.md",
 	name: "departmentExhibition",
 	schema: z => ({
-		dept: z.string().max(1, { message: "Value of \"dept\" must be less than 1 characters." }),
+		department: z.union([z.literal("M"), z.literal("E"), z.literal("I"), z.literal("C"), z.literal("S")]),
 		overview: z.string().max(60, { message: "Value of \"overview\" must be less than 60 characters." }),
 		team: z.string(),
 	}),
