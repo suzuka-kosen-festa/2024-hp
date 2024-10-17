@@ -22,18 +22,19 @@ export default function Page(): ReactNode {
 				})
 				.set(landingRef.current, {
 					display: "none",
+					onComplete: () => {
+						navigate("/top");
+					},
 				});
 		});
 
 		const click = () => {
 			animation();
-			navigate("/top");
 		};
 
 		const kewdown = (e: KeyboardEvent) => {
 			if (e.key === "Enter") {
 				animation();
-				navigate("/top");
 			}
 		};
 
