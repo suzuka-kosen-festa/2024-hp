@@ -3,10 +3,13 @@ import { useRef } from "react";
 import clsx from "clsx";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useLoaderData } from "@remix-run/react";
 import * as styles from "./styles.css";
 import { HeroSection } from "./features/HeroSection";
 import { OverviewSection } from "./features/OverviewSection";
 import { PhilosophySection } from "./features/PhilosophySection";
+import { loader } from "./handlers";
+import { SponsorSection } from "./features/SponsorSection";
 import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
@@ -131,6 +134,8 @@ export default function Page(): ReactNode {
 			);
 	});
 
+	const { sponsors } = useLoaderData<typeof loader>();
+
 	return (
 		<>
 			<>
@@ -153,8 +158,11 @@ export default function Page(): ReactNode {
 				<HeroSection />
 				<PhilosophySection />
 				<OverviewSection />
+				<SponsorSection sponsors={sponsors} />
 				<Footer />
 			</div>
 		</>
 	);
 }
+
+export { loader };
