@@ -91,10 +91,20 @@ const gameEvent = defineCollection({
 	}),
 });
 
+const sponsor = defineCollection({
+	directory: "contents/sponsor",
+	include: "**/*.md",
+	name: "sponsor",
+	schema: z => ({
+		name: z.string(),
+	}),
+});
+
 export default defineConfig({
 	collections: [
 		stageEvent,
 		liveEvent,
 		gameEvent,
+		sponsor,
 	],
 });
