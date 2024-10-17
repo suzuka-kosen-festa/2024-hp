@@ -12,10 +12,10 @@ export const box = style({
 			fontSize: "1.5rem",
 			fontWeight: 600,
 			height: "8.25rem",
-			maxWidth: "20rem",
 			padding: "1.125rem",
 			placeContent: "center",
 			textAlign: "center",
+			width: "100%",
 		},
 	},
 });
