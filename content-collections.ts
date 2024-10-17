@@ -111,6 +111,18 @@ const departmentExhibition = defineCollection({
 	}),
 });
 
+const bazar = defineCollection({
+	directory: "contents/bazar",
+	include: "**/*.md",
+	name: "bazar",
+	schema: z => ({
+		img: z.string().url({ message: "Value of \"img\" must be a valid URL." }),
+		name: z.string(),
+		overview: z.string(),
+		type: z.union([z.literal("food"), z.literal("recreation")]),
+	}),
+});
+
 export default defineConfig({
 	collections: [
 		stageEvent,
@@ -118,5 +130,6 @@ export default defineConfig({
 		gameEvent,
 		sponsor,
 		departmentExhibition,
+		bazar,
 	],
 });
