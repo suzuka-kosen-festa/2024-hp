@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
 
 export default function Page(): ReactNode {
-	return <div />;
+	return <h1>test</h1>;
 }
