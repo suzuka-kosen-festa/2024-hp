@@ -116,7 +116,12 @@ const bazar = defineCollection({
 	include: "**/*.md",
 	name: "bazar",
 	schema: z => ({
-		img: z.string().url({ message: "Value of \"img\" must be a valid URL." }),
+		img: z.string().refine((v) => {
+			if (/^\/images\/.*/.test(v))
+				return true;
+			else
+				return false;
+		}, { message: "Value of \"img\" must be a valid image URL." }),
 		name: z.string(),
 		overview: z.string(),
 		type: z.union([z.literal("food"), z.literal("recreation")]),
