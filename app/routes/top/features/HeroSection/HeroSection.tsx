@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Header } from "../Header";
+import { Header } from "../../../../components/Header";
 import { HeroContentBox } from "../HeroContentBox";
 import * as styles from "./styles.css";
 import { Countdown } from "@/components/Countdown";

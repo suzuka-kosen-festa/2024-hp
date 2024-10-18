@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import * as styles from "./styles.css";
 import { StageEventSection } from "./features/StageEventSection";
 import { LiveEventSection } from "./features/LiveEventSection";
 import { GameEventSection } from "./features/GameEventSection";
 import { loader } from "./handlers";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 
 export default function Page(): ReactNode {
 	const { gameEvents, liveEvents, stageEvents } = useLoaderData<typeof loader>();
@@ -22,7 +23,11 @@ export default function Page(): ReactNode {
 				<img alt="" className={styles.background} src="/images/background.webp" />
 			</picture>
 			<div className={styles.wrapper}>
-				<h1 className={styles.h1}>開催概要 / イベント詳細</h1>
+				<Header />
+				<h1 className={styles.h1}>
+					<Link to="/top#overview">開催概要</Link>
+					/ イベント詳細
+				</h1>
 				<StageEventSection stageEvents={stageEvents} />
 				<LiveEventSection liveEvents={liveEvents} />
 				<GameEventSection gameEvents={gameEvents} />
