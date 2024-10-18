@@ -31,6 +31,33 @@ export const wrapper = style({
 	},
 });
 
+export const link = style({
+	"@layer": {
+		[layers.page]: {
+			position: "relative",
+
+			selectors: {
+				"&::after": {
+					backgroundColor: vars.color.white,
+					bottom: "-1px",
+					content: "''",
+					height: "2px",
+					left: 0,
+					position: "absolute",
+					transform: "scale(0, 1)",
+					transformOrigin: "right top",
+					transition: "transform 0.3s",
+					width: "100%",
+				},
+				"&:hover::after": {
+					transform: "scale(1, 1)",
+					transformOrigin: "left top",
+				},
+			},
+		},
+	},
+});
+
 export const h1 = style({
 	"@layer": {
 		[layers.page]: {
