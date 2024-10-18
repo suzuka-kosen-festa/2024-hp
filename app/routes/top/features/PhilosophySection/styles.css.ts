@@ -127,7 +127,7 @@ export const text = style({
 			"overflowWrap": "anywhere",
 			"position": "relative",
 			"textAlign": "center",
-			"top": "100%",
+			"top": "80%",
 
 			"wordBreak": "keep-all",
 		},
