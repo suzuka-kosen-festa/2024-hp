@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Suspense } from "react";
 import { clsx } from "clsx";
 import { Link } from "@remix-run/react";
-import { HeroContentBox } from "../HeroContentBox";
+import { HeroContentBox } from "../../routes/top/features/HeroContentBox";
 import * as styles from "./styles.css";
 import BookOpen from "~icons/pixelarticons/book-open";
 import Facebook from "~icons/ion/logo-facebook";
@@ -50,8 +50,8 @@ function DropdownContent() {
 	return (
 		<nav className={styles.dropdownContent}>
 			<BookOpen className={clsx(styles.bookOpen, styles.visible)} />
-			<Link className={clsx(styles.link, styles.half)} to="#philosophy">高専祭について</Link>
-			<Link className={styles.link} to="#overview">開催概要</Link>
+			<Link className={clsx(styles.link, styles.half)} to="/top#philosophy">高専祭について</Link>
+			<Link className={styles.link} to="/top#overview">開催概要</Link>
 			<hr className={styles.hr} />
 			<a
 				className={clsx(styles.link, styles.half)}
@@ -59,7 +59,7 @@ function DropdownContent() {
 				rel="noreferrer"
 				target="_blank"
 			>
-				鈴鹿高専HP
+				鈴鹿高専H
 			</a>
 			<ul className={styles.sns}>
 				<li>
