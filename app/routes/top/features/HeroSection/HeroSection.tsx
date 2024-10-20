@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import { Header } from "../Header";
 import { HeroContentBox } from "../HeroContentBox";
 import * as styles from "./styles.css";
+import { Header } from "@/routes/top/features/Header";
 import { Countdown } from "@/components/Countdown";
 
 export function HeroSection(): ReactNode {

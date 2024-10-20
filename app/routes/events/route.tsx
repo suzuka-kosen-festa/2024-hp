@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import * as styles from "./styles.css";
 import { StageEventSection } from "./features/StageEventSection";
 import { LiveEventSection } from "./features/LiveEventSection";
@@ -22,7 +22,11 @@ export default function Page(): ReactNode {
 				<img alt="" className={styles.background} src="/images/background.webp" />
 			</picture>
 			<div className={styles.wrapper}>
-				<h1 className={styles.h1}>開催概要 / イベント詳細</h1>
+				<h1 className={styles.h1}>
+					<Link className={styles.link} to="/top#overview">開催概要</Link>
+					{" "}
+					/ イベント詳細
+				</h1>
 				<StageEventSection stageEvents={stageEvents} />
 				<LiveEventSection liveEvents={liveEvents} />
 				<GameEventSection gameEvents={gameEvents} />
