@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
+import { Breakpoints } from "@/styles/media.css";
 
 export const background = style({
 	"@layer": {
@@ -33,10 +34,15 @@ export const wrapper = style({
 export const h1 = style({
 	"@layer": {
 		[layers.page]: {
-			color: vars.color.white,
-			fontSize: "1.5rem",
-			fontWeight: 600,
-			padding: "2rem 0",
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "2rem",
+				},
+			},
+			"color": vars.color.white,
+			"fontSize": "1.5rem",
+			"fontWeight": 600,
+			"padding": "2rem 0",
 		},
 	},
 });

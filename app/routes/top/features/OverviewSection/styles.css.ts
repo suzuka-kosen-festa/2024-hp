@@ -30,11 +30,15 @@ export const section = style({
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
-			display: "flex",
-			flexDirection: "column",
-			margin: "0 auto",
-			padding: "0.5rem",
-			rowGap: "1.5rem",
+			"@media": {
+				[Breakpoints.md]: {
+					marginInline: "auto",
+				},
+			},
+			"display": "flex",
+			"flexDirection": "column",
+			"margin": "0",
+			"rowGap": "1.5rem",
 		},
 	},
 });
@@ -51,7 +55,7 @@ export const text = style({
 			"fontSize": "1rem",
 			"fontWeight": 600,
 			"margin": "0.75rem 0.5rem 0",
-			"textAlign": "center",
+			"textAlign": "left",
 		},
 	},
 });
