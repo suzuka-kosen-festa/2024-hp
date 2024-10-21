@@ -130,13 +130,12 @@ export const eventLinks = style({
 		[layers.feature]: {
 			"@media": {
 				[Breakpoints.md]: {
-					flexDirection: "row",
+					gridTemplateColumns: "repeat(auto-fill, minmax(0, 20rem))",
 				},
 			},
-			"display": "flex",
-			"flexDirection": "column",
+			"display": "grid",
 			"gap": "1.25rem",
-			"gridTemplateColumns": "repeat(auto-fill, minmax(20rem, 1fr))",
+			"gridAutoRows": "1fr  ",
 			"marginBottom": "3rem",
 		},
 	},
