@@ -22,6 +22,7 @@ export const box = style({
 			"borderWidth": "1px",
 			"display": "flex",
 			"flexDirection": "column",
+			"justifyContent": "space-between",
 			"maxWidth": "none",
 			"padding": "1rem",
 		},
