@@ -103,6 +103,11 @@ export const eventSection = style({
 				[Breakpoints.md]: {
 					padding: "2rem 1rem",
 				},
+				[Breakpoints.xxl]: {
+					marginInline: "auto",
+					maxWidth: "88rem",
+					width: "100%",
+				},
 			},
 			"padding": "0",
 		},
