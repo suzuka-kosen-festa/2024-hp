@@ -11,11 +11,11 @@ export function OverviewSection(): ReactNode {
 			<SectionTitle icon="info" variant="blue" />
 			<div className={styles.box}>
 				<section>
-					<OverviewTag>開催日時</OverviewTag>
+					<OverviewTag color="blue">開催日時</OverviewTag>
 					<p className={styles.text}>2024年11月2日(土)~11月3日(日)</p>
 				</section>
 				<section>
-					<OverviewTag>開催場所</OverviewTag>
+					<OverviewTag color="blue">開催場所</OverviewTag>
 					<p className={styles.text}>鈴鹿工業高等専門学校</p>
 					<span className={styles.span}>
 						<a
