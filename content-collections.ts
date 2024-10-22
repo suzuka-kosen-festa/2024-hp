@@ -100,6 +100,15 @@ const sponsor = defineCollection({
 	}),
 });
 
+const personal_sponsor = defineCollection({
+	directory: "contents/personal_sponsor",
+	include: "**/*.md",
+	name: "personalSponsor",
+	schema: z => ({
+		name: z.string(),
+	}),
+});
+
 const departmentExhibition = defineCollection({
 	directory: "contents/department_exhibition",
 	include: "**/*.md",
@@ -134,6 +143,7 @@ export default defineConfig({
 		liveEvent,
 		gameEvent,
 		sponsor,
+		personal_sponsor,
 		departmentExhibition,
 		bazar,
 	],
