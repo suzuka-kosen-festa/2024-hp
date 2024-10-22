@@ -28,6 +28,10 @@ export function OverviewSection(): ReactNode {
 						</a>
 					</span>
 				</section>
+				<section>
+					<OverviewTag>ご来場にあたっての注意事項</OverviewTag>
+					<p className={styles.text}>駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください</p>
+				</section>
 			</div>
 			<section className={styles.eventSection}>
 				<h2 className={styles.eventTitle}>当日開催されるイベントについて</h2>
