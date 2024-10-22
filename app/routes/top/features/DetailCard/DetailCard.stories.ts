@@ -18,6 +18,7 @@ type Story = StoryObj<T>;
 export const Default: Story = {
 	args: {
 		children: "来訪される中学生の方々で、進路説明会に出席をご希望される方は詳細をご覧ください。",
+		text: "詳細を見る",
 		title: "進路説明会について",
 		url: "/",
 	},
