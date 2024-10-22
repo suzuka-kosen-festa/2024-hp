@@ -8,7 +8,7 @@ const MessageText = lazy(() => import("~icons/custom/message-text"));
 const InfoBox = lazy(() => import("~icons/custom/info-box.svg"));
 
 type Props = {
-	color: "blue" | "green" | "red";
+	color: "blue" | "cyan" | "green" | "red" | "white";
 	title: string;
 	icon?: never;
 	variant?: never;
@@ -34,7 +34,11 @@ export function SectionTitle({
 							? `linear-gradient(to left, ${vars.color.blue} 0%, ${vars.color.black} 50%, ${vars.color.blue} 100%)`
 							: color === "green"
 								? `linear-gradient(to left, ${vars.color.green} 0%, ${vars.color.black} 50%, ${vars.color.green} 100%)`
-								: `linear-gradient(to left, ${vars.color.red} 0%, ${vars.color.black} 50%, ${vars.color.red} 100%)`
+								: color === "red"
+									? `linear-gradient(to left, ${vars.color.red} 0%, ${vars.color.black} 50%, ${vars.color.red} 100%)`
+									: color === "cyan"
+										? `linear-gradient(to left, ${vars.color.cyan} 0%, ${vars.color.black} 50%, ${vars.color.cyan} 100%)`
+										: `linear-gradient(to left, ${vars.color.whiteTransparent} 0%, ${vars.color.black} 50%, ${vars.color.whiteTransparent} 100%)`
 						: typeof title !== "undefined"
 							? "linear-gradient(to left, rgb(255 255 255 / 0.5) 0%, rgb(255 255 255 / 0.2) 50%, rgb(255 255 255 / 0.5) 100%)"
 							: variant === "red"

@@ -43,7 +43,7 @@ export function OverviewSection(): ReactNode {
 				</section>
 				<h2 className={styles.eventTitle}>中学生の皆様へ</h2>
 				<section>
-					<DetailCard title="受験相談会in高専祭" url="https://www.suzuka-ct.ac.jp/admission/admission_index/explanation/">皆様の疑問に可能な限りでお答えいたします！</DetailCard>
+					<DetailCard text="本校HPはこちら" title="受験相談会in高専祭" url="https://www.suzuka-ct.ac.jp/admission/admission_index/explanation/">皆様の疑問に可能な限りでお答えいたします！</DetailCard>
 				</section>
 			</section>
 		</section>
