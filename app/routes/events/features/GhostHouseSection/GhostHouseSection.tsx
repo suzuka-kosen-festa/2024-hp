@@ -23,7 +23,7 @@ export function GhostHouseSection(): ReactNode {
 					<div className={styles.smallCard}>
 						<MapIcon className={styles.icon} />
 						<h3 className={styles.cardTitle}>開催場所</h3>
-						<p className={styles.cardText}>第二合併講義室</p>
+						<p className={styles.cardText}>I科棟1階(3E、3C）待合室4E</p>
 					</div>
 					<div className={styles.formCard}>
 						<FormIcon className={styles.icon} />
