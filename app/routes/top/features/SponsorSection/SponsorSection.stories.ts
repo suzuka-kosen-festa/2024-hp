@@ -17,6 +17,19 @@ type Story = StoryObj<T>;
 
 export const Default: Story = {
 	args: {
+		personalSponsors: [
+			{
+				_meta: {
+					directory: ".",
+					extension: "md",
+					fileName: "1.md",
+					filePath: "1.md",
+					path: "1",
+				},
+				content: "",
+				name: "うえちゃん",
+			},
+		],
 		sponsors: [
 			{
 				_meta: {
