@@ -5,6 +5,7 @@ import { StageEventSection } from "./features/StageEventSection";
 import { LiveEventSection } from "./features/LiveEventSection";
 import { GameEventSection } from "./features/GameEventSection";
 import { loader } from "./handlers";
+import { GhostHouseSection } from "./features/GhostHouseSection";
 import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
@@ -30,6 +31,7 @@ export default function Page(): ReactNode {
 				<StageEventSection stageEvents={stageEvents} />
 				<LiveEventSection liveEvents={liveEvents} />
 				<GameEventSection gameEvents={gameEvents} />
+				<GhostHouseSection />
 			</div>
 			<Footer />
 		</>

@@ -2,11 +2,14 @@ import type { ReactNode } from "react";
 import * as styles from "./styles.css";
 import RightArrow from "~icons/ic/round-play-arrow";
 
+;
+
 interface Props {
+	text: string;
 	url: string;
 }
 
-export function CardExternalLink({ url }: Props): ReactNode {
+export function CardExternalLink({ text, url }: Props): ReactNode {
 	return (
 		<a
 			className={styles.link}
@@ -15,7 +18,7 @@ export function CardExternalLink({ url }: Props): ReactNode {
 			target="_blank"
 		>
 			<span className={styles.span}>
-				本校 HP はこちら
+				{text}
 			</span>
 			<RightArrow className={styles.arrow} />
 		</a>

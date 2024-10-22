@@ -1,19 +1,21 @@
 import type { ReactNode } from "react";
+import { text } from "../OverviewSection/styles.css";
 import * as styles from "./styles.css";
 import { CardExternalLink } from "@/components/CardExternalLink";
 
 interface Props {
 	children: string;
+	text: string;
 	title: string;
 	url: string;
 }
 
-export function DetailCard({ children, title, url }: Props): ReactNode {
+export function DetailCard({ children, text, title, url }: Props): ReactNode {
 	return (
 		<div className={styles.box}>
 			<h3 className={styles.title}>{title}</h3>
 			<p className={styles.content}>{children}</p>
-			<CardExternalLink url={url} />
+			<CardExternalLink text={text} url={url} />
 		</div>
 	);
 }

@@ -18,6 +18,7 @@ export const vars = createThemeContract({
 		redBg: "#C81A5419" as const,
 		textGray: "#C8C8C8" as const,
 		white: "#FFFFFF" as const,
+		whiteTransparent: "rgba(255 255 255 /.2)" as const,
 	},
 	typography: {
 		fontFamily: {
@@ -45,6 +46,7 @@ createGlobalTheme(":root", vars, {
 		redBg: "#C81A5419",
 		textGray: "#C8C8C8",
 		white: "#FFFFFF",
+		whiteTransparent: "rgba(255 255 255 /.2)",
 	},
 	typography: {
 		fontFamily: {
