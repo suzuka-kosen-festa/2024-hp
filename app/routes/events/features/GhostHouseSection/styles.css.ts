@@ -1,5 +1,4 @@
 import { style } from "@vanilla-extract/css";
-import { title } from "./../GameEventCard/styles.css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
 import { Breakpoints } from "@/styles/media.css";
@@ -154,7 +153,7 @@ export const cardText = style({
 	},
 });
 
-export const linkBox = style({
+export const link = style({
 	"@layer": {
 		[layers.feature]: {
 			alignItems: "center",

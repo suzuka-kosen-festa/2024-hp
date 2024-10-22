@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import clsx from "clsx";
 import * as styles from "./styles.css";
 import BookIcon from "~icons/mingcute/book-6-line";
 import MapIcon from "~icons/ri/map-pin-line";
@@ -30,7 +29,7 @@ export function GhostHouseSection(): ReactNode {
 						<FormIcon className={styles.icon} />
 						<h3 className={styles.cardTitle}>お申し込み</h3>
 						<p className={styles.cardText}>下記のフォームからお申し込みください。</p>
-						<CardExternalLink text="申し込みフォームへ" url="/" />
+						<CardExternalLink className={styles.link} text="申し込みフォームへ" url="https://forms.gle/zbgEDTK4wrWDWo4y5" />
 					</div>
 				</div>
 			</div>

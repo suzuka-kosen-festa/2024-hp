@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { text } from "../OverviewSection/styles.css";
 import * as styles from "./styles.css";
 import { CardExternalLink } from "@/components/CardExternalLink";
 
