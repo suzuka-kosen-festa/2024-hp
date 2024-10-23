@@ -14,14 +14,11 @@ export function ExhibitionSection({ exhibitions }: Props): ReactNode {
 			<SectionTitle color="white" title="学科展示" />
 			<div className={styles.container}>
 				<h2 className={styles.heading}>展示時間</h2>
-
 				<h2 className={styles.heading}>展示一覧</h2>
 				<ul className={styles.list}>
 					{
 						exhibitions.map(exhibition => (
-							<li key={exhibition._meta.fileName}>
-								<ExhibitionCard department={exhibition.department} overview={exhibition.overview} team={exhibition.team} />
-							</li>
+							<ExhibitionCard department={exhibition.department} key={exhibition._meta.fileName} overview={exhibition.overview} team={exhibition.team} />
 						))
 					}
 				</ul>

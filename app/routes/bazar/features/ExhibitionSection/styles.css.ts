@@ -50,7 +50,7 @@ export const list = style({
 			"alignItems": "stretch",
 			"display": "grid",
 			"gap": "1rem",
-			"gridTemplateColumns": "100%",
+			"gridTemplateColumns": "1fr",
 			"justifySelf": "center",
 			"maxWidth": "none",
 			"width": "100%",
