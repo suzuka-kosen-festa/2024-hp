@@ -7,7 +7,7 @@ import { vars } from "@/styles/theme.css";
 
 interface Props {
 	children: string;
-	hash: "game" | "ghostHouse" | "live" | "stage";
+	hash: "bazar" | "exhibition" | "game" | "ghostHouse" | "live" | "stage";
 	title: string;
 }
 
@@ -15,8 +15,25 @@ export function EventCard({ children, hash, title }: Props): ReactNode {
 	return (
 		<div
 			style={assignInlineVars({
-				[styles.backgroundColor]: hash === "game" ? vars.color.greenBg : hash === "live" ? vars.color.blueBg : hash === "ghostHouse" ? vars.color.cyanBg : vars.color.redBg,
-				[styles.borderColor]: hash === "game" ? vars.color.green : hash === "live" ? vars.color.blue : hash === "ghostHouse" ? vars.color.cyan : vars.color.red,
+				[styles.background]: hash === "game"
+					? vars.color.greenBg
+					: hash === "live"
+						? vars.color.blueBg
+						: hash === "ghostHouse"
+							? vars.color.cyanBg
+							: hash === "stage"
+								? vars.color.redBg
+								: "linear-gradient(154deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.03) 100%)",
+				[styles.borderColor]:
+				hash === "game"
+					? vars.color.green
+					: hash === "live"
+						? vars.color.blue
+						: hash === "ghostHouse"
+							? vars.color.cyan
+							: hash === "stage"
+								? vars.color.red
+								: vars.color.white,
 			})}
 			className={styles.box}
 		>
@@ -27,10 +44,20 @@ export function EventCard({ children, hash, title }: Props): ReactNode {
 			<Link
 				className={styles.link}
 				prefetch="intent"
-				to={`/events#${hash}`}
+				to={hash === "bazar" || hash === "exhibition" ? `/bazar#${hash}` : `/events#${hash}`}
 			>
 				<span className={styles.span}>
-					{hash === "game" ? "ゲームイベント" : hash === "live" ? "ライブイベント" : hash === "ghostHouse" ? "お化け屋敷" : "ステージイベント"}
+					{hash === "game"
+						? "ゲームイベント"
+						: hash === "live"
+							? "ライブイベント"
+							: hash === "ghostHouse"
+								? "お化け屋敷"
+								: hash === "stage"
+									? "ステージイベント"
+									: hash === "bazar"
+										? "バザー"
+										: "学科展示"}
 					について
 				</span>
 				<RightArrow className={styles.arrow} />

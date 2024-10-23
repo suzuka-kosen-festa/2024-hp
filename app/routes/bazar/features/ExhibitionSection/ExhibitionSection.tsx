@@ -10,7 +10,7 @@ interface Props {
 
 export function ExhibitionSection({ exhibitions }: Props): ReactNode {
 	return (
-		<section>
+		<section aria-label="学科展示" id="exhibition">
 			<SectionTitle color="white" title="学科展示" />
 			<div className={styles.container}>
 				<h2 className={styles.heading}>展示時間</h2>

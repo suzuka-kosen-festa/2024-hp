@@ -3,7 +3,7 @@ import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
 import { Breakpoints } from "@/styles/media.css";
 
-export const backgroundColor = createVar();
+export const background = createVar();
 export const borderColor = createVar();
 
 export const box = style({
@@ -15,7 +15,7 @@ export const box = style({
 				},
 			},
 			"backdropFilter": "blur(32px)",
-			backgroundColor,
+			background,
 			borderColor,
 			"borderRadius": "1.25rem",
 			"borderStyle": "solid",

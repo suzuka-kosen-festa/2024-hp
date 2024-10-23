@@ -12,7 +12,7 @@ interface Props {
 
 export function BazarSection({ foods, recreations }: Props): ReactNode {
 	return (
-		<section className={styles.section}>
+		<section aria-label="バザー・レクリエーション" className={styles.section} id="bazar">
 			<SectionTitle color="white" title="バザー・レクリエーション" />
 			<div className={styles.container}>
 				<OverviewTag color="purple">バザー</OverviewTag>
