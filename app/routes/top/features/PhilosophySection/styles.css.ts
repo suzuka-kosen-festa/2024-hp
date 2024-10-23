@@ -20,8 +20,6 @@ export const section = style({
 			"paddingInline": "1rem",
 			"paddingTop": "6rem",
 			"rowGap": "4.75rem",
-
-			"width": "100%",
 		},
 	},
 });
@@ -29,15 +27,8 @@ export const section = style({
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
-			"@media": {
-				[Breakpoints.md]: {
-					height: "45.25rem",
-				},
-			},
-			"height": "20rem",
-			"position": "relative",
-
-			"width": "100%",
+			height: "80svh",
+			position: "relative",
 		},
 	},
 });
@@ -127,9 +118,7 @@ export const text = style({
 			"overflowWrap": "anywhere",
 			"position": "relative",
 			"textAlign": "center",
-			"top": "80%",
-
-			"wordBreak": "keep-all",
+			"top": "60%",
 		},
 	},
 });
