@@ -1,3 +1,4 @@
+/* eslint-disable ts/ban-ts-comment */
 import { createPagesFunctionHandler } from "@remix-run/cloudflare-pages";
 
 import { getLoadContext } from "../load-context";
