@@ -36,6 +36,15 @@ export const heading = style({
 	},
 });
 
+export const text = style({
+	"@layer": {
+		[layers.feature]: {
+			color: vars.color.white,
+			fontSize: "1.5rem",
+		},
+	},
+});
+
 export const list = style({
 	"@layer": {
 		[layers.feature]: {

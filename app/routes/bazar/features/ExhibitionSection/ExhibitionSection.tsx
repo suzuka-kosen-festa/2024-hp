@@ -14,6 +14,10 @@ export function ExhibitionSection({ exhibitions }: Props): ReactNode {
 			<SectionTitle color="white" title="学科展示" />
 			<div className={styles.container}>
 				<h2 className={styles.heading}>展示時間</h2>
+				<span>
+					<p className={styles.text}>1日目 09:00 ~ 14:30</p>
+					<p className={styles.text}>2日目 09:00 ~ 13:30</p>
+				</span>
 				<h2 className={styles.heading}>展示一覧</h2>
 				<ul className={styles.list}>
 					{
