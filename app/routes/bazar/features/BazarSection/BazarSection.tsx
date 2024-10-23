@@ -7,13 +7,11 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { OverviewTag } from "@/routes/top/features/OverviewTag";
 
 interface Props {
-	bazars: Bazar[];
+	foods: Bazar[];
+	recreations: Bazar[];
 }
 
-export function BazarSection({ bazars }: Props): ReactNode {
-	const foods = useMemo(() => bazars.filter(bazar => bazar.type === "food"), [bazars]);
-	const recreations = useMemo(() => bazars.filter(bazar => bazar.type === "recreation"), [bazars]);
-
+export function BazarSection({ foods, recreations }: Props): ReactNode {
 	return (
 		<section className={styles.section}>
 			<SectionTitle color="white" title="バザー・レクリエーション" />

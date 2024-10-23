@@ -7,7 +7,7 @@ import { ExhibitionSection } from "./features/ExhibitionSection";
 import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
-	const { bazars, exhibitions } = useLoaderData<typeof loader>();
+	const { exhibitions, foods, recreations } = useLoaderData<typeof loader>();
 
 	return (
 		<>
@@ -26,7 +26,7 @@ export default function Page(): ReactNode {
 					{" "}
 					/ バザー・レクリエーション・学科展示詳細
 				</h1>
-				<BazarSection bazars={bazars} />
+				<BazarSection foods={foods} recreations={recreations} />
 				<ExhibitionSection exhibitions={exhibitions} />
 			</div>
 			<Footer />

@@ -7,9 +7,12 @@ export async function loader() {
 		const order = ["M", "E", "I", "C", "S"];
 		return order.indexOf(a.department) - order.indexOf(b.department);
 	});
+	const foods = allBazars.filter(bazar => bazar.type === "food");
+	const recreations = allBazars.filter(bazar => bazar.type === "recreation");
 
 	return json({
-		bazars: allBazars,
 		exhibitions: sortedExhibitions,
+		foods,
+		recreations,
 	});
 }
