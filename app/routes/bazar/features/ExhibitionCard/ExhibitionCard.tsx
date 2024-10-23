@@ -9,7 +9,7 @@ interface Props {
 
 export function ExhibitionCard({ department, overview, team }: Props): ReactNode {
 	return (
-		<div className={styles.box}>
+		<li className={styles.box}>
 			<div>
 				<span className={styles.departmentTag}>
 					{department}
@@ -18,6 +18,6 @@ export function ExhibitionCard({ department, overview, team }: Props): ReactNode
 			</div>
 			<h3 className={styles.team}>{team}</h3>
 			<p className={styles.content}>{overview}</p>
-		</div>
+		</li>
 	);
 }

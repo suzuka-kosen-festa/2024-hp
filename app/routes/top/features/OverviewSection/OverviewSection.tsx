@@ -11,11 +11,11 @@ export function OverviewSection(): ReactNode {
 			<SectionTitle icon="info" variant="blue" />
 			<div className={styles.box}>
 				<section>
-					<OverviewTag>開催日時</OverviewTag>
+					<OverviewTag color="blue">開催日時</OverviewTag>
 					<p className={styles.text}>2024年11月2日(土)~11月3日(日)</p>
 				</section>
 				<section>
-					<OverviewTag>開催場所</OverviewTag>
+					<OverviewTag color="blue">開催場所</OverviewTag>
 					<p className={styles.text}>鈴鹿工業高等専門学校</p>
 					<span className={styles.span}>
 						<a
@@ -29,17 +29,22 @@ export function OverviewSection(): ReactNode {
 					</span>
 				</section>
 				<section>
-					<OverviewTag>ご来場にあたっての注意事項</OverviewTag>
+					<OverviewTag color="purple">ご来場にあたっての注意事項</OverviewTag>
 					<p className={styles.text}>駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください</p>
 				</section>
 			</div>
 			<section className={styles.eventSection}>
-				<h2 className={styles.eventTitle}>当日開催されるイベントについて</h2>
+				<h2 className={styles.eventTitle}>バザー・学科展示</h2>
 				<section className={styles.eventLinks}>
-					<EventCard hash="stage" title="ステージイベント">屋外のメインステージで開催されるイベントについて</EventCard>
+					<EventCard hash="bazar" title="バザー">部活やクラスが行うバザー</EventCard>
+					<EventCard hash="exhibition" title="学科展示">各学科の展示内容</EventCard>
+				</section>
+				<h2 className={styles.eventTitle}>当日のイベント</h2>
+				<section className={styles.eventLinks}>
+					<EventCard hash="stage" title="ステージイベント">屋外のメインステージで開催されるイベント</EventCard>
 					<EventCard hash="live" title="ライブステージ">第一体育館内で行われるライブの出演者情報など</EventCard>
-					<EventCard hash="game" title="ゲームイベント">第二合併講義室で行われるゲームイベントについて</EventCard>
-					<EventCard hash="ghostHouse" title="お化け屋敷">学生が作成したお化け屋敷について</EventCard>
+					<EventCard hash="game" title="ゲームイベント">第二合併講義室で行われるゲームイベントの情報</EventCard>
+					<EventCard hash="ghostHouse" title="お化け屋敷">学生が作成したお化け屋敷の情報</EventCard>
 				</section>
 				<h2 className={styles.eventTitle}>中学生の皆様へ</h2>
 				<section>

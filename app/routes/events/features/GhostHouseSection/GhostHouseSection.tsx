@@ -8,7 +8,7 @@ import { CardExternalLink } from "@/components/CardExternalLink";
 
 export function GhostHouseSection(): ReactNode {
 	return (
-		<section aria-label="ghost-house0section" className={styles.section} id="ghostHouse">
+		<section aria-label="ghost-house section" className={styles.section} id="ghostHouse">
 			<SectionTitle color="cyan" title="お化け屋敷" />
 			<div className={styles.container}>
 				<img alt="お化け屋敷" src="/images/ghost-house.png" />

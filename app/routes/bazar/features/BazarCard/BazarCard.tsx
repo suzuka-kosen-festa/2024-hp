@@ -10,7 +10,7 @@ interface Props {
 
 export function BazarCard({ img, name, overview, type }: Props): ReactNode {
 	return (
-		<div className={styles.box}>
+		<li className={styles.box}>
 			<h3 className={styles.name}>{name}</h3>
 			<div className={styles.layout}>
 				<div>
@@ -18,6 +18,6 @@ export function BazarCard({ img, name, overview, type }: Props): ReactNode {
 				</div>
 				<p className={styles.overView}>{overview}</p>
 			</div>
-		</div>
+		</li>
 	);
 }

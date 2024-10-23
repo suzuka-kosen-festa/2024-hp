@@ -1,0 +1,1 @@
+export { ExhibitionSection } from "./ExhibitionSection";

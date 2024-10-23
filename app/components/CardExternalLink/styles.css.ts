@@ -4,7 +4,7 @@ import { vars } from "@/styles/theme.css";
 
 export const link = style({
 	"@layer": {
-		[layers.feature]: {
+		[layers.component]: {
 			alignItems: "center",
 			display: "inline-flex",
 			justifyContent: "flex-end",
@@ -16,7 +16,7 @@ export const link = style({
 
 export const span = style({
 	"@layer": {
-		[layers.feature]: {
+		[layers.component]: {
 			color: vars.color.white,
 			fontSize: "0.875rem",
 			fontWeight: 600,
@@ -26,7 +26,7 @@ export const span = style({
 
 export const arrow = style({
 	"@layer": {
-		[layers.feature]: {
+		[layers.component]: {
 			color: vars.color.white,
 			height: "1.125rem",
 			selectors: {
