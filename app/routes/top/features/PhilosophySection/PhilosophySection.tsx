@@ -14,13 +14,11 @@ export function PhilosophySection(): ReactNode {
 				<div className={styles.background}>
 					<span className={styles.lattice} role="presentation" />
 				</div>
-
 				<div className={styles.content}>
 					<div className={styles.headingWrapper}>
 						<h2 className={styles.border}>BORDER</h2>
 						<span className={styles.vertical} role="presentation" />
 					</div>
-
 					<div className={styles.textContent}>
 						<p className={styles.text}>
 							今年の高専祭のテーマは
