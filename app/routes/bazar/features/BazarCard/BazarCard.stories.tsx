@@ -6,6 +6,13 @@ type T = typeof BazarCard;
 
 const meta: Meta = {
 	component: BazarCard,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "centered",
 	},

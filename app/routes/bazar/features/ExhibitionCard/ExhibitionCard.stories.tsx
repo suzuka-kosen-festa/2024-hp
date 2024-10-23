@@ -6,6 +6,13 @@ type T = typeof ExhibitionCard;
 
 const meta: Meta = {
 	component: ExhibitionCard,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "centered",
 	},
