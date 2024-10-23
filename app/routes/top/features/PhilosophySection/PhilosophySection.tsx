@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
+import { PrologueSection } from "../PrologueSection";
 import * as styles from "./styles.css";
 import { SectionTitle } from "@/components/SectionTitle";
 
 export function PhilosophySection(): ReactNode {
+	const { displayText, sectionRef } = PrologueSection();
 	return (
 		<section aria-label="philosophy section" className={styles.section} id="philosophy">
 			<SectionTitle icon="message" variant="red" />
@@ -29,6 +31,9 @@ export function PhilosophySection(): ReactNode {
 					<wbr />
 					という想いが込められています。
 				</p>
+				<div className={styles.typingText} ref={sectionRef}>
+					{displayText}
+				</div>
 			</div>
 		</section>
 	);

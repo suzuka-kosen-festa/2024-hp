@@ -70,13 +70,18 @@ export const lattice = style({
 export const vertical = style({
 	"@layer": {
 		[layers.feature]: {
-			backgroundImage: `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`,
-			height: "0.25rem",
-			left: 0,
-			position: "absolute",
-			top: "50%",
-			transform: "translateY(-50%)",
-			width: "100%",
+			"@media": {
+				[Breakpoints.md]: {
+					top: "32%",
+				},
+			},
+			"backgroundImage": `linear-gradient(to left, ${vars.color.black} 0%, ${vars.color.red} 50%, ${vars.color.black} 100%)`,
+			"height": "0.25rem",
+			"left": 0,
+			"position": "absolute",
+			"top": "40%",
+			"transform": "translateY(-50%)",
+			"width": "100%",
 		},
 	},
 });
@@ -89,6 +94,7 @@ export const border = style({
 					fontSize: "7.5rem",
 					letterSpacing: "1.5rem",
 					textShadow: `1rem 1rem 1px ${vars.color.red}`,
+					top: "30%",
 				},
 			},
 			"color": vars.color.white,
@@ -101,7 +107,7 @@ export const border = style({
 			"position": "absolute",
 			"textAlign": "center",
 			"textShadow": `0.5rem 0.5rem 1px ${vars.color.red}`,
-			"top": "48%",
+			"top": "38%",
 
 			"transform": "translate(-48%, -50%)",
 		},
@@ -115,8 +121,8 @@ export const text = style({
 				[Breakpoints.md]: {
 					fontSize: "1.5rem",
 					letterSpacing: "0.3rem",
-					top: "70%",
-					transform: "translateY(-70%)",
+					top: "55%",
+					transform: "translateY(-60%)",
 				},
 			},
 			"color": vars.color.white,
@@ -127,8 +133,34 @@ export const text = style({
 			"overflowWrap": "anywhere",
 			"position": "relative",
 			"textAlign": "center",
-			"top": "80%",
+			"top": "55%",
 
+			"wordBreak": "keep-all",
+		},
+	},
+});
+
+export const typingText = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "1.5rem",
+					letterSpacing: "0.3rem",
+					top: "70%",
+					transform: "translateY(-80%)",
+				},
+			},
+			"color": vars.color.white,
+			"fontSize": "1rem",
+			"hangingPunctuation": "allow-end",
+			"letterSpacing": "0.2rem",
+			"lineBreak": "strict",
+			"overflowWrap": "anywhere",
+			"position": "relative",
+			"textAlign": "center",
+			"top": "60%",
+			"whiteSpace": "pre-wrap",
 			"wordBreak": "keep-all",
 		},
 	},
