@@ -17,6 +17,22 @@ type Story = StoryObj<T>;
 
 export const Default: Story = {
 	args: {
+		specialSponsors: [
+			{
+				"content": "",
+				"name": "飛高専塾",
+				"img": "sponsor/001.webp",
+				"description": "三重県初！飛高専塾が鈴鹿にOPEN！！鈴鹿高専を目指す中学生の皆様、高専入試で不安なことはありませんか？ <br> 詳細は第2体育館の特設ブース、もしくはお電話にてご相談ください！",
+				"tel": "059-389-7860",
+				"_meta": {
+					"filePath": "001.md",
+					"fileName": "001.md",
+					"directory": ".",
+					"extension": "md",
+					"path": "001"
+				}
+			}
+		],
 		personalSponsors: [
 			{
 				_meta: {

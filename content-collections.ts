@@ -100,6 +100,19 @@ const sponsor = defineCollection({
 	}),
 });
 
+const special_sponsor = defineCollection({
+  directory: "contents/sponsor/special",
+  include: "**/*.md",
+  name: "specialSponsor",
+
+  schema: z => ({
+    name: z.string(),
+		img: z.string(),
+    description: z.string(),
+    tel: z.string(),
+  }),
+});
+
 const personal_sponsor = defineCollection({
 	directory: "contents/personal_sponsor",
 	include: "**/*.md",
@@ -143,6 +156,7 @@ export default defineConfig({
 		liveEvent,
 		gameEvent,
 		sponsor,
+		special_sponsor,
 		personal_sponsor,
 		departmentExhibition,
 		bazar,

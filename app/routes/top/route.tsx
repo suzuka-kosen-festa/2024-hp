@@ -134,7 +134,7 @@ export default function Page(): ReactNode {
 			);
 	});
 
-	const { personalSponsors, sponsors } = useLoaderData<typeof loader>();
+	const { personalSponsors, sponsors, specialSponsors } = useLoaderData<typeof loader>();
 
 	return (
 		<>
@@ -158,7 +158,7 @@ export default function Page(): ReactNode {
 				<HeroSection />
 				<PhilosophySection />
 				<OverviewSection />
-				<SponsorSection personalSponsors={personalSponsors} sponsors={sponsors} />
+				<SponsorSection personalSponsors={personalSponsors} sponsors={sponsors} specialSponsors={specialSponsors} />
 				<Footer />
 			</div>
 		</>

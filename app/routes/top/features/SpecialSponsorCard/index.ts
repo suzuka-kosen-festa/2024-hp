@@ -1,0 +1,1 @@
+export { SpecialSponsorCard } from "./SpecialSponsorCard";
