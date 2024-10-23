@@ -10,7 +10,7 @@ export const box = style({
 	"@layer": {
 		[layers.feature]: {
 			"@media": {
-				[Breakpoints.md]: {
+				[Breakpoints.lg]: {
 					maxWidth: "28.5rem",
 				},
 			},

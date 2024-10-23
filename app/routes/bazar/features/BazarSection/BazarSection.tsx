@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { useMemo } from "react";
 import type { Bazar } from "content-collections";
 import { BazarCard } from "../BazarCard";
 import * as styles from "./styles.css";
@@ -20,9 +19,7 @@ export function BazarSection({ foods, recreations }: Props): ReactNode {
 				<ul className={styles.list}>
 					{
 						foods.map(bazar => (
-							<li key={bazar._meta.fileName}>
-								<BazarCard img={bazar.img} name={bazar.name} overview={bazar.overview} type={bazar.type} />
-							</li>
+							<BazarCard img={bazar.img} key={bazar._meta.fileName} name={bazar.name} overview={bazar.overview} type={bazar.type} />
 						))
 					}
 				</ul>
@@ -30,9 +27,7 @@ export function BazarSection({ foods, recreations }: Props): ReactNode {
 				<ul className={styles.list}>
 					{
 						recreations.map(bazar => (
-							<li key={bazar._meta.fileName}>
-								<BazarCard img={bazar.img} name={bazar.name} overview={bazar.overview} type={bazar.type} />
-							</li>
+							<BazarCard img={bazar.img} key={bazar._meta.fileName} name={bazar.name} overview={bazar.overview} type={bazar.type} />
 						))
 					}
 				</ul>

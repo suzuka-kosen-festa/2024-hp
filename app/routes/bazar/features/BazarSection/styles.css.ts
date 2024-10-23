@@ -35,9 +35,13 @@ export const list = style({
 		[layers.feature]: {
 			"@media": {
 				[Breakpoints.md]: {
-					gridTemplateColumns: "repeat(auto-fill, minmax(43.5rem, 1fr))",
+					gridTemplateColumns: "repeat(auto-fill, minmax(28rem, 1fr))",
+				},
+				[Breakpoints.xxl]: {
+					maxWidth: "88rem",
 				},
 			},
+			"alignItems": "stretch",
 			"display": "grid",
 			"gap": "1rem",
 			"gridTemplateColumns": "1fr",
