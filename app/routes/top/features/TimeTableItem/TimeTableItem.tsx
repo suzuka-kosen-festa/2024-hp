@@ -2,25 +2,23 @@ import type { ReactNode } from "react";
 import { Suspense, useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import type { TimeTable } from "content-collections";
 import { CHECK_INTERVAL } from "./constants";
 import * as styles from "./styles.css";
 import { vars } from "@/styles/theme.css";
 
 interface Props {
-	content: string;
 	curtain: Temporal.ZonedDateTime;
-	endAt: Temporal.ZonedDateTime;
-	startAt: Temporal.ZonedDateTime;
-	type: "game" | "live" | "main" | "sub";
+	timetable: TimeTable;
 }
 
-function RawTimeTableItem({ content, curtain, endAt, startAt, type }: Props): ReactNode {
+function RawTimeTableItem({ curtain, timetable }: Props): ReactNode {
 	const [held, setHeld] = useState(false);
 
 	useEffect(() => {
 		const update = () => {
 			const now = Temporal.Now.zonedDateTimeISO(Temporal.TimeZone.from("Asia/Tokyo"));
-			if (Temporal.ZonedDateTime.compare(now, startAt) >= 0 && Temporal.ZonedDateTime.compare(now, endAt) < 0) {
+			if (Temporal.ZonedDateTime.compare(now, Temporal.ZonedDateTime.from(timetable.startAt)) >= 0 && Temporal.ZonedDateTime.compare(now, Temporal.ZonedDateTime.from(timetable.endAt)) < 0) {
 				setHeld(true);
 			}
 			else {
@@ -32,47 +30,47 @@ function RawTimeTableItem({ content, curtain, endAt, startAt, type }: Props): Re
 		const id = setInterval(update, CHECK_INTERVAL);
 
 		return () => clearInterval(id);
-	}, [endAt, startAt]);
+	}, [timetable.endAt, timetable.startAt]);
 
 	return (
 		<div
 			style={assignInlineVars({
 				[styles.backgroundColor]: held
-					? type === "game"
+					? timetable.type === "game"
 						? vars.color.greenHeld
-						: type === "live"
+						: timetable.type === "live"
 							? vars.color.blueHeld
-							: type === "main"
+							: timetable.type === "main"
 								? vars.color.redHeld
 								: vars.color.purpleHeld
-					: type === "game"
+					: timetable.type === "game"
 						? vars.color.greenBg
-						: type === "live"
+						: timetable.type === "live"
 							? vars.color.blueBg
-							: type === "main"
+							: timetable.type === "main"
 								? vars.color.redBg
 								: vars.color.purpleBg,
-				[styles.borderColor]: type === "game"
+				[styles.borderColor]: timetable.type === "game"
 					? vars.color.green
-					: type === "live"
+					: timetable.type === "live"
 						? vars.color.blue
-						: type === "main"
+						: timetable.type === "main"
 							? vars.color.red
 							: vars.color.purple,
-				[styles.height]: `calc((${endAt.since(startAt).total({ unit: "minutes" })} / 5) * 0.5rem)`,
-				[styles.top]: `calc((${startAt.since(curtain).total({ unit: "minutes" })} / 5) * 0.5rem)`,
+				[styles.height]: `calc((${Temporal.ZonedDateTime.from(timetable.endAt).since(Temporal.ZonedDateTime.from(timetable.startAt)).total({ unit: "minutes" })} / 5) * 0.5rem)`,
+				[styles.top]: `calc((${Temporal.ZonedDateTime.from(timetable.startAt).since(curtain).total({ unit: "minutes" })} / 5) * 0.5rem)`,
 			})}
 			className={styles.box}
 		>
-			{content}
+			{timetable.content}
 		</div>
 	);
 }
 
-export function TimeTableItem({ content, curtain, endAt, startAt, type }: Props): ReactNode {
+export function TimeTableItem({ curtain, timetable }: Props): ReactNode {
 	return (
 		<Suspense fallback={null}>
-			<RawTimeTableItem content={content} curtain={curtain} endAt={endAt} startAt={startAt} type={type} />
+			<RawTimeTableItem curtain={curtain} timetable={timetable} />
 		</Suspense>
 	);
 }

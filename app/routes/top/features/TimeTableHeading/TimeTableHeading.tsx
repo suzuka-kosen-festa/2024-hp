@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import type { TimeTable } from "content-collections";
 import * as styles from "./styles.css";
 import { vars } from "@/styles/theme.css";
 
 interface Props {
-	type: "game" | "live" | "main" | "sub";
+	type: TimeTable["type"];
 }
 
 export function TimeTableHeading({ type }: Props): ReactNode {
