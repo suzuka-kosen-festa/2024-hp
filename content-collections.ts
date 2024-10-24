@@ -142,7 +142,7 @@ const timeTable = defineCollection({
 	include: "**/*.md",
 	name: "timeTable",
 	schema: z => ({
-		content: z.string(),
+		day: z.union([z.literal(1), z.literal(2)]),
 		endAt: z.string().refine((v) => {
 			try {
 				Temporal.ZonedDateTime.from(v);
