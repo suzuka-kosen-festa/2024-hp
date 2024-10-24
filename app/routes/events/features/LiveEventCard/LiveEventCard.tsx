@@ -27,7 +27,7 @@ export function LiveEventCard({ endAt, name, overview, press, stage, startAt }: 
 					</span>
 				</div>
 				<div className={styles.overviewContainer}>
-					<img alt={`${name}のアー写`} className={styles.press} height={180} src={press} width={320} />
+					<img alt={`${name}のアー写`} className={styles.press} height={180} loading="lazy" src={press} width={320} />
 					<p className={styles.overview}>{overview}</p>
 				</div>
 			</div>
