@@ -9,10 +9,11 @@ import { vars } from "@/styles/theme.css";
 
 interface Props {
 	curtain: Temporal.ZonedDateTime;
+	isNextToEachOther: boolean;
 	timetable: TimeTable;
 }
 
-function RawTimeTableItem({ curtain, timetable }: Props): ReactNode {
+function RawTimeTableItem({ curtain, isNextToEachOther, timetable }: Props): ReactNode {
 	const [held, setHeld] = useState(false);
 
 	useEffect(() => {
@@ -57,6 +58,7 @@ function RawTimeTableItem({ curtain, timetable }: Props): ReactNode {
 						: timetable.type === "main"
 							? vars.color.red
 							: vars.color.purple,
+				[styles.borderTop]: isNextToEachOther ? "medium none currentcolor" : `2px solid ${styles.borderColor}`,
 				[styles.height]: `calc((${Temporal.ZonedDateTime.from(timetable.endAt).since(Temporal.ZonedDateTime.from(timetable.startAt)).total({ unit: "minutes" })} / 5) * 0.5rem)`,
 				[styles.top]: `calc((${Temporal.ZonedDateTime.from(timetable.startAt).since(curtain).total({ unit: "minutes" })} / 5) * 0.5rem)`,
 			})}
@@ -67,10 +69,10 @@ function RawTimeTableItem({ curtain, timetable }: Props): ReactNode {
 	);
 }
 
-export function TimeTableItem({ curtain, timetable }: Props): ReactNode {
+export function TimeTableItem({ curtain, isNextToEachOther, timetable }: Props): ReactNode {
 	return (
 		<Suspense fallback={null}>
-			<RawTimeTableItem curtain={curtain} timetable={timetable} />
+			<RawTimeTableItem curtain={curtain} isNextToEachOther={isNextToEachOther} timetable={timetable} />
 		</Suspense>
 	);
 }
