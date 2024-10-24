@@ -24,6 +24,7 @@ export const vars = createThemeContract({
 		fontFamily: {
 			dot: "DotGothic16, sans-serif" as const,
 			jura: "Jura, sans-serif" as const,
+			mono: "Roboto Mono, monospace" as const,
 		},
 	},
 });
@@ -52,6 +53,7 @@ createGlobalTheme(":root", vars, {
 		fontFamily: {
 			dot: "DotGothic16, sans-serif",
 			jura: "Jura, sans-serif",
+			mono: "Roboto Mono, monospace",
 		},
 	},
 });

@@ -1,0 +1,1 @@
+export { TimeTableHeading } from "./TimeTableHeading";
