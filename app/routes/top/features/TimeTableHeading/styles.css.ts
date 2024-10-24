@@ -13,7 +13,10 @@ export const heading = style({
 			color: vars.color.white,
 			fontFamily: vars.typography.fontFamily.mono,
 			fontSize: "1.5rem",
-			padding: "0.5rem 4rem",
+			maxWidth: "16rem",
+			padding: "0.5rem",
+			textAlign: "center",
+			width: "100%",
 		},
 	},
 });

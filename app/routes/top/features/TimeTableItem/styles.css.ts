@@ -6,13 +6,14 @@ export const height = createVar();
 export const borderColor = createVar();
 export const backgroundColor = createVar();
 export const top = createVar();
+export const borderTop = createVar();
 
 export const box = style({
 	"@layer": {
 		[layers.feature]: {
 			backgroundColor,
 			borderBottom: `2px solid ${borderColor}`,
-			borderTop: `2px solid ${borderColor}`,
+			borderTop,
 			color: vars.color.white,
 			display: "grid",
 			fontFamily: vars.typography.fontFamily.mono,
