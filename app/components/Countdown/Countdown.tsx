@@ -13,9 +13,23 @@ interface Props {
 
 function CountdownTime(): ReactNode {
 	const initialDiff = () => {
-		const now = Temporal.Now.zonedDateTimeISO(Temporal.TimeZone.from("Asia/Tokyo"));
+		const now = Temporal.Now.zonedDateTimeISO(Temporal.TimeZone.from("Asia/Tokyo")).with({
+			hour: 0,
+			microsecond: 0,
+			millisecond: 0,
+			minute: 0,
+			nanosecond: 0,
+			second: 0,
+		});
 		return Temporal.ZonedDateTime.compare(now, COUNTDOWN_END_AT) < 0
-			? now.until(COUNTDOWN_END_AT, { largestUnit: "day" })
+			? now.until(COUNTDOWN_END_AT.with({
+				hour: 0,
+				microsecond: 0,
+				millisecond: 0,
+				minute: 0,
+				nanosecond: 0,
+				second: 0,
+			}), { largestUnit: "day" })
 			: Temporal.Duration.from({ seconds: 0 });
 	};
 
@@ -23,9 +37,24 @@ function CountdownTime(): ReactNode {
 
 	useEffect(() => {
 		const update = () => {
-			const now = Temporal.Now.zonedDateTimeISO(Temporal.TimeZone.from("Asia/Tokyo"));
-			if (Temporal.ZonedDateTime.compare(now, COUNTDOWN_END_AT) < 0)
-				setDiff(now.until(COUNTDOWN_END_AT, { largestUnit: "day" }));
+			const now = Temporal.Now.zonedDateTimeISO(Temporal.TimeZone.from("Asia/Tokyo")).with({
+				hour: 0,
+				microsecond: 0,
+				millisecond: 0,
+				minute: 0,
+				nanosecond: 0,
+				second: 0,
+			});
+			if (Temporal.ZonedDateTime.compare(now, COUNTDOWN_END_AT) < 0) {
+				setDiff(now.until(COUNTDOWN_END_AT.with({
+					hour: 0,
+					microsecond: 0,
+					millisecond: 0,
+					minute: 0,
+					nanosecond: 0,
+					second: 0,
+				}), { largestUnit: "day" }));
+			}
 		};
 
 		update();
