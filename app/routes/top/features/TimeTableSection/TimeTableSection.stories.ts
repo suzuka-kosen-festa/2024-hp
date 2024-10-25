@@ -1,33 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { createRemixStub } from "@remix-run/testing";
+import type { TimeTable as TTimeTable } from "content-collections";
 import { Temporal } from "temporal-polyfill";
-import type { TimeTable } from "content-collections";
-import { OverviewSection } from "./OverviewSection";
+import { TimeTableSection } from "./TimeTableSection";
 
-type T = typeof OverviewSection;
+type T = typeof TimeTableSection;
 
 const meta: Meta = {
-	component: OverviewSection,
-	decorators: [
-		(story) => {
-			const remixStub = createRemixStub([
-				{
-					action: () => ({ redirect: "/" }),
-					Component: () => story(),
-					loader: () => ({ redirect: "/" }),
-					path: "/*",
-				},
-			]);
-
-			return remixStub({ initialEntries: ["/"] });
-		},
-	],
+	component: TimeTableSection,
 	parameters: {
 		layout: "fullscreen",
 	},
 	tags: ["autodocs"],
-	title: "OverviewSection",
+	title: "TimeTableSection",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
@@ -64,7 +48,7 @@ export const Default: Story = {
 					startAt: "2024-11-02T09:45:00[Asia/Tokyo]",
 					type: "game",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 			live: [
 				{
 					_meta: {
@@ -136,7 +120,7 @@ export const Default: Story = {
 					startAt: "2024-11-02T13:35:00[Asia/Tokyo]",
 					type: "live",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 			main: [
 				{
 					_meta: {
@@ -264,7 +248,7 @@ export const Default: Story = {
 					startAt: "2024-11-02T13:45:00[Asia/Tokyo]",
 					type: "main",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 			sub: [
 				{
 					_meta: {
@@ -350,7 +334,7 @@ export const Default: Story = {
 					startAt: "2024-11-02T11:00:00[Asia/Tokyo]",
 					type: "sub",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 		},
 		day2: {
 			game: [
@@ -382,7 +366,7 @@ export const Default: Story = {
 					startAt: "2024-11-03T09:30:00[Asia/Tokyo]",
 					type: "game",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 			live: [
 				{
 					_meta: {
@@ -440,7 +424,7 @@ export const Default: Story = {
 					startAt: "2024-11-03T09:30:00[Asia/Tokyo]",
 					type: "live",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 			main: [
 				{
 					_meta: {
@@ -526,7 +510,7 @@ export const Default: Story = {
 					startAt: "2024-11-03T13:40:00[Asia/Tokyo]",
 					type: "main",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 			sub: [
 				{
 					_meta: {
@@ -542,7 +526,7 @@ export const Default: Story = {
 					startAt: "2024-11-03T09:30:00[Asia/Tokyo]",
 					type: "sub",
 				},
-			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TimeTable[],
+			].sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))) as TTimeTable[],
 		},
 	},
 };

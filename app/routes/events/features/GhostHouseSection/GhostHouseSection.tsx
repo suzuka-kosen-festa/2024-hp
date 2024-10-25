@@ -11,7 +11,7 @@ export function GhostHouseSection(): ReactNode {
 		<section aria-label="ghost-house section" className={styles.section} id="ghostHouse">
 			<SectionTitle color="cyan" title="お化け屋敷" />
 			<div className={styles.container}>
-				<img alt="お化け屋敷" src="/images/ghost-house.png" />
+				<img alt="お化け屋敷" loading="lazy" src="/images/ghost-house.png" />
 				<div className={styles.box}>
 					<div className={styles.largeCard}>
 						<BookIcon className={styles.icon} />

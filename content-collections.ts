@@ -100,7 +100,7 @@ const sponsor = defineCollection({
 	}),
 });
 
-const personal_sponsor = defineCollection({
+const personalSponsor = defineCollection({
 	directory: "contents/personal_sponsor",
 	include: "**/*.md",
 	name: "personalSponsor",
@@ -137,14 +137,45 @@ const bazar = defineCollection({
 	}),
 });
 
+const timeTable = defineCollection({
+	directory: "contents/time_table",
+	include: "**/*.md",
+	name: "timeTable",
+	schema: z => ({
+		day: z.union([z.literal(1), z.literal(2)]),
+		endAt: z.string().refine((v) => {
+			try {
+				Temporal.ZonedDateTime.from(v);
+
+				return true;
+			}
+			catch {
+				return false;
+			}
+		}, { message: "Value of \"endAt\" must be a valid Temporal.ZonedDateTime." }),
+		startAt: z.string().refine((v) => {
+			try {
+				Temporal.ZonedDateTime.from(v);
+
+				return true;
+			}
+			catch {
+				return false;
+			}
+		}, { message: "Value of \"startAt\" must be a valid Temporal.ZonedDateTime." }),
+		type: z.union([z.literal("game"), z.literal("live"), z.literal("main"), z.literal("sub")]),
+	}),
+});
+
 export default defineConfig({
 	collections: [
 		stageEvent,
 		liveEvent,
 		gameEvent,
 		sponsor,
-		personal_sponsor,
+		personalSponsor,
 		departmentExhibition,
 		bazar,
+		timeTable,
 	],
 });
