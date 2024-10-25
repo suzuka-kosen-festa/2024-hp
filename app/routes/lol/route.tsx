@@ -10,7 +10,7 @@ import * as styles from "./styles.css";
 import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
-	const { personalSponsors, sponsors } = useLoaderData<typeof loader>();
+	const { day1, day2, personalSponsors, sponsors } = useLoaderData<typeof loader>();
 
 	return (
 		<>
@@ -26,7 +26,7 @@ export default function Page(): ReactNode {
 			<div>
 				<HeroSection />
 				<PhilosophySection />
-				<OverviewSection />
+				<OverviewSection day1={day1} day2={day2} />
 				<SponsorSection personalSponsors={personalSponsors} sponsors={sponsors} />
 				<Footer />
 			</div>

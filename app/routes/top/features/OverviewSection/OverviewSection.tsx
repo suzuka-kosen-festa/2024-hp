@@ -1,11 +1,28 @@
 import type { ReactNode } from "react";
+import type { TimeTable } from "content-collections";
 import { OverviewTag } from "../OverviewTag";
 import { EventCard } from "../EventCard";
 import { DetailCard } from "../DetailCard";
+import { TimeTableSection } from "../TimeTableSection";
 import * as styles from "./styles.css";
 import { SectionTitle } from "@/components/SectionTitle";
 
-export function OverviewSection(): ReactNode {
+interface Props {
+	day1: {
+		game: TimeTable[];
+		live: TimeTable[];
+		main: TimeTable[];
+		sub: TimeTable[];
+	};
+	day2: {
+		game: TimeTable[];
+		live: TimeTable[];
+		main: TimeTable[];
+		sub: TimeTable[];
+	};
+}
+
+export function OverviewSection({ day1, day2 }: Props): ReactNode {
 	return (
 		<section aria-label="overview section" className={styles.section} id="overview">
 			<SectionTitle icon="info" variant="blue" />
@@ -34,6 +51,8 @@ export function OverviewSection(): ReactNode {
 				</section>
 			</div>
 			<section className={styles.eventSection}>
+				<h2 className={styles.eventTitle}>タイムテーブル</h2>
+				<TimeTableSection day1={day1} day2={day2} />
 				<h2 className={styles.eventTitle}>バザー・学科展示</h2>
 				<section className={styles.eventLinks}>
 					<EventCard hash="bazar" title="バザー">部活やクラスが行うバザー</EventCard>

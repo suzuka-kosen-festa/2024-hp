@@ -8,6 +8,7 @@ export const section = style({
 			alignItems: "center",
 			display: "flex",
 			flexDirection: "column",
+			marginBottom: "2rem",
 			rowGap: "2rem",
 		},
 	},
