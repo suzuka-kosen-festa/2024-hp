@@ -100,7 +100,25 @@ const sponsor = defineCollection({
 	}),
 });
 
-const personalSponsor = defineCollection({
+const special_sponsor = defineCollection({
+	directory: "contents/special_sponsor",
+	include: "**/*.md",
+	name: "specialSponsor",
+
+	schema: z => ({
+		description: z.string(),
+		images: z.array(z.string().refine((v) => {
+			if (/^\/images\/.*/.test(v))
+				return true;
+			else
+				return false;
+		}, { message: "Value of \"img\" must be a valid image URL." })),
+		name: z.string(),
+		tel: z.string(),
+	}),
+});
+
+const personal_sponsor = defineCollection({
 	directory: "contents/personal_sponsor",
 	include: "**/*.md",
 	name: "personalSponsor",
@@ -173,7 +191,8 @@ export default defineConfig({
 		liveEvent,
 		gameEvent,
 		sponsor,
-		personalSponsor,
+		special_sponsor,
+		personal_sponsor,
 		departmentExhibition,
 		bazar,
 		timeTable,

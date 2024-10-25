@@ -30,6 +30,22 @@ export const Default: Story = {
 				name: "うえちゃん",
 			},
 		],
+		specialSponsors: [
+			{
+				_meta: {
+					directory: ".",
+					extension: "md",
+					fileName: "001.md",
+					filePath: "001.md",
+					path: "001",
+				},
+				content: "",
+				description: "三重県初！飛高専塾が鈴鹿にOPEN！！鈴鹿高専を目指す中学生の皆様、高専入試で不安なことはありませんか？ <br> 詳細は第2体育館の特設ブース、もしくはお電話にてご相談ください！",
+				images: ["sponsor/001.webp"],
+				name: "飛高専塾",
+				tel: "059-389-7860",
+			},
+		],
 		sponsors: [
 			{
 				_meta: {
