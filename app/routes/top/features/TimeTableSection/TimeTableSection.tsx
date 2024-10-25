@@ -56,6 +56,7 @@ export function TimeTableSection({ day1, day2 }: TimeTableSectionProps): ReactNo
 	return (
 		<section className={styles.section}>
 			<TimeTableSwitcher days={[1, 2]} onClick={onClick} />
+			<p className={styles.scrollText}>横スクロールしてください</p>
 			<TimeTableFrame>
 				<div aria-label="横スクロールしてください" className={styles.timetables} tabIndex={0}>
 					{day === 1
