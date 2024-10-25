@@ -16,7 +16,7 @@ export const heading = style({
 			maxWidth: "16rem",
 			padding: "0.5rem",
 			textAlign: "center",
-			width: "100%",
+			width: "16rem",
 		},
 	},
 });
