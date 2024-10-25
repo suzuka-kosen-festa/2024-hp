@@ -6,6 +6,13 @@ type T = typeof SpecialSponsorCard;
 
 const meta: Meta = {
 	component: SpecialSponsorCard,
+	decorators: [
+		Story => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
 		layout: "fullscreen",
 	},

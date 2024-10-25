@@ -60,7 +60,6 @@ export const imagesContainer = style({
 export const image = style({
 	flex: "1",
 	maxWidth: "456px",
-	minWidth: "256px",
 	objectFit: "contain",
 	objectPosition: "center",
 	width: "100%",

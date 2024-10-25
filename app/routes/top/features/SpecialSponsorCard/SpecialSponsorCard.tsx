@@ -11,11 +11,11 @@ interface Props {
 
 export function SpecialSponsorCard({ description, images, name, tel }: Props): ReactNode {
 	return (
-		<div className={styles.box}>
-			<h2 className={styles.heading}>
+		<li className={styles.box}>
+			<h3 className={styles.heading}>
 				{name}
 				様
-			</h2>
+			</h3>
 			<div className={styles.content}>
 				<div className={styles.imagesContainer}>
 					{images.map(img => (
@@ -42,6 +42,6 @@ export function SpecialSponsorCard({ description, images, name, tel }: Props): R
 					}
 				</div>
 			</div>
-		</div>
+		</li>
 	);
 }
