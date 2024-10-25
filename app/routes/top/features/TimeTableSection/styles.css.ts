@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
+import { Breakpoints } from "@/styles/media.css";
 
 export const section = style({
 	"@layer": {
@@ -40,10 +41,15 @@ export const times = style({
 export const time = style({
 	"@layer": {
 		[layers.feature]: {
-			color: vars.color.white,
-			fontFamily: vars.typography.fontFamily.mono,
-			fontSize: "1.5rem",
-			lineHeight: 0,
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "1.5rem",
+				},
+			},
+			"color": vars.color.white,
+			"fontFamily": vars.typography.fontFamily.mono,
+			"fontSize": "1.25rem",
+			"lineHeight": 0,
 		},
 	},
 });

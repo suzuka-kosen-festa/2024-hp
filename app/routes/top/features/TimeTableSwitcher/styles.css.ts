@@ -1,6 +1,7 @@
 import { createVar, style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
+import { Breakpoints } from "@/styles/media.css";
 
 export const gridTemplateColumns = createVar();
 export const width = createVar();
@@ -39,23 +40,28 @@ export const indicator = style({
 });
 
 export const button = style({
-	backgroundColor: "transparent",
-	border: "none",
-	boxSizing: "border-box",
-	color: "rgba(255, 255, 255, 0.5)",
-	cursor: "pointer",
-	fontFamily: vars.typography.fontFamily.mono,
-	fontSize: "1.5rem",
-	height: "100%",
-	minWidth: "0",
-	padding: "0.5rem 2rem",
-	position: "relative",
-	selectors: {
+	"@media": {
+		[Breakpoints.md]: {
+			fontSize: "1.5rem",
+		},
+	},
+	"backgroundColor": "transparent",
+	"border": "none",
+	"boxSizing": "border-box",
+	"color": "rgba(255, 255, 255, 0.5)",
+	"cursor": "pointer",
+	"fontFamily": vars.typography.fontFamily.mono,
+	"fontSize": "1.25rem",
+	"height": "100%",
+	"minWidth": "0",
+	"padding": "0.5rem 2rem",
+	"position": "relative",
+	"selectors": {
 		"&[aria-checked='true']": {
 			color: vars.color.white,
 			cursor: "inherit",
 		},
 	},
-	transition:
+	"transition":
     "font-weight 0.35s ease, color 0.35s ease, background-color 0.15s ease",
 });
