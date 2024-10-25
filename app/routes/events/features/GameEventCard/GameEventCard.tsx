@@ -55,8 +55,8 @@ export function GameEventCard({ date, day, form, guideBook, title, venue }: Prop
 				</div>
 				<h4 className={styles.schedule}>タイムスケジュール</h4>
 				<div className={styles.schedules}>
-					<ScheduleRow date={date} time="9:30~10:20" value="受付開始" />
-					<ScheduleRow date={date} time="10:30" value="試合開始" />
+					<ScheduleRow date={date} time={day === 1 ? "9:45" : "9:30"} value="受付開始" />
+					<ScheduleRow date={date} time={day === 1 ? "10:45" : "10:30"} value="試合開始" />
 				</div>
 			</div>
 		</EventCardLayout>
