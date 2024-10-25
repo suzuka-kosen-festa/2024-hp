@@ -54,7 +54,9 @@ export const list = style({
 export const specialSponsorList = style({
 	"@layer": {
 		[layers.feature]: {
-			display: "grid",
+			alignItems: "center",
+			display: "flex",
+			flexDirection: "column",
 			gap: "2rem",
 			padding: "2rem",
 			width: "100%",

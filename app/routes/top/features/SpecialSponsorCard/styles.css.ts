@@ -12,6 +12,7 @@ export const box = style({
 			fontSize: "1.5rem",
 			fontWeight: 600,
 			height: "auto",
+			maxWidth: "88rem",
 			padding: "1rem",
 			paddingBottom: "2rem",
 			width: "100%",
@@ -37,6 +38,7 @@ export const content = style({
 			display: "flex",
 			flexWrap: "wrap",
 			gap: "1rem",
+			justifyContent: "center",
 		},
 	},
 });
@@ -78,6 +80,7 @@ export const details = style({
 	"fontSize": "1rem",
 	"gap": "1rem",
 	"justifyContent": "space-between",
+	"minWidth": "256px",
 	"textAlign": "left",
 });
 
