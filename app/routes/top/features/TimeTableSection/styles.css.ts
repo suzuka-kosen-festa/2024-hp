@@ -25,6 +25,21 @@ export const frame = style({
 	},
 });
 
+export const scrollText = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.xl]: {
+					display: "none",
+				},
+			},
+			"color": vars.color.white,
+			"fontSize": "1rem",
+			"fontWeight": 600,
+		},
+	},
+});
+
 export const times = style({
 	"@layer": {
 		[layers.feature]: {
@@ -57,9 +72,12 @@ export const time = style({
 export const timetables = style({
 	"@layer": {
 		[layers.feature]: {
+			borderTopLeftRadius: "0.25rem",
+			borderTopRightRadius: "0.25rem",
 			columnGap: "2rem",
 			display: "flex",
 			overflowX: "auto",
+			padding: "0 1rem",
 		},
 	},
 });
