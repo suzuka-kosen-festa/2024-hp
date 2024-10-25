@@ -3,11 +3,18 @@ import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
 import { Breakpoints } from "@/styles/media.css";
 
+export const container = style({
+	"@layer": {
+		[layers.feature]: {
+			backgroundColor: vars.color.gray,
+		},
+	},
+});
+
 export const section = style({
 	"@layer": {
 		[layers.feature]: {
 			alignItems: "center",
-			backgroundColor: vars.color.gray,
 			display: "flex",
 			flexDirection: "column",
 			padding: "4rem 1rem",
@@ -43,3 +50,23 @@ export const list = style({
 		},
 	},
 });
+
+export const specialSponsorList = style({
+	"@layer": {
+		[layers.feature]: {
+			display: "grid",
+			gap: "2rem",
+			padding: "2rem",
+			width: "100%",
+		},
+	},
+});
+
+export const text = style([heading, {
+	"@layer": {
+		[layers.feature]: {
+			paddingBottom: "4rem",
+			textAlign: "center",
+		},
+	},
+}]);

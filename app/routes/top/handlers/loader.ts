@@ -2,7 +2,7 @@ import { json } from "@remix-run/cloudflare";
 import { Temporal } from "temporal-polyfill";
 
 export async function loader() {
-	const { allPersonalSponsors, allSponsors, allTimeTables } = await import("content-collections");
+	const { allPersonalSponsors, allSpecialSponsors, allSponsors, allTimeTables } = await import("content-collections");
 	const day1 = allTimeTables.filter(({ day }) => day === 1);
 	const day2 = allTimeTables.filter(({ day }) => day === 2);
 
@@ -20,6 +20,7 @@ export async function loader() {
 			sub: day2.filter(({ type }) => type === "sub").sort((a, b) => Temporal.ZonedDateTime.compare(Temporal.ZonedDateTime.from(a.startAt), Temporal.ZonedDateTime.from(b.startAt))),
 		},
 		personalSponsors: allPersonalSponsors,
+		specialSponsors: allSpecialSponsors,
 		sponsors: allSponsors,
 	});
 }
