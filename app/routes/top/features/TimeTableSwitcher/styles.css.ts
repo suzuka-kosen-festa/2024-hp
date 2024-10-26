@@ -52,7 +52,6 @@ export const button = style({
 	"cursor": "pointer",
 	"fontFamily": vars.typography.fontFamily.mono,
 	"fontSize": "1.25rem",
-	"height": "100%",
 	"minWidth": "0",
 	"padding": "0.5rem 2rem",
 	"position": "relative",
