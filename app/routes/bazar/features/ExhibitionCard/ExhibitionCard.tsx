@@ -12,7 +12,17 @@ export function ExhibitionCard({ department, overview, team }: Props): ReactNode
 		<li className={styles.box}>
 			<div>
 				<span className={styles.departmentTag}>
-					{department}
+					{
+						department === "C"
+							? "生物応用化学"
+							: department === "E"
+								? "電気電子工学"
+								: department === "I"
+									? "電子情報工学"
+									: department === "M"
+										? "機械工学"
+										: "材料工学"
+					}
 					科
 				</span>
 			</div>
