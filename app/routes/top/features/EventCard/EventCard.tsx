@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import type { ReactNode } from "react";
+import { memo } from "react";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import * as styles from "./styles.css";
 import RightArrow from "~icons/ic/round-play-arrow";
@@ -11,7 +12,7 @@ interface Props {
 	title: string;
 }
 
-export function EventCard({ children, hash, title }: Props): ReactNode {
+export const EventCard = memo<Props>(({ children, hash, title }): ReactNode => {
 	return (
 		<div
 			style={assignInlineVars({
@@ -64,4 +65,4 @@ export function EventCard({ children, hash, title }: Props): ReactNode {
 			</Link>
 		</div>
 	);
-}
+});
