@@ -1,4 +1,3 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
 import { Suspense, useEffect } from "react";
@@ -19,6 +18,27 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 	return (
 		<html lang="ja-JP">
 			<head>
+				<meta charSet="utf-8" content="utf-8" />
+				<meta content="width=device-width, initial-scale=1" name="viewport" />
+				<meta content="第59回鈴鹿高専祭公式サイト" name="description" />
+				<meta content="第59回 鈴鹿高専祭" property="og:title" />
+				<meta content="第59回鈴鹿高専祭公式サイト" property="og:description" />
+				<meta content="https://snct-fes.info" property="og:url" />
+				<meta content="https://www.snct-fes.info/ogp.png" property="og:image" />
+				<meta content="https://www.snct-fes.info/ogp.png" property="og:image:url" />
+				<meta content="第59回 鈴鹿高専祭" property="og:image:alt" />
+				<meta content="website" property="og:type" />
+				<meta content="summary_large_image" name="twitter:card" />
+				<meta content="第59回 鈴鹿高専祭" name="twitter:title" />
+				<meta content="第59回鈴鹿高専祭公式サイト" name="twitter:description" />
+				<meta content="https://www.snct-fes.info/ogp.png" name="twitter:image" />
+				<meta content="第59回 鈴鹿高専祭" name="twitter:image:alt" />
+				<meta content="@KOSENFESTA" name="twitter:site" />
+				<link href="https://fonts.googleapis.com" rel="preconnect" />
+				<link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
+				<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet" />
+				<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+				<link href="/favicon.ico" rel="icon" sizes="any" />
 				{noIndex && <meta content="noindex" name="robots" />}
 				{import.meta.env.PROD && (
 					<>
@@ -66,33 +86,6 @@ function App(): ReactNode {
 		</Document>
 	);
 }
-
-export const links: LinksFunction = () => [
-	{ href: "https://fonts.googleapis.com", rel: "preconnect" },
-	{ crossOrigin: "anonymous", href: "https://fonts.gstatic.com", rel: "preconnect" },
-	{ href: "https://fonts.googleapis.com/css2?family=DotGothic16&family=Jura:wght@300&family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&family=Roboto+Mono&display=swap", rel: "stylesheet" },
-	{ href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
-	{ href: "/favicon.ico", rel: "icon", sizes: "any" },
-];
-
-export const meta: MetaFunction = () => [
-	{ charSet: "utf-8" },
-	{ content: "width=device-width, initial-scale=1", name: "viewport" },
-	{ content: "第59回鈴鹿高専祭公式サイト", name: "description" },
-	{ content: "第59回 鈴鹿高専祭", property: "og:title" },
-	{ content: "第59回鈴鹿高専祭公式サイト", property: "og:description" },
-	{ content: "https://snct-fes.info", property: "og:url" },
-	{ content: "https://www.snct-fes.info/ogp.png", property: "og:image" },
-	{ content: "https://www.snct-fes.info/ogp.png", property: "og:image:url" },
-	{ content: "第59回 鈴鹿高専祭", property: "og:image:alt" },
-	{ content: "website", property: "og:type" },
-	{ content: "summary_large_image", name: "twitter:card" },
-	{ content: "第59回 鈴鹿高専祭", name: "twitter:title" },
-	{ content: "第59回鈴鹿高専祭公式サイト", name: "twitter:description" },
-	{ content: "https://www.snct-fes.info/ogp.png", name: "twitter:image" },
-	{ content: "第59回 鈴鹿高専祭", name: "twitter:image:alt" },
-	{ content: "@KOSENFESTA", name: "twitter:site" },
-];
 
 export function ErrorBoundary() {
 	const error = useRouteError();

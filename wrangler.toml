@@ -1,3 +1,6 @@
 # :schema node_modules/wrangler/config-schema.json
 name = "2024-hp"
 compatibility_date = "2024-04-05"
+
+[vars]
+URL = "https://snct-fes.info"

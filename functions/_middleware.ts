@@ -1,4 +1,4 @@
-export const onRequest: PagesFunction = async (context) => {
+export const onRequest: PagesFunction<Env> = async (context) => {
 	const { request } = context;
 	const url = new URL(request.url);
 	const referer = request.headers.get("Referer");
@@ -17,6 +17,9 @@ export const onRequest: PagesFunction = async (context) => {
 				},
 			});
 		}
+	}
+	else if (url.pathname === "/lol") {
+		return Response.redirect(context.env.URL, 302);
 	}
 
 	return context.next();
