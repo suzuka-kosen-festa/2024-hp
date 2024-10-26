@@ -1,4 +1,3 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
 import { Suspense, useEffect } from "react";
