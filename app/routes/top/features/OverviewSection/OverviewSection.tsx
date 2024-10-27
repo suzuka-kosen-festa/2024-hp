@@ -30,6 +30,7 @@ export function OverviewSection({ day1, day2 }: Props): ReactNode {
 				<section>
 					<OverviewTag color="blue">開催日時</OverviewTag>
 					<p className={styles.text}>2024年11月2日(土)~11月3日(日)</p>
+					<p className={styles.text}>09:00 開場</p>
 				</section>
 				<section>
 					<OverviewTag color="blue">開催場所</OverviewTag>
