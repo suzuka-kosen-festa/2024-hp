@@ -18,7 +18,6 @@ export const heading = style({
 			"fontSize": "3.5rem",
 			"fontStyle": "normal",
 			"fontWeight": 400,
-
 			"textAlign": "center",
 		},
 	},
