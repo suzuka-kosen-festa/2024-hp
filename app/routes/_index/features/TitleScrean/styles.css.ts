@@ -16,7 +16,6 @@ export const text = style({
 			"fontFamily": vars.typography.fontFamily.dot,
 			"fontSize": "1.5rem",
 			"letterSpacing": "0.3rem",
-
 			"textAlign": "center",
 		},
 	},
@@ -42,7 +41,6 @@ export const box = style({
 			"flexDirection": "column",
 			"maxWidth": "20.375rem",
 			"padding": "1rem 0",
-
 			"width": "100%",
 		},
 	},
@@ -68,12 +66,10 @@ export const border = style({
 			"textAlign": "center",
 			"textShadow": `0px 2px 0 ${vars.color.red}`,
 			"WebkitTextStrokeColor": vars.color.black,
-
 			"WebkitTextStrokeWidth": "calc(1px / 2)",
 		},
 	},
-},
-);
+});
 
 export const countdown = style({
 	"@layer": {
@@ -85,6 +81,78 @@ export const countdown = style({
 			},
 
 			"margin": "0 auto 0.45rem",
+		},
+	},
+});
+
+export const menu = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					margin: "1.25rem auto 4rem",
+					maxWidth: "28ch",
+				},
+			},
+			"color": vars.color.white,
+			"fontFamily": vars.typography.fontFamily.dot,
+			"margin": "0.75rem auto",
+			"maxWidth": "20ch",
+			"width": "100%",
+		},
+	},
+});
+
+export const menuItems = style({
+	"@layer": {
+		[layers.feature]: {
+			display: "flex",
+			justifyContent: "space-between",
+		},
+	},
+});
+
+export const menuItem = style({
+	"@layer": {
+		[layers.feature]: {
+			alignItems: "center",
+			display: "inline-flex",
+			rowGap: "0.5rem",
+		},
+	},
+});
+
+export const menuText = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "2.5rem",
+				},
+			},
+			"fontSize": "1.5rem",
+			"textAlign": "center",
+		},
+	},
+});
+
+export const arrow = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					height: "2.125rem",
+					width: "2.125rem",
+				},
+			},
+			"height": "1.725rem",
+			"selectors": {
+				[`${menuItem}:hover &`]: {
+					transform: "scale(1.2)",
+				},
+			},
+			"transition": "transform 0.3s ease-in",
+			"width": "1.725rem",
 		},
 	},
 });
