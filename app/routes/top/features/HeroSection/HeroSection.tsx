@@ -1,19 +1,17 @@
 import type { ReactNode } from "react";
 import { Temporal } from "temporal-polyfill";
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { HeroContentBox } from "../HeroContentBox";
 import * as styles from "./styles.css";
 import { Header } from "@/routes/top/features/Header";
-import { COUNTDOWN_END_AT, COUNTDOWN_INTERVAL } from "@/components/Countdown";
-
-const LazyCountdown = lazy(() => import("@/components/Countdown").then(mod => ({ default: mod.Countdown })));
+import { COUNTDOWN_END_AT, COUNTDOWN_INTERVAL, Countdown } from "@/components/Countdown";
 
 export function HeroSection(): ReactNode {
 	return (
 		<section aria-label="hero section" className={styles.section}>
 			<Header />
 			<Suspense fallback={null}>
-				<Countdown />
+				<HeroImpl />
 			</Suspense>
 			<div className={styles.bottom}>
 				<h1 className={styles.title}>
@@ -30,7 +28,7 @@ export function HeroSection(): ReactNode {
 	);
 }
 
-function Countdown(): ReactNode {
+function HeroImpl(): ReactNode {
 	const [isOnTheDay, setisOnTheDay] = useState(false);
 	useEffect(() => {
 		const update = () => {
@@ -46,11 +44,11 @@ function Countdown(): ReactNode {
 		return () => clearInterval(id);
 	}, []);
 
-	return !isOnTheDay
+	return isOnTheDay
 		? <div />
 		: (
 				<HeroContentBox className={styles.contentBox}>
-					<LazyCountdown />
+					<Countdown />
 				</HeroContentBox>
 			);
 }
