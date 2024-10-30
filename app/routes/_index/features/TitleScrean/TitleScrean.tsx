@@ -2,23 +2,22 @@ import type { ReactNode } from "react";
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Temporal } from "temporal-polyfill";
 import * as styles from "./styles.css";
-import { COUNTDOWN_END_AT, COUNTDOWN_INTERVAL } from "@/components/Countdown";
+import { COUNTDOWN_END_AT, COUNTDOWN_INTERVAL, Countdown } from "@/components/Countdown";
 
 const PixelarticonsChevronRight = lazy(() => import("~icons/pixelarticons/chevron-right"));
-const LazyCountdown = lazy(() => import("@/components/Countdown").then(mod => ({ default: mod.Countdown })));
 
 export function TitleScrean(): ReactNode {
 	return (
 		<div className={styles.box}>
 			<h2 className={styles.border}>BORDER</h2>
 			<Suspense fallback={null}>
-				<Countdown />
+				<TitleImpl />
 			</Suspense>
 		</div>
 	);
 }
 
-function Countdown(): ReactNode {
+function TitleImpl(): ReactNode {
 	const [isOnTheDay, setisOnTheDay] = useState(false);
 	useEffect(() => {
 		const update = () => {
@@ -52,7 +51,7 @@ function Countdown(): ReactNode {
 			)
 		: (
 				<>
-					<LazyCountdown isLanding className={styles.countdown} />
+					<Countdown isLanding className={styles.countdown} />
 					<p className={styles.text}>-TAP TO START-</p>
 				</>
 			);
