@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import type { Bazar } from "content-collections";
 import { BazarCard } from "../BazarCard";
+import { BazarTag } from "../BazarTag";
 import * as styles from "./styles.css";
 import { SectionTitle } from "@/components/SectionTitle";
-import { OverviewTag } from "@/routes/top/features/OverviewTag";
 
 interface Props {
 	foods: Bazar[];
@@ -15,7 +15,8 @@ export function BazarSection({ foods, recreations }: Props): ReactNode {
 		<section aria-label="バザー・レクリエーション" className={styles.section} id="bazar">
 			<SectionTitle color="white" title="バザー・レクリエーション" />
 			<div className={styles.container}>
-				<OverviewTag color="purple">バザー</OverviewTag>
+				<BazarTag>バザー</BazarTag>
+				<a className={styles.link} href="/pamphlet.pdf" rel="noreferrer">バザーマップはこちらから</a>
 				<ul className={styles.list}>
 					{
 						foods.map(bazar => (
@@ -23,7 +24,7 @@ export function BazarSection({ foods, recreations }: Props): ReactNode {
 						))
 					}
 				</ul>
-				<OverviewTag color="purple">レクリエーション</OverviewTag>
+				<BazarTag>レクリエーション</BazarTag>
 				<ul className={styles.list}>
 					{
 						recreations.map(bazar => (

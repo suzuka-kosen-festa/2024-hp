@@ -35,7 +35,6 @@ export const link = style({
 	"@layer": {
 		[layers.page]: {
 			position: "relative",
-
 			selectors: {
 				"&::after": {
 					backgroundColor: vars.color.white,
