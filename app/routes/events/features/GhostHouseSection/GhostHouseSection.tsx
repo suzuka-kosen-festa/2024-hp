@@ -29,7 +29,7 @@ export function GhostHouseSection(): ReactNode {
 						<FormIcon className={styles.icon} />
 						<h3 className={styles.cardTitle}>お申し込み</h3>
 						<p className={styles.cardText}>下記のフォームからお申し込みください。</p>
-						<CardExternalLink className={styles.link} text="申し込みフォームへ" url="https://forms.gle/zbgEDTK4wrWDWo4y5" />
+						<CardExternalLink className={styles.link} text="申し込みフォームへ" url="https://qr-ticket-management-623513941420.asia-northeast1.run.app/" />
 					</div>
 				</div>
 			</div>
