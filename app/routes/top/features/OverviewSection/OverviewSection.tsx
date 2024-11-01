@@ -50,6 +50,20 @@ export function OverviewSection({ day1, day2 }: Props): ReactNode {
 					<OverviewTag color="purple">ご来場にあたっての注意事項</OverviewTag>
 					<p className={styles.text}>駐車スペースに限りがございますので、公共交通機関でのご来場にご協力ください</p>
 				</section>
+				<section>
+					<OverviewTag color="purple">駐車スペース</OverviewTag>
+					<p className={styles.text}>DAY 1 と DAY2 で駐車スペースの場所が異なります、下の地点付近の警備員の指示に従ってください。</p>
+					<span className={styles.span}>
+						<a
+							className={styles.googleMap}
+							href="https://maps.app.goo.gl/x4KW9XkZkERnEhtn8"
+							rel="noreferrer"
+							target="_brank"
+						>
+							駐車スペースはこちら
+						</a>
+					</span>
+				</section>
 			</div>
 			<section className={styles.eventSection}>
 				<h2 className={styles.eventTitle}>タイムテーブル</h2>
