@@ -158,3 +158,24 @@ export const text = style({
 		},
 	},
 });
+
+export const prologueText = style({
+	"@layer": {
+		[layers.feature]: {
+			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "1.5rem",
+					letterSpacing: "0.3rem",
+					marginTop: "2rem",
+				},
+			},
+			"margin": "1rem 0",
+			"color": vars.color.white,
+			"fontSize": "1rem",
+			"letterSpacing": "0.2rem",
+			"lineHeight": "1.5",
+			"maxWidth": "60rem",
+		},
+	},
+});
+

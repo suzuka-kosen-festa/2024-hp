@@ -33,6 +33,22 @@ export function PhilosophySection(): ReactNode {
 							<wbr />
 							という想いが込められています。
 						</p>
+
+						<p className={styles.prologueText}>
+							ここは、鈴鹿工業高等専門学校
+							<wbr />
+							この学校の校門は、
+							<br />
+							年に2日間だけ「異世界へ繋がる門」に姿を変えるという。
+							<br />
+							その先に広がっているのは未知の国、ボーダー王国。
+							<br />
+							"日常"を飛び出して、
+							<wbr />
+							心躍る冒険が待つ"非日常"の世界へ。
+							<br />
+							さあ、門をくぐって、君だけの物語を始めよう！
+						</p>
 					</div>
 				</div>
 			</div>
