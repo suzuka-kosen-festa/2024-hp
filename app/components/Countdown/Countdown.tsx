@@ -64,7 +64,7 @@ function CountdownTime(): ReactNode {
 	}, []);
 
 	return (
-		<time className={styles.time} data-test="time" dateTime={diff.days.toString().padStart(3, "0")}>{diff.days.toString().padStart(3, "0")}</time>
+		<time className={styles.time} data-test="time" dateTime="0">0</time>
 	);
 }
 
