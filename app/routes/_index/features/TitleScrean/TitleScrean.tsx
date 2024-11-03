@@ -33,7 +33,7 @@ function TitleImpl(): ReactNode {
 		return () => clearInterval(id);
 	}, []);
 
-	return isOnTheDay
+	return false
 		? (
 				<div className={styles.menu}>
 					<p className={styles.menuText}>Continue ?</p>
