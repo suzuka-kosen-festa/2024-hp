@@ -24,7 +24,7 @@ export default function Page(): ReactNode {
 			</picture>
 			<div className={styles.wrapper}>
 				<h1 className={styles.h1}>
-					<Link className={styles.link} to="/top#overview">開催概要</Link>
+					<Link className={styles.link} to="/archived/top#overview">開催概要</Link>
 					{" "}
 					/ イベント詳細
 				</h1>

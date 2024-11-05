@@ -45,7 +45,7 @@ export const EventCard = memo<Props>(({ children, hash, title }): ReactNode => {
 			<Link
 				className={styles.link}
 				prefetch="intent"
-				to={hash === "bazar" || hash === "exhibition" ? `/bazar#${hash}` : `/events#${hash}`}
+				to={hash === "bazar" || hash === "exhibition" ? `/archived/bazar#${hash}` : `/archived/events#${hash}`}
 			>
 				<span className={styles.span}>
 					{hash === "game"

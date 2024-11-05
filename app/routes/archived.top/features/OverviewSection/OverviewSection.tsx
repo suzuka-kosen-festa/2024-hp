@@ -77,7 +77,7 @@ export function OverviewSection({ day1, day2 }: Props): ReactNode {
 				<section className={styles.eventLinks}>
 					<EventCard hash="stage" title="ステージイベント">屋外のメインステージで開催されるイベント</EventCard>
 					<EventCard hash="live" title="ライブステージ">第一体育館内で行われるライブの出演者情報など</EventCard>
-					<EventCard hash="game" title="ゲームイベント">第二合併講義室で行われるゲームイベントの情報</EventCard>
+					<EventCard hash="game" title="ゲームイベント">第三合併講義室で行われるゲームイベントの情報</EventCard>
 					<EventCard hash="ghostHouse" title="お化け屋敷">学生が作成したお化け屋敷の情報</EventCard>
 				</section>
 				<h2 className={styles.eventTitle}>中学生の皆様へ</h2>

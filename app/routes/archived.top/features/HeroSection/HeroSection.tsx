@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 import { Temporal } from "temporal-polyfill";
 import { Suspense, useEffect, useState } from "react";
 import { HeroContentBox } from "../HeroContentBox";
+import { Header } from "../Header";
 import * as styles from "./styles.css";
-import { Header } from "@/routes/top/features/Header";
 import { COUNTDOWN_END_AT, COUNTDOWN_INTERVAL, Countdown } from "@/components/Countdown";
 
 export function HeroSection(): ReactNode {

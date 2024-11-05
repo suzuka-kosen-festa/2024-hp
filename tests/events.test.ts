@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 
 test.describe("/events", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto("http://localhost:8788/events");
+		await page.goto("http://localhost:8788/archived/events");
 	});
 	test.describe("rendering", () => {});
 	test.describe("action", () => {});

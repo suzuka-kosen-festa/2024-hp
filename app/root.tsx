@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Partytown } from "@builder.io/partytown/react";
 import { ErrorBoundary as ErrorBoundaryComponent } from "./components/ErrorBoundary";
-import { NavigationHandler } from "./components/NavigationHandler/NavigationHandler";
 import "@/styles/globals.css";
 
 interface Props {
@@ -67,7 +66,6 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 				</main>
 				<ScrollRestoration />
 				<Scripts />
-				<NavigationHandler />
 			</body>
 		</html>
 	);

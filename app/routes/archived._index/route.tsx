@@ -52,7 +52,7 @@ export default function Page(): ReactNode {
 				.to({}, {
 					duration: 8,
 					onComplete: () => {
-						navigate("/top");
+						navigate("/archived/top");
 					},
 				})
 			;

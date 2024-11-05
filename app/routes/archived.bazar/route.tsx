@@ -1,16 +1,13 @@
 import type { ReactNode } from "react";
-import { useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@remix-run/cloudflare";
-import { loader } from "../top/handlers";
-import { HeroSection } from "../top/features/HeroSection";
-import { OverviewSection } from "../top/features/OverviewSection";
-import { PhilosophySection } from "../top/features/PhilosophySection";
-import { SponsorSection } from "../top/features/SponsorSection";
+import { Link, useLoaderData } from "@remix-run/react";
 import * as styles from "./styles.css";
+import { loader } from "./handlers";
+import { BazarSection } from "./features/BazarSection";
+import { ExhibitionSection } from "./features/ExhibitionSection";
 import { Footer } from "@/components/Footer";
 
 export default function Page(): ReactNode {
-	const { day1, day2, personalSponsors, specialSponsors, sponsors } = useLoaderData<typeof loader>();
+	const { exhibitions, foods, recreations } = useLoaderData<typeof loader>();
 
 	return (
 		<>
@@ -23,19 +20,18 @@ export default function Page(): ReactNode {
 				<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
 				<img alt="" className={styles.background} src="/images/background.webp" />
 			</picture>
-			<div>
-				<HeroSection />
-				<PhilosophySection />
-				<OverviewSection day1={day1} day2={day2} />
-				<SponsorSection personalSponsors={personalSponsors} specialSponsors={specialSponsors} sponsors={sponsors} />
-				<Footer />
+			<div className={styles.wrapper}>
+				<h1 className={styles.h1}>
+					<Link className={styles.link} to="/archived/top#overview">開催概要</Link>
+					{" "}
+					/ バザー・レクリエーション・学科展示詳細
+				</h1>
+				<BazarSection foods={foods} recreations={recreations} />
+				<ExhibitionSection exhibitions={exhibitions} />
 			</div>
+			<Footer />
 		</>
 	);
 }
-
-export const meta: MetaFunction = () => [
-	{ content: "noindex, nofollow", name: "robots" },
-];
 
 export { loader };
