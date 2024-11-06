@@ -1,7 +1,14 @@
 import type { ReactNode } from "react";
+import { useLoaderData } from "@remix-run/react";
 import * as styles from "./styles.css";
+import { Epilogue } from "./features/Epilogue";
+import { Title } from "./features/Title";
+import { loader } from "./handlers";
+import { EndrollBlock } from "./features/EndrollBlock";
 
 export default function Page(): ReactNode {
+	const { endrolls } = useLoaderData<typeof loader>();
+
 	return (
 		<>
 			<picture>
@@ -13,7 +20,16 @@ export default function Page(): ReactNode {
 				<source media="(min-height: 768px)" srcSet="/images/background@2x.webp" type="image/webp" />
 				<img alt="" className={styles.background} src="/images/background.webp" />
 			</picture>
-			<div></div>
+			<Epilogue />
+			<hr className={styles.hr} />
+			<section className={styles.endroll}>
+				<Title />
+				{endrolls.map((endroll, index) => (
+					<EndrollBlock isRight={index % 2 !== 0} key={endroll._meta.fileName} members={endroll.members} team={endroll.team} />
+				))}
+			</section>
 		</>
 	);
 }
+
+export { loader };

@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
+import { vars } from "@/styles/theme.css";
 
 export const background = style({
 	"@layer": {
@@ -13,6 +14,28 @@ export const background = style({
 			top: 0,
 			width: "100%",
 			zIndex: -1,
+		},
+	},
+});
+
+export const hr = style({
+	"@layer": {
+		[layers.page]: {
+			background: `linear-gradient(to bottom, ${vars.color.black}, rgb(0 0 0 / 0.8))`,
+			height: "10svh",
+			width: "100%",
+		},
+	},
+});
+
+export const endroll = style({
+	"@layer": {
+		[layers.page]: {
+			alignItems: "center",
+			backgroundColor: "rgb(0 0 0 / 0.8)",
+			display: "flex",
+			flexDirection: "column",
+			paddingBottom: "5rem",
 		},
 	},
 });
