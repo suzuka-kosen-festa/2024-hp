@@ -50,7 +50,7 @@ function EpilogueText(): ReactNode {
 
 	return (
 		<Suspense fallback={null}>
-			<p aria-label={EPILOGUES[index]} className={styles.text} ref={ref} />
+			<p className={styles.text} ref={ref} />
 		</Suspense>
 	);
 }

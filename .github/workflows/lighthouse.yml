@@ -28,10 +28,11 @@ jobs:
         uses: treosh/lighthouse-ci-action@12.1.0
         with:
           urls: |
-            ${{ inputs.url }}
-            ${{ inputs.url }}/top
-            ${{ inputs.url }}/events
-            ${{ inputs.url }}/bazar
+            ${{ inputs.url }}/archived
+            ${{ inputs.url }}/archived/top
+            ${{ inputs.url }}/archived/events
+            ${{ inputs.url }}/archived/bazar
+            ${{ inputs.url }}/endroll
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
