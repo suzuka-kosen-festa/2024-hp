@@ -1,47 +1,62 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
-import { Breakpoints } from "@/styles/media.css";
 
-export const landingWrapper = style({
+export const background = style({
 	"@layer": {
 		[layers.page]: {
-			alignItems: "center",
-			backgroundColor: vars.color.black,
-			display: "flex",
 			height: "100%",
-			justifyContent: "center",
+			inset: 0,
+			left: 0,
+			objectFit: "cover",
+			objectPosition: "center",
+			position: "fixed",
+			top: 0,
+			width: "100%",
+			zIndex: -1,
+		},
+	},
+});
+
+export const eyeWrapper = style({
+	"@layer": {
+		[layers.page]: {
+			height: "100%",
+			left: 0,
 			minHeight: "100svh",
+			overflow: "hidden",
+			position: "absolute",
+			top: 0,
 			width: "100%",
 		},
 	},
 });
 
-export const prologueWrapper = style({
+export const eye = style({
 	"@layer": {
 		[layers.page]: {
-			alignItems: "center",
-			display: "none",
-			height: "100%",
-			justifyContent: "center",
-			minHeight: "100svh",
+			height: "calc(50% + 120px)",
+			left: 0,
+			position: "absolute",
 			width: "100%",
 		},
 	},
 });
 
-export const prologue = style({
+export const eyeTop = style({
 	"@layer": {
 		[layers.page]: {
-			"@media": {
-				[Breakpoints.md]: {
-					fontSize: "1.5rem",
-				},
-			},
-			"color": vars.color.white,
-			"fontFamily": vars.typography.fontFamily.dot,
-			"fontSize": "1rem",
-			"whiteSpace": "pre-line",
+			backgroundImage: `linear-gradient(${vars.color.black} calc(100% - 120px), transparent)`,
+			top: "-101%",
+		},
+	},
+});
+
+export const eyeBottom = style({
+	"@layer": {
+		[layers.page]: {
+			backgroundImage: `linear-gradient(to top, ${vars.color.black} calc(100% - 120px), transparent)`,
+			bottom: "-101%",
 		},
 	},
 });

@@ -104,7 +104,6 @@ const special_sponsor = defineCollection({
 	directory: "contents/special_sponsor",
 	include: "**/*.md",
 	name: "specialSponsor",
-
 	schema: z => ({
 		description: z.string(),
 		images: z.array(z.string().refine((v) => {
@@ -185,6 +184,16 @@ const timeTable = defineCollection({
 	}),
 });
 
+const endroll = defineCollection({
+	directory: "contents/endroll",
+	include: "**/*.md",
+	name: "endroll",
+	schema: z => ({
+		members: z.array(z.string()),
+		team: z.string(),
+	}),
+});
+
 export default defineConfig({
 	collections: [
 		stageEvent,
@@ -196,5 +205,6 @@ export default defineConfig({
 		departmentExhibition,
 		bazar,
 		timeTable,
+		endroll,
 	],
 });

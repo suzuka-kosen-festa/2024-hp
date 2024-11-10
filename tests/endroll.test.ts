@@ -1,9 +1,9 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
-test.describe("/events", () => {
+test.describe("/endroll", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto("http://localhost:8788/archived/events");
+		await page.goto("http://localhost:8788/endroll");
 	});
 	test.describe("rendering", () => {});
 	test.describe("action", () => {});
