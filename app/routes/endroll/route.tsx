@@ -5,6 +5,10 @@ import { Epilogue } from "./features/Epilogue";
 import { Title } from "./features/Title";
 import { loader } from "./handlers";
 import { EndrollBlock } from "./features/EndrollBlock";
+import { Everyone } from "./features/Everyone";
+import { Sponsor } from "./features/Sponsor";
+import { ThankYou } from "./features/ThankYou";
+import { Border } from "./features/Border";
 
 export default function Page(): ReactNode {
 	const { endrolls } = useLoaderData<typeof loader>();
@@ -28,6 +32,11 @@ export default function Page(): ReactNode {
 					<EndrollBlock isRight={index % 2 !== 0} key={endroll._meta.fileName} members={endroll.members} team={endroll.team} />
 				))}
 			</section>
+			<Sponsor />
+			<Everyone />
+			<hr className={styles.final} />
+			<ThankYou />
+			<Border />
 		</>
 	);
 }

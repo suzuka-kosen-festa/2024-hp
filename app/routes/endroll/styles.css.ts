@@ -36,6 +36,17 @@ export const endroll = style({
 			display: "flex",
 			flexDirection: "column",
 			paddingBottom: "5rem",
+			rowGap: "1.75rem",
+		},
+	},
+});
+
+export const final = style({
+	"@layer": {
+		[layers.page]: {
+			background: "linear-gradient(to bottom, rgb(0 0 0 / 0.8), rgb(0 0 0 / 0.6))",
+			height: "10svh",
+			width: "100%",
 		},
 	},
 });

@@ -27,13 +27,16 @@ export const team = style({
 	"@layer": {
 		[layers.feature]: {
 			"@media": {
+				[Breakpoints.md]: {
+					fontSize: "2.5rem",
+				},
 				[Breakpoints.xl]: {
 					fontSize: "3rem",
 				},
 			},
 			"color": vars.color.white,
 			"fontFamily": vars.typography.fontFamily.dot,
-			"fontSize": "2.5rem",
+			"fontSize": "1.5rem",
 			"fontWeight": 600,
 		},
 	},
