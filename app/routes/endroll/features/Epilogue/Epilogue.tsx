@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { MutableRefObject, ReactNode } from "react";
 import { Suspense, useRef, useState } from "react";
 import * as styles from "./styles.css";
 import { useScramble } from "@/hooks/useScramble";
@@ -19,15 +19,19 @@ const EPILOGUE_3 = `
 `;
 const EPILOGUES = [EPILOGUE_1, EPILOGUE_2, EPILOGUE_3];
 
-export function Epilogue(): ReactNode {
+interface Props {
+	targetRef: MutableRefObject<HTMLElement | null>;
+}
+
+export function Epilogue({ targetRef }: Props): ReactNode {
 	return (
 		<section className={styles.epilogue}>
-			<EpilogueText />
+			<EpilogueText targetRef={targetRef} />
 		</section>
 	);
 }
 
-function EpilogueText(): ReactNode {
+function EpilogueText({ targetRef }: Props): ReactNode {
 	const [index, setIndex] = useState(0);
 	const loopRef = useRef<number>();
 	const { ref } = useScramble({
@@ -36,6 +40,9 @@ function EpilogueText(): ReactNode {
 			clearInterval(loopRef.current);
 			loopRef.current = window.setTimeout(() => {
 				setIndex(index => (index < EPILOGUES.length - 1 ? index + 1 : 0));
+				if (index === 2) {
+					targetRef.current?.scrollIntoView({ behavior: "smooth" });
+				}
 			}, 2000);
 		},
 		onAnimationStart: () => {
