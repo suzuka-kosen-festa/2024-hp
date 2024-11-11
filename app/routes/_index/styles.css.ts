@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import * as layers from "@/styles/layers.css";
 import { vars } from "@/styles/theme.css";
+import { Breakpoints } from "@/styles/media.css";
 
 export const background = style({
 	"@layer": {
@@ -35,10 +36,15 @@ export const eyeWrapper = style({
 export const eye = style({
 	"@layer": {
 		[layers.page]: {
-			height: "calc(50% + 120px)",
-			left: 0,
-			position: "absolute",
-			width: "100%",
+			"@media": {
+				[Breakpoints.md]: {
+					height: "calc(50% + 120px)",
+				},
+			},
+			"height": "calc(50% + 90px)",
+			"left": 0,
+			"position": "absolute",
+			"width": "100%",
 		},
 	},
 });
