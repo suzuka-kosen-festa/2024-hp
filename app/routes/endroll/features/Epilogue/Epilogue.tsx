@@ -34,14 +34,16 @@ export function Epilogue({ targetRef }: Props): ReactNode {
 function EpilogueText({ targetRef }: Props): ReactNode {
 	const [index, setIndex] = useState(0);
 	const loopRef = useRef<number>();
+	const scrolledRef = useRef(false);
 	const { ref } = useScramble({
 		chance: 0.8,
 		onAnimationEnd: () => {
 			clearInterval(loopRef.current);
 			loopRef.current = window.setTimeout(() => {
 				setIndex(index => (index < EPILOGUES.length - 1 ? index + 1 : 0));
-				if (index === 2) {
+				if (index === 2 && !scrolledRef.current) {
 					targetRef.current?.scrollIntoView({ behavior: "smooth" });
+					scrolledRef.current = true;
 				}
 			}, 2000);
 		},
